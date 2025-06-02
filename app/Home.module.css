@@ -83,6 +83,7 @@
   margin: 0 auto;
   padding: 0 10rem;
   white-space: nowrap;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -102,16 +103,6 @@
   flex-wrap: nowrap;
   align-items: center;
   margin-left: clamp(10rem, 30vw, 40rem);
-}
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .statCardsContainer {
-    margin-left: 10rem;
-    flex-wrap: nowrap;
-  }
-  .statCard {
-    width: 250px;
-    height: 200px;
-  }
 }
 
 .statCard {
@@ -201,7 +192,59 @@
   margin-top: 0.5rem;
   flex-wrap: wrap;
 }
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .heroHeading {
+    margin-top: 9.5rem;
+    color: white;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(2rem, 6vw, 75px);
 
+    white-space: nowrap;
+    margin-left: 10rem;
+    margin-right: auto;
+    padding: 0 2rem;
+    max-width: 1000px;
+  }
+  .heroDescription {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+
+    max-width: 1200px;
+    margin: 0 1rem;
+    padding: 0 1rem;
+  }
+  .statCardsContainer {
+    margin-left: 5rem;
+    padding: auto;
+    gap: 3.5rem;
+  }
+  .statCard {
+    max-width: 19.625rem;
+    max-height: 16.75rem;
+    width: 13.625rem;
+    height: 13.75rem;
+    padding: 1.5rem;
+    gap: 0.75rem;
+  }
+  .statValue {
+    color: white;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(2rem, 6vw, 60px);
+  }
+
+  .statSuffix {
+    font-size: clamp(1rem, 2vw, 22px);
+    margin-left: 0.25rem;
+    vertical-align: middle;
+    text-transform: lowercase;
+  }
+
+  .statLabel {
+    font-size: clamp(1rem, 2vw, 16px);
+  }
+}
 /* Transform Section */
 .transformSection {
   position: relative;
@@ -1242,7 +1285,170 @@
   height: clamp(1.5rem, 4vw, 50px);
   transition: transform 0.3s ease-in-out;
 }
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .premiumHeadingContainer {
+    margin-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
+  .premiumHeading {
+    font-size: 4vw;
+    white-space: wrap;
+    word-break: break-word;
+  }
+
+  .premiumDescription {
+    margin-bottom: 4rem;
+  }
+
+  .paginationDots {
+    margin-top: 2.5rem;
+  }
+
+  .ctaButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+
+  .ctaButton {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 400 / 110;
+  }
+  .ctaButtonText {
+    font-size: 2.4rem;
+  }
+
+  .topRatedBackground1 {
+    display: flex;
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    aspect-ratio: 1 / 1.02;
+    transform: rotate(-126.46deg);
+
+    margin-left: -130px;
+  }
+
+  .topRatedBackground2 {
+    margin-right: -180px;
+    margin-top: -120px;
+  }
+
+  .topRatedimage {
+    object-fit: contain;
+    opacity: 0.8; /* Or any styling */
+  }
+
+  .topRatedContentContainer {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    height: 100%;
+  }
+
+  .topRatedFlexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .platformLogoInner {
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Individual logo positions & sizes */
+  .appleTvLogo {
+    margin-top: 22vw;
+    margin-left: -162px;
+    width: clamp(2rem, 8vw, 70px);
+    height: auto;
+  }
+
+  .googlePlayLogo {
+    margin-top: 22vw;
+    margin-left: -8vw;
+    width: clamp(2rem, 8vw, 75px);
+    height: auto;
+  }
+
+  .appStoreLogo {
+    margin-top: 22vw;
+    margin-left: -7vw;
+    width: clamp(2.5rem, 10vw, 90px);
+    height: auto;
+  }
+
+  .rokuLogo {
+    margin-top: 22vw;
+    margin-left: -13vw;
+    width: clamp(3rem, 12vw, 170px);
+    height: auto;
+  }
+
+  .metaLogo {
+    margin-top: 30vw;
+    margin-left: -15vw;
+    width: clamp(1.5rem, 6vw, 50px);
+    height: auto;
+  }
+
+  .fireTvLogo {
+    margin-top: 25vw;
+    margin-left: -12vw;
+    width: clamp(2.5rem, 10vw, 110px);
+    height: auto;
+  }
+
+  .lgLogo {
+    margin-top: 24vw;
+    margin-left: -6vw;
+    width: clamp(2rem, 8vw, 70px);
+    height: auto;
+  }
+  .textSideWrapper {
+    width: 100%;
+    padding: 0rem 10rem;
+    margin-left: 40rem;
+    margin-top: -20vw;
+  }
+  .SeamlessHeading {
+    font-size: clamp(1.5rem, 4vw, 28px);
+    text-wrap: nowrap;
+  }
+
+  .SeamlessSpan {
+    font-size: clamp(2rem, 5vw, 38px);
+  }
+
+  .seamlessPara {
+    font-size: clamp(1rem, 3vw, 24px);
+  }
+
+  /* Learn More button */
+  .learnMoreButton {
+    width: 80%;
+    max-width: 400px;
+    aspect-ratio: 400/110;
+    padding: clamp(1rem, 3vw, 24px) clamp(2rem, 5vw, 65px);
+  }
+  .learnMoreText {
+    font-size: 30px;
+    text-wrap: nowrap;
+  }
+}
 /* Breakpoints for any further tweaks */
 @media (max-width: 768px) {
   .platformLogosWrapper {
@@ -1636,7 +1842,118 @@
   box-shadow: 0 10px 15px -3px rgba(1, 144, 255, 0.3),
     0 4px 6px -2px rgba(1, 144, 255, 0.1); /* Approximate shadow-primary/30 */
 }
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .lifeAtSection {
+    position: relative;
+    overflow: hidden;
+  }
 
+  .backgroundOverlay {
+    width: 1500.181px;
+    height: 1080.864px;
+    flex-shrink: 0;
+    aspect-ratio: 1500.181 / 1080.864;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transition: all 0.7s; /* Keep transition for image change */
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .contentContainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    position: relative;
+    z-index: 10;
+  }
+
+  /* --- Heading --- */
+  .mainHeadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainHeading {
+    color: #fff;
+    text-align: center;
+    font-family: "Manrope", sans-serif; /* Ensure Manrope is imported/available */
+    font-size: 78px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 850px;
+    height: 132px;
+    position: relative;
+    z-index: 20;
+  }
+  .mainHeadingRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; /* Adjust spacing as needed */
+    width: 100%;
+  }
+
+  .mainHeadingText {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 78px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .mainHeadingLogo {
+    display: inline-block;
+    width: 148px !important;
+    height: 210px !important; /* Adjust height as needed for alignment */
+    object-fit: contain;
+  }
+  .carouselWrapper {
+    position: relative;
+    margin-top: 34px;
+    margin-left: 50px;
+  }
+
+  .mainImageDisplay {
+    width: 1008px;
+    height: 600px;
+    position: relative;
+    z-index: 20;
+    border-radius: 20px;
+    border: 1px solid #fff;
+  }
+
+  .thumbnailContainer {
+    margin-top: 114px;
+    gap: 10px;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    /* Tailwind: mt-4 space-x-2 is now handled by gap */
+  }
+
+  .thumbnailButton {
+    width: 157px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem; /* rounded-lg */
+    border: 1px solid; /* For border-gray-700 / border-primary */
+    transform: scale(1); /* Initial state for transition */
+    transition: all 0.3s; /* transition-all duration-300 */
+  }
+}
 /* --- Company Values Section --- */
 .valuesSection {
   position: relative;
@@ -1793,6 +2110,149 @@
 
 .horizontalBar.two {
   margin-left: -150px;
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .valuesSection {
+    position: relative;
+    z-index: 20;
+    margin-top: 156px;
+  }
+
+  .valuesContainer {
+    max-width: 80rem; /* max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .valueBlock {
+    margin-bottom: 4rem; /* mb-16 */
+    padding-bottom: 3rem; /* pb-12 */
+    /* Tailwind: mt-241 is an unusual class name; converting to margin-top */
+  }
+
+  .valueBlock.creative {
+    /* Specific for the second value block */
+    margin-top: 241px;
+  }
+
+  .valueTitleWrapper {
+    position: relative;
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center;
+  }
+
+  .valueNumber {
+    position: absolute;
+
+    transform: translate(-50%, -50%); /* Center the number */
+    font-size: 200px;
+    font-weight: 700; /* font-bold */
+    color: #2f2f2f;
+    opacity: 1; /* opacity-100 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+    margin-left: 1240px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
+    margin-bottom: 70px;
+  }
+
+  .valueNumber.one {
+    left: 80%;
+  }
+
+  .valueNumber.two {
+    left: 10%;
+  }
+
+  .valueNumber.three {
+    left: -20%;
+  }
+
+  .valueTitle {
+    font-size: 70px;
+    font-weight: 500;
+  }
+
+  .valueTitle.one {
+    margin-right: 100px;
+  }
+
+  .valueTitle.two {
+    margin-left: 40rem;
+  }
+
+  .valueTitle.three {
+    margin-left: 600px;
+    margin-top: 141px; /* mt-141px */
+  }
+  .barline3 {
+    width: 20rem;
+    height: 1px;
+    background-color: #474646;
+    margin: 2rem auto;
+  }
+  .valueDescription {
+    width: 900px;
+    color: #e7e7e7;
+    text-align: justify;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 163%;
+    text-transform: capitalize;
+
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+  }
+
+  .valueDescription.one {
+    margin-left: 200px;
+  }
+
+  .valueDescription.two {
+    margin-left: -160px;
+  }
+
+  .valueDescription3 {
+    width: 900px;
+    color: #e7e7e7;
+    text-align: justify;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163%;
+    text-transform: capitalize;
+    margin-left: 15rem;
+  }
+
+  .highlightedText {
+    color: #0190ff;
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163%;
+    text-transform: capitalize;
+  }
+
+  .horizontalBar {
+    width: 1200px;
+    height: 1px;
+    background-color: #6a6a6a;
+    margin: 0 auto;
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+    margin-left: 150px;
+  }
+
+  .horizontalBar.one {
+    margin-left: 150px;
+  }
 }
 .vrExperienceSection {
   position: relative;
