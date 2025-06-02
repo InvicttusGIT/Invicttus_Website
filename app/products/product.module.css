@@ -1,0 +1,747 @@
+.ProductPage {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+.ContentWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section */
+.ProductHero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 960px;
+  min-width: 1920px;
+  z-index: 1;
+}
+
+.ProductHerobg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  width: 1920px;
+  height: 960px;
+  filter: grayscale(100%);
+  background: linear-gradient(180deg, rgba(69, 69, 69, 0) 0%, #000 81.5%),
+    url("/productpagetopbg.png") no-repeat center top;
+  background-size: cover;
+  background-blend-mode: normal, luminosity;
+}
+
+.ProductHeroContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 304px;
+}
+
+.ProductHeroHeading {
+  font-size: 65px;
+  font-weight: 600;
+  text-transform: capitalize;
+  max-width: 907px;
+  line-height: normal;
+}
+
+.Highlight {
+  color: #0090ff;
+}
+
+.ProductHeroSubheading {
+  color: #d1d5db; /* text-gray-300 */
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: capitalize;
+  max-width: 688px;
+}
+
+.OurProductButton {
+  padding: 28px 80px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 157px;
+  transition: color 0.2s, border-color 0.2s;
+  background: none;
+  cursor: pointer;
+}
+.OurProductButton:hover {
+  color: #0090ff;
+  border-color: #0090ff;
+}
+
+/* Products Section */
+.ProductsSection {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding: 48px 48px;
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (min-width: 768px) {
+  .ProductsSection {
+    flex-direction: row;
+  }
+}
+.ProductsSectionbg {
+  background-image: url("/ProductBg2.png");
+  fill: linear-gradient(
+    0deg,
+    #0ff 30.27%,
+    #00b0e1 48.83%,
+    #0065c6 67.38%,
+    #002eb2 82.23%,
+    #000ca5 94.1%,
+    #0000a1 100.04%
+  );
+  width: 1459px;
+  height: 1471px;
+
+  rotate: 208deg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  position: absolute;
+  margin-left: -800px;
+  margin-bottom: 200px;
+  margin-top: -300px;
+  z-index: 0; /* Make sure it's behind content */
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.ProductsSectiotLeft {
+  flex: 1;
+}
+
+.LeftHeading {
+  width: 632px;
+  font-family: Manrope;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  background: linear-gradient(180deg, #fff 37.5%, #474646 93.56%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.LeftSubHeading {
+  width: 646px;
+  color: #c3c3c3;
+  text-align: justify;
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 152%; /* 48.64px */
+  text-transform: capitalize;
+}
+
+.PrductsSectionFilter {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem; /* Space between buttons */
+  margin: 8.688rem 0 2.5rem 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.FilterButton,
+.PlatformButtonWithIcon {
+  color: #9f9f9f;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 33.556px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39.746px; /* 118.447% */
+  letter-spacing: 0.199px;
+
+  display: flex;
+  width: 243.28px;
+  height: 75.151px;
+  padding: 12.202px 80.916px 15.949px 82.364px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 84.518px;
+  border: 1.525px solid #9f9f9f;
+  gap: 2.3rem;
+  background: #000;
+  margin: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.FilterButton:hover,
+.productsSelect:hover {
+  background: #0090ff;
+  color: #fff;
+}
+
+.ProductsFilter {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Right Section */
+.productSectionRight {
+  flex: 1;
+  display: flex;
+
+  position: absolute;
+
+  border-radius: 0.75rem;
+
+  width: 935px;
+  height: 563px;
+  background: #18181b;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  margin-left: 700px;
+  background-image: url("/flagship.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 4px solid #fff;
+  border-radius: 24px;
+}
+
+.FlagshipAppconatiner {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Flagship {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+}
+
+.ProductSectionImage {
+  width: 357.244px;
+  height: 293.329px;
+  flex-shrink: 0;
+  border-radius: 24.638px;
+  position: relative;
+  max-width: 357.244px;
+  max-height: 293.329px;
+  margin-top: 11.8rem;
+  margin-left: 5.3rem;
+}
+.ProductSectionLeft h4 {
+  color: #0d0d0d;
+  font-family: Manrope;
+  font-size: 45.654px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-left: 5.313rem;
+  margin-top: 4.25rem;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+}
+.ProductSectionFlagship {
+  width: 272px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 0px 34.5px;
+  background: #b32700;
+}
+.ProductSectionFlagship h2 {
+  color: #fff;
+
+  font-family: Inter;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+  width: 272px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 0px 24px 0px 34.5px;
+  background: #b32700;
+  margin-left: 210px;
+  text-align: center;
+}
+/* Apps Grid */
+.productsgridSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.125rem;
+  flex: 1;
+  margin-top: 11rem;
+
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+.ProductSectionStats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3.125rem;
+  margin-left: 3.125rem;
+}
+.ProductSectionStatBox {
+  width: 205px;
+  height: 81px;
+  flex-shrink: 0;
+  border-radius: 8.847px;
+  border: 1.712px solid #101010;
+
+  background: #49bfff;
+  color: #101010;
+}
+.ProductSectionStatBox p {
+  font-family: Manrope;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1rem;
+}
+.ProductSectionSeeMoreButton {
+  width: 219px;
+  height: 68px;
+  flex-shrink: 0;
+
+  border-radius: 9.437px;
+  border: 1.786px solid #343434;
+  margin-top: 3.438rem;
+  margin-left: 13.375rem;
+}
+.ProductSectionSeeMoreButton a {
+  width: 160px;
+  height: 36.881px;
+  flex-shrink: 0;
+  color: #111;
+  font-family: Manrope;
+  font-size: 26.796px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135.938%;
+  margin-right: 2.5rem;
+}
+@media (min-width: 640px) {
+  .productsgridSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.AppsgridContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.9) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url("/appgridbg.jpg") lightgray 824.903px 861.135px / -101.201% -176.59% no-repeat;
+
+  background-blend-mode: normal, luminosity;
+
+  border-radius: 0.75rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #4b5563;
+  width: 819px;
+  height: 429px;
+  min-height: 320px;
+  margin: 0 auto 2rem auto;
+  gap: 2.5rem;
+  position: relative;
+}
+.AppsgridContainer {
+  position: relative;
+  /* layout styles */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 0.75rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #4b5563;
+  width: 819px;
+  height: 429px;
+  min-height: 320px;
+  margin: 0 auto 2rem auto;
+  gap: 2.5rem;
+  z-index: 1;
+  overflow: hidden;
+  background-color: lightgray;
+}
+
+.AppsgridContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/Appgrid.png");
+  background-size: cover;
+  /* background: linear-gradient(
+      0deg,
+      rgba(17, 17, 17, 0.9) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    url("/Appgrid.png") center center / cover no-repeat; */
+  z-index: -1;
+  opacity: 10;
+}
+
+.AppsGridLeft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.AppsName {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  white-space: nowrap;
+  margin-top: 3.4rem;
+  margin-left: 3.4rem;
+}
+
+.Appsgridimages {
+  width: 220px;
+  height: 160px;
+  max-width: 220px;
+  max-height: 160px;
+  margin: 0;
+  position: relative;
+  flex-shrink: 0;
+  margin-left: 3.4rem;
+}
+
+.AppsImages {
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.AppsGridRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-left: 2rem;
+}
+
+.AppsStats {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 23px;
+  margin-top: 5rem;
+  margin-left: 4.3rem;
+}
+
+.AppsStatBox {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+  width: 180px;
+  height: 70.942px;
+  flex-shrink: 0;
+  border-radius: 7.751px;
+  border: 0.5px solid #fff;
+}
+.AppsStatBox p {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 1.2rem;
+}
+.SeemoreButton {
+  width: 215px;
+  height: 67px;
+  flex-shrink: 0;
+  border-radius: 9.257px;
+  border: 1px solid var(--Linear, #0090ff);
+  margin-left: 2.5rem;
+}
+.SeemoreButton:hover {
+  background: var(
+    --Linear,
+    linear-gradient(
+      127deg,
+      #000 17.06%,
+      #00152c 38.41%,
+      #002958 59.76%,
+      #002958 60.36%,
+      #001329 84.94%
+    )
+  );
+}
+.SeemoreButton a {
+  color: #bababa;
+
+  font-family: Manrope;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135.938%;
+  margin-right: 2rem;
+}
+
+/* Load More */
+.AppGridLoadmore {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.LoadMoreButton {
+  display: flex;
+  width: 290px;
+  height: 80px;
+  padding: 21.818px 145.455px;
+  justify-content: center;
+  align-items: center;
+  gap: 18.182px;
+  flex-shrink: 0;
+  border-radius: 90.909px;
+  background: #282828;
+  margin-top: 5.563rem;
+}
+.LoadMoreButton a {
+  width: 140px;
+  color: #fff;
+
+  text-align: center;
+  font-family: Manrope;
+  font-size: 29.091px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  white-space: nowrap;
+}
+.LoadMoreButton:hover {
+  background: var(
+    --Linear,
+    linear-gradient(
+      127deg,
+      #000 17.06%,
+      #00152c 38.41%,
+      #002958 59.76%,
+      #002958 60.36%,
+      #001329 84.94%
+    )
+  );
+}
+
+/* Bottom Slogan */
+.ProductsBottomSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 6rem; /* Reduced padding */
+  padding-bottom: 4rem;
+  background: none; /* Remove background from here */
+  position: relative;
+  z-index: 2;
+  background: none;
+}
+.ProductsBottomBg {
+  position: absolute;
+  top: 600px; /* Yeh important hai taake full height cover ho */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/ProductBottomBg.png");
+  background-size: 100%; /* ya contain ya auto try karo */
+  background-repeat: no-repeat;
+  background-position: bottom; /* Try 'top', 'center top', '50% 0%' */
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+.ProductBottomheading {
+  display: flex;
+  width: 527.995px;
+  height: 491.977px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 128%; /* 163.84px */
+  text-transform: uppercase;
+  background: var(
+    --Linear,
+    linear-gradient(
+      119deg,
+      #fff 3.3%,
+      #a7a7a7 41.66%,
+      #7b7b7b 61.27%,
+      #4f4f4f 97.98%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 16.063rem;
+}
+@media (min-width: 768px) {
+  .ProductBottomheading {
+    font-size: 3rem;
+  }
+}
+
+.Block {
+  display: block;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 128%; /* 163.84px */
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .ProductsSectiotLeft {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 32px; /* Optional: add spacing below for stacked layout */
+  }
+}
+
+.PlatformDropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.PlatformButtonWithIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.PlatformDropdownIcon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 0.5rem;
+  pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.PlatformDropdown:hover .PlatformDropdownIcon {
+  transform: rotate(180deg);
+}
+
+.PlatformOptions {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #000;
+
+  min-width: 180px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  width: 293px;
+  height: 54px;
+}
+
+.PlatformDropdown:hover .PlatformOptions {
+  display: flex;
+}
+
+.PlatformOption {
+  padding: 0.75rem 2.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: Manrope;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1.375rem;
+  border-radius: 0;
+  transition: background 0.2s;
+  border: 0.5px solid #cbcbcb;
+  border-radius: 4px 4px 0px 0px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 81.818% */
+  letter-spacing: 0.66px;
+}
+
+.PlatformOption:hover {
+  background: #0090ff;
+}
+
+.DevicesDropdown {
+  position: relative;
+  display: inline-block;
+}
+.DevicesDropdown:hover .PlatformOptions {
+  display: flex;
+}

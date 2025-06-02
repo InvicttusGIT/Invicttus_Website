@@ -1,0 +1,2427 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: black;
+  overflow: hidden;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 200px 200px 0 0;
+  border-top: 1px solid #bbb;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) -9.2%, #000 100%),
+    url("/hero-background.png") center right / cover no-repeat;
+}
+
+.heroContentContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroTextContainer {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .heroTextContainer {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+.heroHeading {
+  margin-top: 13.5rem;
+  color: white;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2rem, 6vw, 85px);
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  margin-left: 16rem;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.heroHeadingBlue {
+  color: #0090ff;
+  font-weight: 600;
+  font-size: inherit; /* Keep same size as parent */
+}
+
+.heroDescription {
+  color: #fff;
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.2rem, 2.2vw, 35px); /* responsive scaling */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: capitalize;
+  max-width: 1404px; /* or use 100% inside container */
+  width: 100%;
+  margin: 0;
+  padding: 1rem 7rem; /* small side padding for mobile */
+  text-align: left;
+}
+
+.statCardsContainer {
+  display: flex;
+
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-left: clamp(10rem, 30vw, 40rem);
+}
+@media screen and (max-width: 1440px) {
+  .statCardsContainer {
+    margin-left: 10rem;
+    flex-wrap: nowrap;
+  }
+  .statCard {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 19.625rem;
+  max-height: 16.75rem;
+  width: 19.625rem;
+  height: 16.75rem;
+
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 22px;
+  border: 1px solid #fff;
+  background-color: black;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Ensure consistency on tablets */
+@media (max-width: 1024px) {
+  .statCardsContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-left: 0; /* Reset margin for better alignment */
+  }
+  .statCard {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+/* Ensure consistency on mobile */
+@media (max-width: 640px) {
+  .statCardsContainer {
+    flex-wrap: wrap;
+  }
+  .statCard {
+    width: 100%;
+    max-width: 314px;
+    height: 268px;
+  }
+}
+
+.statCard:hover {
+  background: linear-gradient(
+    127deg,
+    #000000 17.06%,
+    #00152c 38.41%,
+    #002958 59.76%,
+    #002958 60.36%,
+    #001329 84.94%
+  );
+  box-shadow: 0 0 20px rgba(0, 144, 255, 0.5);
+  transform: translateY(-10px);
+}
+
+.statValue {
+  color: white;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2rem, 6vw, 80px);
+  font-weight: 800;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+}
+
+.statSuffix {
+  font-size: clamp(1rem, 2vw, 28px);
+  margin-left: 0.25rem;
+  vertical-align: middle;
+  text-transform: lowercase;
+}
+
+.statLabel {
+  color: white;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1rem, 2vw, 22px);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Transform Section */
+.transformSection {
+  position: relative;
+  width: 100%;
+
+  min-height: 650px; /* ensure it never collapses too small */
+  background-color: #000;
+  overflow: hidden;
+  margin-top: -0.25rem;
+  box-sizing: border-box;
+}
+
+.transformBackground {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  bottom: 0;
+  width: 125vw; /* 2357 / 1920 ≈ 1.23 → 123vw */
+  max-width: none;
+  height: auto; /* 1508 / 1920 ≈ 78.5vh */
+  object-fit: contain;
+  object-position: right;
+  z-index: 0;
+}
+
+.transformContentContainer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.transformFlexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5rem 1rem; /* vertical 5rem, horizontal 1rem */
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .transformFlexContainer {
+    flex-direction: row;
+  }
+}
+
+.transformHeadingWrapper {
+  margin-top: 5rem;
+  margin-left: 8%; /* 157px / 1920px ≈ 8% */
+}
+
+.transformHeading {
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2rem, 4vw, 6rem); /* scales from 32px to 96px */
+  font-weight: 600;
+  line-height: 1.2;
+  text-transform: capitalize;
+  text-align: left;
+}
+
+/* Users Worldwide */
+.usersWorldwide {
+  display: flex;
+  align-items: center;
+  margin-top: 5vh; /* 100px / 1920px ≈ 5vh */
+}
+
+.usersIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+  margin-right: 0.5rem;
+}
+
+.usersText {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Network Visualization */
+.networkVisualization {
+  position: relative;
+  margin-top: 20vh; /* 373px / 1920px ≈ 19.5vh */
+  margin-right: 25%; /* 470px / 1920px ≈ 24.5% */
+}
+
+.networkGlobe {
+  width: clamp(200px, 36vw, 690px); /* scales between 200px and 690px */
+  height: auto;
+  aspect-ratio: 1/1; /* keep square */
+  transform: rotate(-7.872deg);
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  animation: rotate-clockwise 30s linear infinite;
+}
+
+.networkPeopleImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: contain;
+  animation: rotate-counterclockwise 25s linear infinite;
+}
+
+/* Keyframes unchanged */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Smaller screens adjustments */
+@media (max-width: 1024px) {
+  .transformBackground {
+    top: -3rem;
+    width: 150vw;
+    height: 100vh;
+  }
+  .transformHeadingWrapper {
+    margin-left: 4%;
+  }
+  .usersWorldwide {
+    margin-top: 8vh;
+  }
+  .networkVisualization {
+    margin-top: 30vh;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 767px) {
+  .transformFlexContainer {
+    padding: 3rem 1rem;
+  }
+  .transformHeadingWrapper {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+  .transformHeading {
+    font-size: clamp(1.5rem, 6vw, 4rem);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .usersWorldwide,
+  .networkVisualization {
+    margin-top: 5vh;
+    margin-right: 0;
+    justify-content: center;
+  }
+  .networkVisualization {
+    margin-top: 35vh;
+  }
+  .networkGlobe {
+    width: 70vw;
+  }
+}
+
+/* Premium Quality Solutions Section */
+/* Premium Quality Solutions Section */
+.premiumSection {
+  padding-top: 0;
+  position: relative;
+}
+
+.premiumContentWrapper {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.premiumHeadingContainer {
+  margin-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.premiumHeading {
+  font-family: Manrope;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 90%;
+  max-width: 1285px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 6vw;
+  font-weight: 800;
+  line-height: normal;
+  background: linear-gradient(180deg, #fff 37.5%, #474646 93.56%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premiumDescription {
+  color: #c3c3c3;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 2vw;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 90%;
+  max-width: 1535px;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: capitalize;
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+  height: 60vh;
+  max-height: 600px;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.75rem;
+  border-radius: 9999px;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.carouselButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carouselButtonLeft {
+  left: 1rem;
+}
+
+.carouselButtonRight {
+  right: 1rem;
+}
+
+.carouselButtonIcon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.carouselContentWrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselSlide {
+  position: absolute;
+  top: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.carouselSlideFeatured {
+  width: 50vw;
+  max-width: 729px;
+  height: auto;
+  aspect-ratio: 729 / 539;
+  z-index: 20;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carouselSlideRight1,
+.carouselSlideRight2,
+.carouselSlideLeft1,
+.carouselSlideLeft2 {
+  width: 40vw;
+  max-width: 562px;
+  height: auto;
+  aspect-ratio: 562 / 421;
+  opacity: 0.7;
+}
+
+.carouselSlideRight1 {
+  z-index: 15;
+  left: 65%;
+  transform: translate(-30%, -50%);
+  opacity: 0.9;
+}
+
+.carouselSlideRight2 {
+  z-index: 10;
+  left: 80%;
+  transform: translate(-20%, -50%);
+}
+
+.carouselSlideLeft1 {
+  z-index: 15;
+  left: 35%;
+  transform: translate(-70%, -50%);
+  opacity: 0.9;
+}
+
+.carouselSlideLeft2 {
+  z-index: 10;
+  left: 20%;
+  transform: translate(-80%, -50%);
+}
+
+.carouselSlideImageWrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.carouselSlideImage {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 30;
+  gap: 0.75rem;
+}
+
+.paginationDot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+}
+
+.paginationDotActive {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.paginationDotInactive {
+  background-color: #4b5563;
+}
+
+.paginationDotInactive:hover {
+  background-color: #9ca3af;
+}
+
+.ctaButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-left: 1rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  transition-property: color;
+  position: relative;
+  width: 90%;
+  max-width: 520px;
+  height: auto;
+  aspect-ratio: 520 / 140;
+  justify-content: center;
+  margin-top: 40px;
+  border-radius: 80px;
+  border: 2px solid #fff;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(
+    223deg,
+    #000 -1.77%,
+    #002958 32.19%,
+    #002958 49.63%,
+    #001f42 68.91%,
+    #00152c 88.18%,
+    #001329 137.44%
+  );
+  border: 2px solid #0090ff;
+}
+
+.ctaButton:hover .ctaButtonArrow {
+  transform: rotate(-45deg);
+}
+
+.ctaButtonText {
+  width: 33%;
+  height: auto;
+  position: absolute;
+  left: 12%;
+  top: 30%;
+  display: flex;
+  flex-wrap: nowrap;
+  text-align: center;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 2.5vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.ctaButtonArrow {
+  transition: transform 0.3s ease-in-out;
+  width: 3vw;
+  height: 3vw;
+  min-width: 30px;
+  min-height: 30px;
+  margin-left: auto;
+  position: absolute;
+  right: 10%;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1280px) {
+  .heroHeading {
+    margin-left: 8rem;
+    font-size: clamp(2rem, 5vw, 85px);
+  }
+
+  .heroDescription {
+    padding: 1rem 4rem;
+    font-size: clamp(1.2rem, 2vw, 35px);
+  }
+
+  .statCardsContainer {
+    margin-left: 5rem;
+  }
+
+  .transformHeading {
+    font-size: clamp(2.5rem, 4vw, 6rem);
+  }
+
+  .networkVisualization {
+    margin-right: 20%;
+  }
+
+  .premiumHeading {
+    font-size: clamp(2.5rem, 5vw, 6vw);
+  }
+
+  .premiumDescription {
+    font-size: clamp(1.2rem, 2vw, 2vw);
+  }
+
+  .carouselSlideFeatured {
+    width: 45vw;
+  }
+
+  .carouselSlideRight1,
+  .carouselSlideRight2,
+  .carouselSlideLeft1,
+  .carouselSlideLeft2 {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroHeading {
+    margin-left: 4rem;
+    white-space: normal;
+  }
+
+  .heroDescription {
+    padding: 1rem 2rem;
+  }
+
+  .statCardsContainer {
+    margin-left: 2rem;
+  }
+
+  .transformHeading {
+    font-size: clamp(2rem, 3.5vw, 6rem);
+  }
+
+  .networkVisualization {
+    margin-right: 15%;
+  }
+
+  .carouselContainer {
+    height: 50vh;
+  }
+
+  .carouselSlideFeatured {
+    width: 50vw;
+  }
+
+  .carouselSlideRight1,
+  .carouselSlideRight2,
+  .carouselSlideLeft1,
+  .carouselSlideLeft2 {
+    width: 40vw;
+  }
+
+  .topRatedBackground1,
+  .topRatedBackground2 {
+    opacity: 0.4;
+  }
+
+  .platformLogo {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHeading {
+    margin-left: 2rem;
+    margin-top: 8rem;
+  }
+
+  .heroDescription {
+    padding: 1rem;
+  }
+
+  .statCardsContainer {
+    margin-left: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .statCard {
+    width: 280px;
+    height: 200px;
+  }
+
+  .transformHeading {
+    font-size: clamp(1.8rem, 3vw, 4rem);
+  }
+
+  .networkVisualization {
+    margin-right: 5%;
+  }
+
+  .premiumHeading {
+    font-size: clamp(2rem, 4vw, 6vw);
+  }
+
+  .premiumDescription {
+    font-size: clamp(1rem, 2vw, 2vw);
+  }
+
+  .carouselContainer {
+    height: 40vh;
+  }
+
+  .carouselSlideFeatured {
+    width: 60vw;
+  }
+
+  .carouselSlideRight1,
+  .carouselSlideRight2,
+  .carouselSlideLeft1,
+  .carouselSlideLeft2 {
+    width: 45vw;
+  }
+
+  .topRatedFlexContainer {
+    flex-direction: column;
+  }
+
+  .platformLogosWrapper {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .textSideWrapper {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ctaButtonText {
+    font-size: clamp(1.2rem, 3vw, 2.5vw);
+  }
+}
+
+@media (max-width: 640px) {
+  .heroHeading {
+    margin-left: 1rem;
+    margin-top: 6rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .heroDescription {
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+  }
+
+  .statCard {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+  }
+
+  .transformHeading {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+  }
+
+  .networkVisualization {
+    margin-right: 0;
+  }
+
+  .premiumHeading {
+    font-size: clamp(1.8rem, 3.5vw, 5vw);
+  }
+
+  .premiumDescription {
+    font-size: clamp(0.9rem, 1.8vw, 1.8vw);
+  }
+
+  .carouselContainer {
+    height: 35vh;
+  }
+
+  .carouselSlideFeatured {
+    width: 70vw;
+  }
+
+  .carouselSlideRight1,
+  .carouselSlideRight2,
+  .carouselSlideLeft1,
+  .carouselSlideLeft2 {
+    width: 50vw;
+  }
+
+  .platformLogo {
+    transform: scale(0.8);
+  }
+
+  .ctaButton {
+    max-width: 300px;
+  }
+
+  .ctaButtonText {
+    font-size: clamp(1rem, 2.5vw, 2vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroHeading {
+    margin-left: 0.5rem;
+    margin-top: 5rem;
+  }
+
+  .heroDescription {
+    padding: 0.5rem;
+  }
+
+  .statCard {
+    height: 160px;
+  }
+
+  .carouselContainer {
+    height: 30vh;
+  }
+
+  .carouselSlideFeatured {
+    width: 80vw;
+  }
+
+  .carouselSlideRight1,
+  .carouselSlideRight2,
+  .carouselSlideLeft1,
+  .carouselSlideLeft2 {
+    width: 60vw;
+  }
+
+  .platformLogo {
+    transform: scale(0.7);
+  }
+
+  .ctaButton {
+    max-width: 250px;
+  }
+}
+
+/* Top Rated Apps / Platform Experience Section */
+.topRatedSection {
+  position: relative;
+  width: 100%;
+  padding: 5rem 0;
+  background-color: black;
+
+  box-sizing: border-box;
+}
+
+/* Large rotated shape on left */
+.topRatedBackground1 {
+  display: flex;
+  position: absolute;
+  width: clamp(300px, 80vw, 1300px);
+  height: clamp(300px, 80vw, 1300px);
+  aspect-ratio: 1 / 1.02;
+  transform: rotate(-126.46deg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  top: clamp(-420px, -22vw, -300px);
+  left: clamp(-500px, -26.5vw, -300px);
+  z-index: 1;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.topRatedBackground2 {
+  position: absolute;
+  width: clamp(250px, 80vw, 1062px);
+  height: clamp(250px, 80vw, 1062px);
+  aspect-ratio: 1 / 1.02;
+  transform: rotate(-3.54deg);
+  top: clamp(-700px, -45vw, -400px);
+  right: clamp(-300px, -27.9vw, -300px);
+  z-index: 1;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.topRatedimage {
+  object-fit: contain;
+  opacity: 0.8; /* Or any styling */
+}
+/* Content wrapper centered to align text & logos */
+.topRatedContentContainer {
+  position: relative;
+  z-index: 10;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Flex layout: column on mobile, row from tablet up */
+.topRatedFlexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .topRatedFlexContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Logos wrapper */
+.platformLogosWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .platformLogosWrapper {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+/* All logos absolutely positioned within wrapper; sizes now fluid */
+.platformLogo {
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.platformLogoInner {
+  border-radius: 9999px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Individual logo positions & sizes */
+.appleTvLogo {
+  top: -15vw;
+  left: -14vw;
+  width: clamp(2rem, 8vw, 100px);
+  height: auto;
+}
+
+.googlePlayLogo {
+  top: -20vw;
+  left: -5vw;
+  width: clamp(2rem, 8vw, 100px);
+  height: auto;
+}
+
+.appStoreLogo {
+  top: -15vw;
+  left: 3vw;
+  width: clamp(2.5rem, 10vw, 124px);
+  height: auto;
+}
+
+.rokuLogo {
+  top: -10vw;
+  left: -10vw;
+  width: clamp(3rem, 12vw, 212px);
+  height: auto;
+}
+
+.metaLogo {
+  top: -1vw;
+  left: -14vw;
+  width: clamp(1.5rem, 6vw, 66px);
+  height: auto;
+}
+
+.fireTvLogo {
+  top: 2vw;
+  left: -1vw;
+  width: clamp(2.5rem, 10vw, 157px);
+  height: auto;
+}
+
+.lgLogo {
+  top: -5vw;
+  left: 7vw;
+  width: clamp(2rem, 8vw, 86px);
+  height: auto;
+  margin-left: clamp(1rem, 4vw, 40px);
+}
+
+@media (max-width: 1536px) {
+  .platformLogosWrapper {
+    height: clamp(300px, 40vh, 400px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .platformLogosWrapper {
+    height: clamp(280px, 38vh, 380px);
+  }
+
+  .appleTvLogo {
+    width: clamp(1.8rem, 7vw, 90px);
+  }
+
+  .googlePlayLogo {
+    width: clamp(1.8rem, 7vw, 90px);
+  }
+
+  .appStoreLogo {
+    width: clamp(2.2rem, 9vw, 110px);
+  }
+
+  .rokuLogo {
+    width: clamp(2.7rem, 11vw, 190px);
+  }
+
+  .metaLogo {
+    width: clamp(1.3rem, 5.5vw, 60px);
+  }
+
+  .fireTvLogo {
+    width: clamp(2.2rem, 9vw, 140px);
+  }
+
+  .lgLogo {
+    width: clamp(1.8rem, 7vw, 80px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .platformLogosWrapper {
+    height: clamp(260px, 36vh, 360px);
+  }
+}
+
+@media (max-width: 768px) {
+  .platformLogosWrapper {
+    height: clamp(240px, 34vh, 340px);
+  }
+}
+
+@media (max-width: 640px) {
+  .platformLogosWrapper {
+    height: clamp(220px, 32vh, 320px);
+  }
+}
+
+@media (max-width: 480px) {
+  .platformLogosWrapper {
+    height: clamp(200px, 30vh, 300px);
+  }
+}
+
+/* Text side wrapper */
+.textSideWrapper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .textSideWrapper {
+    width: 50%;
+    padding-left: 3rem;
+  }
+}
+
+/* Headings and paragraphs */
+.SeamlessHeading {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  text-align: justify;
+  margin: 0;
+}
+
+.SeamlessSpan {
+  color: #0090ff;
+  font-size: clamp(2rem, 5vw, 60px);
+  font-weight: 700;
+}
+
+.seamlessPara {
+  margin-top: 2rem;
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1rem, 3vw, 36px);
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* Main/sub head and description */
+.mainHeading,
+.subHeading {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #fff;
+  text-align: justify;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.highlightedText {
+  position: absolute;
+  left: clamp(1rem, 12vw, 227px);
+  top: -8px;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2rem, 5vw, 60px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0090ff;
+}
+
+.descriptionText {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1rem, 3vw, 36px);
+  font-weight: 400;
+  line-height: 1.45;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+/* Learn More button */
+.learnMoreButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 5rem;
+  width: 90%;
+  max-width: 520px;
+  aspect-ratio: 520/140;
+  padding: clamp(1rem, 3vw, 34px) clamp(2rem, 5vw, 65px);
+  gap: clamp(2rem, 6vw, 120px);
+  border-radius: 80px;
+  border: 2px solid #fff;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+.learnMoreButton:hover {
+  background: linear-gradient(
+    223deg,
+    #000 -1.77%,
+    #002958 32.19%,
+    #002958 49.63%,
+    #001f42 68.91%,
+    #00152c 88.18%,
+    #001329 137.44%
+  );
+  border: 2px solid #0090ff;
+}
+
+.learnMoreText {
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1rem, 3vw, 40px);
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+
+.learnMoreArrow {
+  width: clamp(1.5rem, 4vw, 50px);
+  height: clamp(1.5rem, 4vw, 50px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Breakpoints for any further tweaks */
+@media (max-width: 768px) {
+  .platformLogosWrapper {
+    margin-bottom: 1rem;
+  }
+  .textSideWrapper {
+    padding-left: 1rem;
+  }
+  .highlightedText {
+    left: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlightedText {
+    display: none;
+  }
+}
+
+/* Three Containers Section */
+.threeContainersSection {
+  background-color: black;
+  margin-top: 25rem; /* 430px ≈ 25rem */
+  padding: 5rem 0; /* py-20 */
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Decorative rotated backdrop */
+.threeContainerBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(30rem, 60vw, 48rem); /* 770px max */
+  aspect-ratio: 770 / 743;
+  transform: rotate(11deg);
+  border-radius: 48rem; /* 770px */
+  background: black;
+  opacity: 1;
+  z-index: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Inner content wrapper */
+.threeContainersInner {
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* Flex layout for the cards */
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem; /* gap-8 */
+}
+
+/* Top row grouping */
+.topRowContainers {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* gap-8 */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Each of the three "cards" */
+.singleContainer,
+.bottomContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  width: clamp(20rem, 30vw, 40rem); /* 644px max */
+  aspect-ratio: 644 / 316; /* maintain height 316px */
+
+  padding: clamp(2rem, 4vw, 5rem) clamp(3rem, 6vw, 10rem);
+  border-radius: 1rem; /* 10px */
+  border: 1px solid #fff;
+  background: #000;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Hover state */
+.singleContainer:hover,
+.bottomContainer:hover {
+  background: linear-gradient(
+    139deg,
+    #000 0%,
+    rgba(0, 0, 0, 0.72) 1.25%,
+    #00152c 16.71%,
+    #002958 35.88%,
+    #002958 36.21%,
+    #001f42 54.34%,
+    #00152c 71.04%,
+    #000 93.64%,
+    #000 100%
+  );
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 144, 255, 0.5); /* 10px/30px */
+  transform: translateY(-1.25rem); /* 20px */
+}
+
+/* Simple title inside card */
+.containerTitle {
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 3rem); /* 50px max */
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Highlighted title span */
+.containerTitleHighlight {
+  display: block;
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.5rem, 3vw, 4rem); /* 64px max */
+  font-weight: 700;
+  margin-top: 0.2em;
+}
+
+/* Value-block groupings (if used) */
+.valueBlock,
+.valueBlockLeft,
+.valueBlockRight {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
+}
+
+.valueBlockLeft {
+  flex-direction: row-reverse;
+  text-align: left;
+}
+.valueBlockRight {
+  flex-direction: row;
+  text-align: right;
+}
+
+/* Inner value text wrapper */
+.valueTextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Value labels */
+.highlightedText1,
+.highlightedText2,
+.highlightedText3,
+.valueDescription span {
+  color: #0190ff;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 2rem); /* 32px max */
+  font-weight: 500;
+  line-height: 1.63;
+  text-transform: capitalize;
+}
+
+/* Value number */
+.valueNumber {
+  font-size: clamp(2rem, 5vw, 7.5rem); /* 120px max */
+  font-weight: bold;
+  color: #2f2f2f;
+  line-height: 1;
+}
+
+/* Value title */
+.valueTitle {
+  font-size: clamp(2rem, 5vw, 6.25rem); /* 100px max */
+  font-weight: 700;
+  color: #fff;
+  margin-left: clamp(1rem, 4vw, 6rem); /* 100px max */
+  line-height: 1.2;
+}
+
+/* Value description */
+.valueDescription {
+  max-width: 90%;
+  font-size: clamp(1rem, 2.5vw, 1.75rem); /* 28px max */
+  color: #e7e7e7;
+  font-family: Manrope, sans-serif;
+  line-height: 1.63;
+  margin: 0 clamp(1rem, 4vw, 2rem);
+  align-self: center;
+}
+.barline {
+  width: 100%;
+  height: 1px;
+  background-color: #474646;
+  margin: 1rem auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .valueBlock,
+  .valueBlockLeft,
+  .valueBlockRight,
+  .valueTextWrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 1.5rem;
+  }
+
+  .valueDescription {
+    margin: 1rem auto;
+    max-width: 95vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .topRowContainers,
+  .flexContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .threeContainerBackground {
+    top: -5rem;
+    left: -5rem;
+    width: clamp(20rem, 80vw, 48rem);
+  }
+}
+/* InvicttusLife.module.css */
+
+/* InvicttusLife.module.css */
+
+/* InvicttusLife.module.css */
+
+/* --- General Section Spacing & Layout --- */
+.lifeAtSection {
+  margin-top: 311px;
+  position: relative;
+  overflow: hidden;
+}
+
+.backgroundOverlay {
+  width: 2121.181px;
+  height: 1595.864px;
+  flex-shrink: 0;
+  aspect-ratio: 2121.18 / 1595.86;
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  transition: all 0.7s; /* Keep transition for image change */
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contentContainer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Heading --- */
+.mainHeadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainHeading {
+  color: #fff;
+  text-align: center;
+  font-family: "Manrope", sans-serif; /* Ensure Manrope is imported/available */
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  width: 850px;
+  height: 132px;
+  position: relative;
+  z-index: 20;
+}
+.mainHeadingRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem; /* Adjust spacing as needed */
+  width: 100%;
+}
+
+.mainHeadingText {
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.mainHeadingLogo {
+  display: inline-block;
+  width: 178px !important;
+  height: 250px !important; /* Adjust height as needed for alignment */
+  object-fit: contain;
+}
+@media (max-width: 900px) {
+  .mainHeadingText {
+    font-size: 8vw;
+  }
+  .mainHeadingLogo {
+    width: 16vw !important;
+    height: 8vw !important;
+  }
+}
+.logoSpan {
+  width: 400px;
+  height: 128px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* --- Image Carousel --- */
+.carouselWrapper {
+  position: relative;
+  margin-top: 334px;
+  margin-bottom: 468px;
+  margin-left: -100px;
+}
+
+.mainImageDisplay {
+  width: 1508px;
+  height: 793px;
+  position: relative;
+  z-index: 20;
+}
+
+.thumbnailContainer {
+  margin-top: 114px;
+  gap: 10px;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  /* Tailwind: mt-4 space-x-2 is now handled by gap */
+}
+
+.thumbnailButton {
+  width: 187px;
+  height: 101px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem; /* rounded-lg */
+  border: 1px solid; /* For border-gray-700 / border-primary */
+  transform: scale(1); /* Initial state for transition */
+  transition: all 0.3s; /* transition-all duration-300 */
+}
+
+.thumbnailButton:hover {
+  transform: scale(1.1); /* hover:scale-110 */
+  z-index: 30; /* hover:z-30 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
+}
+
+.thumbnailButton.active {
+  border-color: var(
+    --color-primary,
+    #0190ff
+  ); /* Use CSS variable for primary color if defined */
+  transform: scale(1.05); /* scale-105 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  /* If you have a Tailwind primary color setup, you'd use a custom property for shadow-primary/30 */
+  box-shadow: 0 10px 15px -3px rgba(1, 144, 255, 0.3),
+    0 4px 6px -2px rgba(1, 144, 255, 0.1); /* Approximate shadow-primary/30 */
+}
+
+/* --- Company Values Section --- */
+.valuesSection {
+  position: relative;
+  z-index: 20;
+  margin-top: 156px;
+}
+
+.valuesContainer {
+  max-width: 96rem; /* max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.valueBlock {
+  margin-bottom: 4rem; /* mb-16 */
+  padding-bottom: 3rem; /* pb-12 */
+  /* Tailwind: mt-241 is an unusual class name; converting to margin-top */
+}
+
+.valueBlock.creative {
+  /* Specific for the second value block */
+  margin-top: 241px;
+}
+
+.valueTitleWrapper {
+  position: relative;
+  margin-bottom: 2rem; /* mb-8 */
+  text-align: center;
+}
+
+.valueNumber {
+  position: absolute;
+
+  transform: translate(-50%, -50%); /* Center the number */
+  font-size: 250px;
+  font-weight: 700; /* font-bold */
+  color: #2f2f2f;
+  opacity: 1; /* opacity-100 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  /* Specific offsets based on your inline styles, adjust as needed */
+  /* For value 1: */
+  margin-left: 1240px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
+  margin-bottom: 70px;
+}
+
+.valueNumber.one {
+  left: 90%;
+}
+
+.valueNumber.two {
+  left: 10%;
+}
+
+.valueNumber.three {
+  left: 5%;
+}
+
+.valueTitle {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 163%;
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  text-align: justify; /* textAlign: "justify" */
+  position: relative;
+  z-index: 10;
+  /* Specific offsets based on your inline styles, adjust as needed */
+  /* For value 1: */
+  margin-left: 700px;
+}
+
+.valueTitle.one {
+  margin-left: 700px;
+}
+
+.valueTitle.two {
+  margin-left: 40rem;
+}
+
+.valueTitle.three {
+  margin-left: 700px;
+  margin-top: 141px; /* mt-141px */
+}
+.barline3 {
+  width: 20rem;
+  height: 1px;
+  background-color: #474646;
+  margin: 2rem auto;
+}
+.valueDescription {
+  width: 1119px;
+  color: #e7e7e7;
+  text-align: justify;
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 163%;
+  text-transform: capitalize;
+
+  /* Specific offsets based on your inline styles, adjust as needed */
+  /* For value 1: */
+}
+
+.valueDescription.one {
+  margin-left: 600px;
+}
+
+.valueDescription.two {
+  margin-left: -160px;
+}
+
+.valueDescription3 {
+  width: 1119px;
+  color: #e7e7e7;
+  text-align: justify;
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 163%;
+  text-transform: capitalize;
+  margin-left: 25rem;
+}
+
+.highlightedText {
+  color: #0190ff;
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 163%;
+  text-transform: capitalize;
+}
+
+.horizontalBar {
+  width: 1200px;
+  height: 1px;
+  background-color: #6a6a6a;
+  margin: 0 auto;
+  /* Specific offsets based on your inline styles, adjust as needed */
+  /* For value 1: */
+  margin-left: 150px;
+}
+
+.horizontalBar.one {
+  margin-left: 150px;
+}
+
+.horizontalBar.two {
+  margin-left: -150px;
+}
+.vrExperienceSection {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #000 8.1%,
+    rgba(0, 0, 0, 0) 71.04%,
+    #000 98.32%
+  );
+}
+
+.vrExperienceWrapper {
+  max-height: 1228px;
+  max-width: 2191px;
+  left: -7vw;
+  position: relative;
+
+  aspect-ratio: 2191 / 1228;
+  width: 100vw;
+  height: 100vh;
+}
+
+.vrBackgroundImage {
+  filter: brightness(0.8) contrast(1.2);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.gradientOverlayHorizontal {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 15.93%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  mix-blend-mode: multiply;
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+}
+
+.gradientOverlayBottom {
+  width: 1919px;
+  height: 433px;
+  margin-bottom: 0;
+  background: linear-gradient(182deg, rgba(0, 0, 0, 0) 15.93%, #050505 91.08%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.vrContentContainer {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  position: relative;
+  z-index: 20;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.vrGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); /* grid-cols-1 */
+  gap: 2rem; /* gap-8 */
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .vrGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+  }
+}
+
+.appMockupContainer {
+  width: 980px;
+  height: 673px;
+  margin-left: 50rem;
+  margin-top: 20rem;
+  position: relative;
+}
+
+/* For value 1 and 3: right-aligned */
+.valueBlock .one {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* For value 2: left-aligned */
+.valueBlock .two {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Responsive: stack vertically and center on mobile */
+@media (max-width: 900px) {
+  .valueBlock .one,
+  .valueBlock .two,
+  .valueBlock .three {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+/* --- Animations --- */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(-7.872deg);
+  }
+  to {
+    transform: rotate(352.128deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+/* For value 1 and 3: right-aligned */
+.valueBlock .one {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* For value 2: left-aligned */
+.valueBlock .two {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Responsive: stack vertically and center on mobile */
+@media (max-width: 900px) {
+  .valueBlock .one,
+  .valueBlock .two,
+  .valueBlock .three {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .vrExperienceWrapper {
+    margin-left: 0 !important;
+    width: 100vw !important;
+    height: auto !important;
+  }
+
+  .appMockupContainer {
+    margin-left: auto !important;
+    margin-top: 2rem !important;
+    width: 90vw !important;
+    height: auto !important;
+  }
+
+  .vrContentContainer {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* --- Animations --- */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(-7.872deg);
+  }
+  to {
+    transform: rotate(352.128deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Additional Responsive Breakpoints */
+@media (max-width: 1536px) {
+  .heroContentContainer {
+    max-width: 1200px;
+  }
+
+  .transformContentContainer {
+    max-width: 1200px;
+  }
+
+  .premiumContentWrapper {
+    max-width: 1200px;
+  }
+
+  .topRatedContentContainer {
+    max-width: 1200px;
+  }
+
+  .vrExperienceWrapper {
+    max-width: 1800px;
+    left: -5vw;
+  }
+
+  .appMockupContainer {
+    width: 800px;
+    height: 550px;
+    margin-left: 40rem;
+  }
+
+  .topRatedBackground1 {
+    width: clamp(280px, 85vw, 1200px);
+    height: clamp(280px, 85vw, 1200px);
+    top: clamp(-380px, -20vw, -280px);
+    left: clamp(-460px, -24vw, -280px);
+  }
+
+  .topRatedBackground2 {
+    width: clamp(230px, 75vw, 1000px);
+    height: clamp(230px, 75vw, 1000px);
+    top: clamp(-660px, -42vw, -380px);
+    right: clamp(-260px, -25vw, -280px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .vrExperienceWrapper {
+    max-width: 1400px;
+    left: -4vw;
+  }
+
+  .appMockupContainer {
+    width: 700px;
+    height: 480px;
+    margin-left: 35rem;
+  }
+
+  .vrContentContainer {
+    padding: 2rem;
+  }
+
+  .topRatedBackground1 {
+    width: clamp(260px, 80vw, 1100px);
+    height: clamp(260px, 80vw, 1100px);
+    top: clamp(-340px, -18vw, -260px);
+    left: clamp(-420px, -22vw, -260px);
+  }
+
+  .topRatedBackground2 {
+    width: clamp(210px, 70vw, 900px);
+    height: clamp(210px, 70vw, 900px);
+    top: clamp(-620px, -40vw, -360px);
+    right: clamp(-240px, -23vw, -260px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .vrExperienceWrapper {
+    max-width: 1200px;
+    left: -3vw;
+  }
+
+  .appMockupContainer {
+    width: 600px;
+    height: 412px;
+    margin-left: 30rem;
+  }
+
+  .vrGrid {
+    gap: 1.5rem;
+  }
+
+  .topRatedBackground1 {
+    width: clamp(240px, 75vw, 1000px);
+    height: clamp(240px, 75vw, 1000px);
+    top: clamp(-300px, -16vw, -240px);
+    left: clamp(-380px, -20vw, -240px);
+  }
+
+  .topRatedBackground2 {
+    width: clamp(190px, 65vw, 800px);
+    height: clamp(190px, 65vw, 800px);
+    top: clamp(-580px, -38vw, -340px);
+    right: clamp(-220px, -21vw, -240px);
+  }
+}
+
+@media (max-width: 768px) {
+  .vrExperienceWrapper {
+    max-width: 100%;
+    left: 0;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  .appMockupContainer {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+
+  .vrContentContainer {
+    padding: 1rem;
+  }
+
+  .vrGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gradientOverlayHorizontal {
+    opacity: 0.8;
+  }
+
+  .gradientOverlayBottom {
+    height: 200px;
+  }
+
+  .topRatedBackground1 {
+    width: clamp(220px, 70vw, 900px);
+    height: clamp(220px, 70vw, 900px);
+    top: clamp(-260px, -14vw, -220px);
+    left: clamp(-340px, -18vw, -220px);
+  }
+
+  .topRatedBackground2 {
+    width: clamp(170px, 60vw, 700px);
+    height: clamp(170px, 60vw, 700px);
+    top: clamp(-540px, -36vw, -320px);
+    right: clamp(-200px, -19vw, -220px);
+  }
+}
+
+@media (max-width: 640px) {
+  .vrExperienceWrapper {
+    aspect-ratio: 4/3;
+  }
+
+  .appMockupContainer {
+    max-width: 400px;
+  }
+
+  .vrContentContainer {
+    padding: 0.5rem;
+  }
+
+  .gradientOverlayBottom {
+    height: 150px;
+  }
+
+  .topRatedBackground1 {
+    width: clamp(200px, 65vw, 800px);
+    height: clamp(200px, 65vw, 800px);
+    top: clamp(-220px, -12vw, -200px);
+    left: clamp(-300px, -16vw, -200px);
+  }
+
+  .topRatedBackground2 {
+    width: clamp(150px, 55vw, 600px);
+    height: clamp(150px, 55vw, 600px);
+    top: clamp(-500px, -34vw, -300px);
+    right: clamp(-180px, -17vw, -200px);
+  }
+}
+
+@media (max-width: 480px) {
+  .vrExperienceWrapper {
+    aspect-ratio: 3/2;
+  }
+
+  .appMockupContainer {
+    max-width: 300px;
+  }
+
+  .gradientOverlayBottom {
+    height: 100px;
+  }
+
+  .topRatedBackground1 {
+    width: clamp(180px, 60vw, 700px);
+    height: clamp(180px, 60vw, 700px);
+    top: clamp(-180px, -10vw, -180px);
+    left: clamp(-260px, -14vw, -180px);
+  }
+
+  .topRatedBackground2 {
+    width: clamp(130px, 50vw, 500px);
+    height: clamp(130px, 50vw, 500px);
+    top: clamp(-460px, -32vw, -280px);
+    right: clamp(-160px, -15vw, -180px);
+  }
+}
+
+/* Top Rated Apps Section Responsive Styles */
+@media (max-width: 1536px) {
+  .topRatedSection {
+    padding: 4rem 0;
+  }
+
+  .topRatedContentContainer {
+    max-width: 1200px;
+  }
+
+  .platformLogo {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 1280px) {
+  .topRatedSection {
+    padding: 3.5rem 0;
+  }
+
+  .platformLogo {
+    transform: scale(0.9);
+  }
+
+  .appleTvLogo {
+    top: -12vw;
+    left: -12vw;
+  }
+
+  .googlePlayLogo {
+    top: -16vw;
+    left: -4vw;
+  }
+
+  .appStoreLogo {
+    top: -12vw;
+    left: 2vw;
+  }
+
+  .rokuLogo {
+    top: -8vw;
+    left: -8vw;
+  }
+
+  .metaLogo {
+    top: -1vw;
+    left: -12vw;
+  }
+
+  .fireTvLogo {
+    top: 2vw;
+    left: -1vw;
+  }
+
+  .lgLogo {
+    top: -4vw;
+    left: 6vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .topRatedSection {
+    padding: 3rem 0;
+  }
+
+  .platformLogo {
+    transform: scale(0.85);
+  }
+
+  .SeamlessHeading {
+    font-size: clamp(1.3rem, 3.5vw, 48px);
+  }
+
+  .SeamlessSpan {
+    font-size: clamp(1.8rem, 4.5vw, 60px);
+  }
+
+  .seamlessPara {
+    font-size: clamp(0.9rem, 2.5vw, 36px);
+  }
+}
+
+@media (max-width: 768px) {
+  .topRatedSection {
+    padding: 2.5rem 0;
+  }
+
+  .topRatedFlexContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .platformLogosWrapper {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .platformLogo {
+    transform: scale(0.8);
+  }
+
+  .textSideWrapper {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .SeamlessHeading {
+    font-size: clamp(1.2rem, 3vw, 48px);
+    text-align: center;
+  }
+
+  .SeamlessSpan {
+    font-size: clamp(1.6rem, 4vw, 60px);
+  }
+
+  .seamlessPara {
+    font-size: clamp(0.8rem, 2vw, 36px);
+    text-align: center;
+  }
+
+  .learnMoreButton {
+    margin: 3rem auto 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .topRatedSection {
+    padding: 2rem 0;
+  }
+
+  .platformLogosWrapper {
+    height: 250px;
+  }
+
+  .platformLogo {
+    transform: scale(0.7);
+  }
+
+  .appleTvLogo {
+    top: -8vw;
+    left: -8vw;
+  }
+
+  .googlePlayLogo {
+    top: -12vw;
+    left: -2vw;
+  }
+
+  .appStoreLogo {
+    top: -8vw;
+    left: 1vw;
+  }
+
+  .rokuLogo {
+    top: -6vw;
+    left: -6vw;
+  }
+
+  .metaLogo {
+    top: -1vw;
+    left: -8vw;
+  }
+
+  .fireTvLogo {
+    top: 1vw;
+    left: -1vw;
+  }
+
+  .lgLogo {
+    top: -3vw;
+    left: 4vw;
+  }
+
+  .SeamlessHeading {
+    font-size: clamp(1.1rem, 2.5vw, 48px);
+  }
+
+  .SeamlessSpan {
+    font-size: clamp(1.4rem, 3.5vw, 60px);
+  }
+
+  .seamlessPara {
+    font-size: clamp(0.7rem, 1.8vw, 36px);
+  }
+
+  .learnMoreButton {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topRatedSection {
+    padding: 1.5rem 0;
+  }
+
+  .platformLogosWrapper {
+    height: 200px;
+  }
+
+  .platformLogo {
+    transform: scale(0.6);
+  }
+
+  .SeamlessHeading {
+    font-size: clamp(1rem, 2vw, 48px);
+  }
+
+  .SeamlessSpan {
+    font-size: clamp(1.2rem, 3vw, 60px);
+  }
+
+  .seamlessPara {
+    font-size: clamp(0.6rem, 1.5vw, 36px);
+  }
+
+  .learnMoreButton {
+    max-width: 250px;
+  }
+}
