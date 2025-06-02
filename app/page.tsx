@@ -68,8 +68,9 @@ export default function Home() {
 
             <p className={styles.heroDescription}>
               At Invicttus, We Push The Boundaries Of Innovation, Delivering
-              Cutting-Edge Products That Redefine How Tech Consumers Engage With
-              The Digital World.
+              Cutting-Edge Products
+              <br /> That Redefine How Tech Consumers Engage With The Digital
+              World.
             </p>
 
             {/* Stat Cards */}
