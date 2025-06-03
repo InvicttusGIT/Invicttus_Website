@@ -23,13 +23,13 @@ export default function Footer() {
       <div className={styles.topFooter}>
         {/* Background Image */}
         <div className={`${styles.topFooterBg} ${styles.footerWrapper}`}>
-          <Image
+          {/* <Image
             src="/footer-background.png"
             alt="Footer Background"
             width={1920}
             height={859}
             className={styles.footerImage}
-          />
+          /> */}
         </div>
 
         <div className={styles.container}>

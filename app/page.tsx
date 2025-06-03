@@ -52,7 +52,7 @@ export default function Home() {
   }, [appSlides.length]); // dependency to ensure it updates if slides change
 
   return (
-    <div className="pt-0">
+    <div className={styles.hero}>
       {/* <div className={styles.topRatedBackground1}></div> */}
       {/* Hero Section */}
       <section className={styles.heroSection}>
