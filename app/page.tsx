@@ -164,170 +164,173 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className={styles.topRatedBackgroundWrapper}>
+        {/* Premium Quality Solutions */}
+        <section className={styles.premiumSection}>
+          <div className={styles.premiumContentWrapper}>
+            <div className={styles.premiumHeadingContainer}>
+              <h2 className={styles.premiumHeading}>
+                Premium-Quality Solutions
+              </h2>
+              <p className={styles.premiumDescription}>
+                We Create Seamless, High-Performance Solutions – From Immersive
+                Apps And Interactive TV To Premium Content, High-Octane Games,
+                And Next-Gen VR/MR Experiences.
+              </p>
 
-      {/* Premium Quality Solutions */}
-      <section className={styles.premiumSection}>
-        <div className={styles.premiumContentWrapper}>
-          <div className={styles.premiumHeadingContainer}>
-            <h2 className={styles.premiumHeading}>Premium-Quality Solutions</h2>
-            <p className={styles.premiumDescription}>
-              We Create Seamless, High-Performance Solutions – From Immersive
-              Apps And Interactive TV To Premium Content, High-Octane Games, And
-              Next-Gen VR/MR Experiences.
-            </p>
+              {/* Interactive Product Carousel with Overlapping Effect */}
+              <div className={styles.carouselContainer}>
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className={styles.carouselButtonIcon} />
+                </button>
 
-            {/* Interactive Product Carousel with Overlapping Effect */}
-            <div className={styles.carouselContainer}>
-              {/* Navigation Arrows */}
-              <button
-                onClick={prevSlide}
-                className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className={styles.carouselButtonIcon} />
-              </button>
+                <button
+                  onClick={nextSlide}
+                  className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className={styles.carouselButtonIcon} />
+                </button>
 
-              <button
-                onClick={nextSlide}
-                className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
-                aria-label="Next slide"
-              >
-                <ChevronRight className={styles.carouselButtonIcon} />
-              </button>
+                {/* Carousel Container */}
+                <div className={styles.carouselContentWrapper}>
+                  {appSlides.map((app, index) => {
+                    // Calculate position relative to active slide
+                    const position =
+                      (index - activeSlide + appSlides.length) %
+                      appSlides.length;
 
-              {/* Carousel Container */}
-              <div className={styles.carouselContentWrapper}>
-                {appSlides.map((app, index) => {
-                  // Calculate position relative to active slide
-                  const position =
-                    (index - activeSlide + appSlides.length) % appSlides.length;
+                    // Determine if this app is the featured one (center position)
+                    const isFeatured = position === 0;
 
-                  // Determine if this app is the featured one (center position)
-                  const isFeatured = position === 0;
+                    // Determine class based on position relative to active
+                    let slideClassName = styles.carouselSlide;
+                    if (isFeatured) {
+                      slideClassName += ` ${styles.carouselSlideFeatured}`;
+                    } else if (position === 1 || position === -4) {
+                      slideClassName += ` ${styles.carouselSlideRight1}`;
+                    } else if (position === 2 || position === -3) {
+                      slideClassName += ` ${styles.carouselSlideRight2}`;
+                    } else if (position === -1 || position === 4) {
+                      slideClassName += ` ${styles.carouselSlideLeft1}`;
+                    } else if (position === -2 || position === 3) {
+                      slideClassName += ` ${styles.carouselSlideLeft2}`;
+                    }
 
-                  // Determine class based on position relative to active
-                  let slideClassName = styles.carouselSlide;
-                  if (isFeatured) {
-                    slideClassName += ` ${styles.carouselSlideFeatured}`;
-                  } else if (position === 1 || position === -4) {
-                    slideClassName += ` ${styles.carouselSlideRight1}`;
-                  } else if (position === 2 || position === -3) {
-                    slideClassName += ` ${styles.carouselSlideRight2}`;
-                  } else if (position === -1 || position === 4) {
-                    slideClassName += ` ${styles.carouselSlideLeft1}`;
-                  } else if (position === -2 || position === 3) {
-                    slideClassName += ` ${styles.carouselSlideLeft2}`;
-                  }
+                    // Only show 5 items (2 on each side of featured)
+                    const isVisible =
+                      Math.abs(position) <= 2 ||
+                      Math.abs(position) >= appSlides.length - 2;
 
-                  // Only show 5 items (2 on each side of featured)
-                  const isVisible =
-                    Math.abs(position) <= 2 ||
-                    Math.abs(position) >= appSlides.length - 2;
+                    if (!isVisible) return null;
 
-                  if (!isVisible) return null;
-
-                  return (
-                    <div
-                      key={app.id}
-                      className={slideClassName}
-                      onClick={() => {
-                        if (!isFeatured) {
-                          changeSlide(index);
-                        }
-                      }}
-                    >
-                      <div className={styles.carouselSlideImageWrapper}>
-                        <Image
-                          src={app.image || "/placeholder.svg"}
-                          alt={app.name}
-                          fill
-                          className={styles.carouselSlideImage}
-                        />
-                        {/* App name label - this div was empty, so it's kept as-is if it has purpose */}
-                        <div className="absolute bottom-0 left-0 right-0 p-2 text-center"></div>
+                    return (
+                      <div
+                        key={app.id}
+                        className={slideClassName}
+                        onClick={() => {
+                          if (!isFeatured) {
+                            changeSlide(index);
+                          }
+                        }}
+                      >
+                        <div className={styles.carouselSlideImageWrapper}>
+                          <Image
+                            src={app.image || "/placeholder.svg"}
+                            alt={app.name}
+                            fill
+                            className={styles.carouselSlideImage}
+                          />
+                          {/* App name label - this div was empty, so it's kept as-is if it has purpose */}
+                          <div className="absolute bottom-0 left-0 right-0 p-2 text-center"></div>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
+                {/* Pagination Dots */}
+                <div className={styles.paginationDots}>
+                  {appSlides.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => changeSlide(index)}
+                      className={`${styles.paginationDot} ${
+                        activeSlide === index
+                          ? styles.paginationDotActive
+                          : styles.paginationDotInactive
+                      }`}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
-              {/* Pagination Dots */}
-              <div className={styles.paginationDots}>
-                {appSlides.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => changeSlide(index)}
-                    className={`${styles.paginationDot} ${
-                      activeSlide === index
-                        ? styles.paginationDotActive
-                        : styles.paginationDotInactive
-                    }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
 
-            {/* CTA Button */}
-            <div className={styles.ctaButtonContainer}>
-              <Link
-                href="/products"
-                className={styles.ctaButton}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background =
-                    "linear-gradient(223deg, #000 -1.77%, #002958 32.19%, #002958 49.63%, #001F42 68.91%, #00152C 88.18%, #001329 137.44%)";
-                  e.currentTarget.style.border = "2px solid #0090FF";
-                  const arrow = e.currentTarget.querySelector("svg");
-                  if (arrow) {
-                    (arrow as unknown as HTMLElement).style.transform =
-                      "rotate(-45deg)";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "";
-                  e.currentTarget.style.border = "2px solid #FFF";
-                  const arrow = e.currentTarget.querySelector("svg");
-                  if (arrow) {
-                    (arrow as unknown as HTMLElement).style.transform = "";
-                  }
-                }}
-              >
-                <span className={styles.ctaButtonText}>Our Apps</span>
-                <ArrowRight className={styles.ctaButtonArrow} />
-              </Link>
+              {/* CTA Button */}
+              <div className={styles.ctaButtonContainer}>
+                <Link
+                  href="/products"
+                  className={styles.ctaButton}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background =
+                      "linear-gradient(223deg, #000 -1.77%, #002958 32.19%, #002958 49.63%, #001F42 68.91%, #00152C 88.18%, #001329 137.44%)";
+                    e.currentTarget.style.border = "2px solid #0090FF";
+                    const arrow = e.currentTarget.querySelector("svg");
+                    if (arrow) {
+                      (arrow as unknown as HTMLElement).style.transform =
+                        "rotate(-45deg)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "";
+                    e.currentTarget.style.border = "2px solid #FFF";
+                    const arrow = e.currentTarget.querySelector("svg");
+                    if (arrow) {
+                      (arrow as unknown as HTMLElement).style.transform = "";
+                    }
+                  }}
+                >
+                  <span className={styles.ctaButtonText}>Our Apps</span>
+                  <ArrowRight className={styles.ctaButtonArrow} />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Top Rated Apps / Platform Experience Section */}
-      <section className={styles.topRatedSection}>
-        {/* Background Image */}
-        <div className={styles.topRatedBackground1}>
-          <Image
+        {/* Top Rated Apps / Platform Experience Section */}
+        <section className={styles.topRatedSection}>
+          {/* Background Image */}
+          <div className={styles.topRatedBackground1}>
+            {/* <Image
             src="/roundbg.png"
             alt="Top rated apps background"
             fill
             className={styles.topRatedimage} // Changed to use the style class
             priority
-          />
-        </div>
-        <div className={styles.topRatedBackground2}>
-          <Image
+          /> */}
+          </div>
+          <div className={styles.topRatedBackground2}>
+            {/* <Image
             src="/roundbg.png"
             alt="Top rated apps background 2"
             fill
             className={styles.topRatedimage} // Changed to use the style class
             priority
-          />
-        </div>
+          /> */}
+          </div>
 
-        <div className={styles.topRatedContentContainer}>
-          <div className={styles.topRatedFlexContainer}>
-            {/* Platform Logos Side */}
-            <div className={styles.platformLogosWrapper}>
-              <div className="relative h-full w-full">
-                {/* Apple TV */}
-                <div className={`${styles.platformLogo} ${styles.appleTvLogo}`}>
+          <div className={styles.topRatedContentContainer}>
+            <div className={styles.topRatedFlexContainer}>
+              {/* Platform Logos Side */}
+              {/* <div className={styles.platformLogosWrapper}>
+              <div className="relative h-full w-full"> */}
+              {/* Apple TV */}
+              {/* <div className={`${styles.platformLogo} ${styles.appleTvLogo}`}>
                   <div className={styles.platformLogoInner}>
                     <Image
                       src="/apple-tv-logo.png"
@@ -337,10 +340,10 @@ export default function Home() {
                       className="object-contain w-full"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                {/* Google Play */}
-                <div
+              {/* Google Play */}
+              {/* <div
                   className={`${styles.platformLogo} ${styles.googlePlayLogo}`}
                 >
                   <div className={styles.platformLogoInner}>
@@ -352,10 +355,10 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                {/* App Store */}
-                <div
+              {/* App Store */}
+              {/* <div
                   className={`${styles.platformLogo} ${styles.appStoreLogo}`}
                 >
                   <div className={styles.platformLogoInner}>
@@ -367,10 +370,10 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                {/* Roku */}
-                <div className={`${styles.platformLogo} ${styles.rokuLogo}`}>
+              {/* Roku */}
+              {/* <div className={`${styles.platformLogo} ${styles.rokuLogo}`}>
                   <div className={styles.platformLogoInner}>
                     <Image
                       src="/roku-logo.png"
@@ -380,10 +383,10 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                {/* Meta */}
-                <div className={`${styles.platformLogo} ${styles.metaLogo}`}>
+              {/* Meta */}
+              {/* <div className={`${styles.platformLogo} ${styles.metaLogo}`}>
                   <div className={styles.platformLogoInner}>
                     <Image
                       src="/meta-logo.png"
@@ -393,10 +396,10 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                {/* Fire TV */}
-                <div className={`${styles.platformLogo} ${styles.fireTvLogo}`}>
+              {/* Fire TV */}
+              {/* <div className={`${styles.platformLogo} ${styles.fireTvLogo}`}>
                   <div className={styles.platformLogoInner}>
                     <Image
                       src="/fire-tv-logo.png"
@@ -406,10 +409,10 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                </div>
+                </div> */}
 
-                {/* LG */}
-                <div className={`${styles.platformLogo} ${styles.lgLogo}`}>
+              {/* LG */}
+              {/* <div className={`${styles.platformLogo} ${styles.lgLogo}`}>
                   <div className={styles.platformLogoInner}>
                     <Image
                       src="/lg-logo.png"
@@ -421,52 +424,53 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            {/* Text Content Side */}
-            <div className={styles.textSideWrapper}>
-              <h2 className={styles.SeamlessHeading}>
-                Powering
-                <span className={styles.SeamlessSpan}>
-                  Seamless Experiences
-                </span>
-                <br />
-                Across Every Platform
-              </h2>
-              <p className={styles.seamlessPara}>
-                – From Smart TVs and Streaming Platforms to <br /> Tablets,
-                Mobile Phones, VR and Beyond.
-              </p>
+              {/* Text Content Side */}
+              <div className={styles.textSideWrapper}>
+                <h2 className={styles.SeamlessHeading}>
+                  Powering
+                  <span className={styles.SeamlessSpan}>
+                    Seamless Experiences
+                  </span>
+                  <br />
+                  Across Every Platform
+                </h2>
+                <p className={styles.seamlessPara}>
+                  – From Smart TVs and Streaming Platforms to <br /> Tablets,
+                  Mobile Phones, VR and Beyond.
+                </p>
 
-              <Link
-                href="/about"
-                className={styles.learnMoreButton}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background =
-                    "linear-gradient(223deg, #000 -1.77%, #002958 32.19%, #002958 49.63%, #001F42 68.91%, #00152C 88.18%, #001329 137.44%)";
-                  e.currentTarget.style.border = "2px solid #0090FF";
-                  const arrow = e.currentTarget.querySelector("svg");
-                  if (arrow) {
-                    (arrow as unknown as HTMLElement).style.transform =
-                      "rotate(-45deg)";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "";
-                  e.currentTarget.style.border = "2px solid #FFF";
-                  const arrow = e.currentTarget.querySelector("svg");
-                  if (arrow) {
-                    (arrow as unknown as HTMLElement).style.transform = "";
-                  }
-                }}
-              >
-                <span className={styles.learnMoreText}>Learn More</span>
-                <ArrowRight className={styles.learnMoreArrow} />
-              </Link>
+                <Link
+                  href="/about"
+                  className={styles.learnMoreButton}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background =
+                      "linear-gradient(223deg, #000 -1.77%, #002958 32.19%, #002958 49.63%, #001F42 68.91%, #00152C 88.18%, #001329 137.44%)";
+                    e.currentTarget.style.border = "2px solid #0090FF";
+                    const arrow = e.currentTarget.querySelector("svg");
+                    if (arrow) {
+                      (arrow as unknown as HTMLElement).style.transform =
+                        "rotate(-45deg)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "";
+                    e.currentTarget.style.border = "2px solid #FFF";
+                    const arrow = e.currentTarget.querySelector("svg");
+                    if (arrow) {
+                      (arrow as unknown as HTMLElement).style.transform = "";
+                    }
+                  }}
+                >
+                  <span className={styles.learnMoreText}>Learn More</span>
+                  <ArrowRight className={styles.learnMoreArrow} />
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       {/* Three Containers Section */}
       <section className={styles.threeContainersSection}>
