@@ -39,6 +39,7 @@
   margin: 0 auto;
   padding-bottom: 3rem;
   text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -502,8 +503,8 @@
 .topRatedBackgroundWrapper {
   background-image: url("/topratedbg.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 470px;
+  background-size: 100%;
+  background-position: center 300px;
   height: auto; /* 👈 isko barhao */
 
   top: 0;
@@ -1402,6 +1403,7 @@ F .premiumContentWrapper {
   .SeamlessHeading {
     font-size: clamp(1.5rem, 4vw, 28px);
     text-wrap: nowrap;
+    margin-top: 20rem;
   }
 
   .SeamlessSpan {
@@ -1442,15 +1444,16 @@ F .premiumContentWrapper {
     display: none;
   }
 }
-
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+}
 /* Three Containers Section */
 .threeContainersSection {
   background-color: transparent;
-  margin-top: 25rem; /* 430px ≈ 25rem */
+  margin-top: 5rem; /* 430px ≈ 25rem */
   padding: 5rem 0; /* py-20 */
   position: relative;
   box-sizing: border-box;
-  overflow: visible;
+  overflow: hidden;
 }
 
 /* Decorative rotated backdrop */
@@ -1462,7 +1465,7 @@ F .premiumContentWrapper {
   aspect-ratio: 770 / 743;
   transform: rotate(11deg);
   border-radius: 48rem; /* 770px */
-  background: black;
+  background: transparent;
   opacity: 1;
   z-index: 0;
   object-fit: cover;
