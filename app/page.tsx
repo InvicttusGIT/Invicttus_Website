@@ -131,15 +131,15 @@ export default function Home() {
             {/* Main Heading */}
             <div className={styles.transformHeadingWrapper}>
               <h2 className={styles.transformHeading}>
-                Transform
+                Transform &nbsp;
                 <br />
-                Ideas
+                Ideas &nbsp;
                 <br />
-                Into
+                Into &nbsp;
                 <br />
-                Reality
+                Reality &nbsp;
                 <br />
-                Together
+                Together &nbsp;
               </h2>
 
               {/* Users Worldwide Text */}
