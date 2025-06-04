@@ -3,6 +3,7 @@
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 .heroSection {
   position: relative;
@@ -48,13 +49,6 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .heroTextContainer {
-    text-align: left;
-    align-items: flex-start;
-  }
-}
-
 .heroHeading {
   margin-top: 13.5rem;
   color: white;
@@ -93,14 +87,6 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .heroDescription {
-    font-size: clamp(1.2rem, 4vw, 28px);
-    line-height: 1.4;
-    padding: 0.5rem;
-  }
-}
-
 .statCardsContainer {
   display: flex;
 
@@ -135,31 +121,7 @@
   flex-shrink: 0;
 }
 
-/* Ensure consistency on tablets */
-@media (max-width: 1024px) {
-  .statCardsContainer {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-left: 0; /* Reset margin for better alignment */
-  }
-  .statCard {
-    width: 250px;
-    height: 200px;
-  }
-}
-
 /* Ensure consistency on mobile */
-@media (max-width: 640px) {
-  .statCardsContainer {
-    flex-wrap: wrap;
-  }
-  .statCard {
-    width: 100%;
-    max-width: 314px;
-    height: 268px;
-  }
-}
 
 .statCard:hover {
   background: linear-gradient(
@@ -328,6 +290,107 @@
     font-size: clamp(1rem, 2vw, 16px);
   }
 }
+@media screen and (min-width: 330px) and (max-width: 425px) {
+  .heroBackground {
+    background-position: cover;
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .heroContentContainer {
+    position: relative;
+  }
+
+  .heroTextContainer {
+    text-align: center;
+    max-width: 1404px;
+    margin: 0 0;
+    padding-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .heroHeading {
+    margin-top: 3.5rem;
+    color: white;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(2rem, 6vw, 85px);
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 4rem;
+    max-width: 1200px;
+  }
+
+  .heroHeadingBlue {
+    color: #0090ff;
+    font-weight: 600;
+    font-size: inherit; /* Keep same size as parent */
+  }
+
+  .heroDescription {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 4px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0;
+    white-space: wrap;
+    width: 100%;
+  }
+  .statCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: clamp(1rem, 3vw, 4rem);
+  }
+
+  .statCard {
+    width: 6rem;
+    height: 6rem;
+
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .statValue {
+    color: white;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(1rem, 1vw, 8px);
+    font-weight: 800;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+
+  .statSuffix {
+    font-size: clamp(0.1rem, 0.1vw, 2px);
+    margin-left: 0.25rem;
+    vertical-align: middle;
+    text-transform: lowercase;
+  }
+
+  .statLabel {
+    font-size: clamp(0.4rem, 0.2vw, 2px);
+
+    margin-top: 0.1rem;
+  }
+}
 /* Transform Section */
 .transformSection {
   position: relative;
@@ -369,12 +432,6 @@
   padding: 5rem 1rem; /* vertical 5rem, horizontal 1rem */
   height: 100%;
   box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
-  .transformFlexContainer {
-    flex-direction: row;
-  }
 }
 
 .transformHeadingWrapper {
@@ -510,7 +567,7 @@
   background-image: url("/topratedbg.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center 300px;
+  background-position: center 470px;
   height: auto; /* 👈 isko barhao */
 
   top: 0;
@@ -520,6 +577,7 @@
 .premiumSection {
   padding-top: 0;
   position: relative;
+  width: 100%;
 }
 F .premiumContentWrapper {
   width: 100%;
@@ -608,6 +666,7 @@ F .premiumContentWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .carouselSlide {
@@ -621,7 +680,7 @@ F .premiumContentWrapper {
   width: 50vw;
   max-width: 729px;
   height: auto;
-  aspect-ratio: 729 / 539;
+  aspect-ratio: 729 / 480;
   z-index: 20;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -642,7 +701,7 @@ F .premiumContentWrapper {
   z-index: 15;
   left: 65%;
   transform: translate(-30%, -50%);
-  opacity: 0.9;
+  opacity: 100;
 }
 
 .carouselSlideRight2 {
@@ -655,7 +714,7 @@ F .premiumContentWrapper {
   z-index: 15;
   left: 35%;
   transform: translate(-70%, -50%);
-  opacity: 0.9;
+  opacity: 100;
 }
 
 .carouselSlideLeft2 {
@@ -1151,8 +1210,9 @@ F .premiumContentWrapper {
 .textSideWrapper {
   width: 100%;
   box-sizing: border-box;
-  margin-left: 30rem;
+  margin-left: 10rem;
   margin-top: 25rem;
+  padding: 0 0 0 4rem;
 }
 
 @media (min-width: 768px) {
@@ -1268,6 +1328,16 @@ F .premiumContentWrapper {
   transition: transform 0.3s ease-in-out;
 }
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .topRatedBackgroundWrapper {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 220px;
+    height: auto; /* 👈 isko barhao */
+
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
   .premiumHeadingContainer {
     margin-bottom: 4rem;
     padding-left: 1rem;
@@ -1335,6 +1405,7 @@ F .premiumContentWrapper {
     padding: 0 1rem;
     box-sizing: border-box;
     height: 100%;
+    margin-top: 5rem;
   }
 
   .topRatedFlexContainer {
@@ -1450,7 +1521,100 @@ F .premiumContentWrapper {
     display: none;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (min-width: 330px) and (max-width: 425px) {
+  .topRatedBackgroundWrapper {
+    background-position: center 400px;
+  }
+
+  .premiumDescription {
+    margin-bottom: 4rem;
+  }
+
+  .paginationDots {
+    margin-top: 0.5rem;
+  }
+
+  .ctaButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    padding-left: 0.1rem;
+  }
+
+  .ctaButton {
+    width: 20%;
+    max-width: 200px;
+    height: auto;
+    aspect-ratio: 400 / 110;
+    margin-top: 0.31rem;
+  }
+  .ctaButtonText {
+    font-size: 0.4rem;
+  }
+
+  .topRatedimage {
+    object-fit: contain;
+    opacity: 0.8; /* Or any styling */
+  }
+
+  .topRatedContentContainer {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    margin-top: 5rem;
+  }
+
+  .topRatedFlexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .platformLogoInner {
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .textSideWrapper {
+    width: 100%;
+    padding: 0 0 0 4rem;
+    margin-left: 5rem;
+    margin-top: -20vw;
+    text-wrap: wrap;
+  }
+  .SeamlessHeading {
+    font-size: clamp(0.5rem, 4vw, 8px);
+    text-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .SeamlessSpan {
+    font-size: clamp(2rem, 5vw, 38px);
+  }
+
+  .seamlessPara {
+    font-size: clamp(1rem, 3vw, 24px);
+  }
+
+  /* Learn More button */
+  .learnMoreButton {
+    width: 100px;
+    max-width: 200px;
+    aspect-ratio: 200/50;
+    padding: auto;
+  }
+  .learnMoreText {
+    font-size: 10px;
+    text-wrap: nowrap;
+  }
 }
 /* Three Containers Section */
 .threeContainersSection {
@@ -1939,6 +2103,118 @@ F .premiumContentWrapper {
     transition: all 0.3s; /* transition-all duration-300 */
   }
 }
+@media screen and (min-width: 330px) and (max-width: 425px) {
+  .lifeAtSection {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .backgroundOverlay {
+    width: 424.181px;
+    height: 350.864px;
+    flex-shrink: 0;
+    aspect-ratio: 424 /500;
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transition: all 0.7s; /* Keep transition for image change */
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .contentContainer {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* px-4 */
+    padding-right: 1rem; /* px-4 */
+    position: relative;
+    z-index: 10;
+  }
+
+  /* --- Heading --- */
+  .mainHeadingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainHeading {
+    color: #fff;
+    text-align: center;
+    font-family: "Manrope", sans-serif; /* Ensure Manrope is imported/available */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 250px;
+    height: 132px;
+    position: relative;
+    z-index: 20;
+  }
+  .mainHeadingRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem; /* Adjust spacing as needed */
+    width: 100%;
+  }
+
+  .mainHeadingText {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .mainHeadingLogo {
+    display: inline-block;
+    width: 48px !important;
+    height: 50px !important; /* Adjust height as needed for alignment */
+    object-fit: contain;
+  }
+  .carouselWrapper {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 10px;
+  }
+
+  .mainImageDisplay {
+    width: 90vw;
+    height: 60vw;
+    position: relative;
+    z-index: 20;
+    border-radius: 20px;
+    border: 1px solid #fff;
+  }
+
+  .thumbnailContainer {
+    margin-top: 14px;
+    gap: 5px;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    /* Tailwind: mt-4 space-x-2 is now handled by gap */
+  }
+
+  .thumbnailButton {
+    width: 40px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem; /* rounded-lg */
+    border: 1px solid; /* For border-gray-700 / border-primary */
+    transform: scale(1); /* Initial state for transition */
+    transition: all 0.3s; /* transition-all duration-300 */
+  }
+}
 /* --- Company Values Section --- */
 .valuesSection {
   position: relative;
@@ -2239,6 +2515,165 @@ F .premiumContentWrapper {
     margin-left: 150px;
   }
 }
+@media screen and (min-width: 330px) and (max-width: 425px) {
+  .valuesSection {
+    position: relative;
+    z-index: 20;
+    margin-top: 156px;
+  }
+
+  .valuesContainer {
+    max-width: 16rem; /* max-w-6xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .valueBlock {
+    margin-bottom: 4rem; /* mb-16 */
+    padding-bottom: 3rem; /* pb-12 */
+    /* Tailwind: mt-241 is an unusual class name; converting to margin-top */
+  }
+
+  .valueBlock.creative {
+    /* Specific for the second value block */
+    margin-top: 241px;
+  }
+
+  .valueTitleWrapper {
+    position: relative;
+    margin-bottom: 2rem; /* mb-8 */
+    text-align: center;
+  }
+
+  .valueNumber {
+    position: absolute;
+
+    transform: translate(-50%, -50%); /* Center the number */
+    font-size: 100px;
+    font-weight: 700; /* font-bold */
+    color: #2f2f2f;
+    opacity: 1; /* opacity-100 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+    margin-left: 1240px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
+    margin-bottom: 70px;
+  }
+
+  .valueNumber.one {
+    left: 70%;
+  }
+
+  .valueNumber.two {
+    left: 10%;
+  }
+
+  .valueNumber.three {
+    left: 5%;
+  }
+
+  .valueTitle {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 163%;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    text-align: justify; /* textAlign: "justify" */
+    position: relative;
+    z-index: 10;
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+    margin-left: 100px;
+  }
+
+  .valueTitle.one {
+    margin-left: 10px;
+  }
+
+  .valueTitle.two {
+    margin-left: 4rem;
+  }
+
+  .valueTitle.three {
+    margin-left: 7px;
+    margin-top: 14px; /* mt-141px */
+  }
+  .barline3 {
+    width: 20rem;
+    height: 1px;
+    background-color: #474646;
+    margin: 2rem 1rem;
+  }
+  .valueDescription {
+    width: 1119px;
+    color: #e7e7e7;
+    text-align: justify;
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163%;
+    text-transform: capitalize;
+
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+  }
+
+  .valueDescription.one {
+    margin-left: 600px;
+  }
+
+  .valueDescription.two {
+    margin-left: -160px;
+  }
+
+  .valueDescription3 {
+    width: 1119px;
+    color: #e7e7e7;
+    text-align: justify;
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 163%;
+    text-transform: capitalize;
+    margin-left: 2rem;
+    text-wrap: wrap;
+  }
+
+  .highlightedText {
+    color: #0190ff;
+    font-family: "Manrope", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 163%;
+    text-transform: capitalize;
+  }
+
+  .horizontalBar {
+    width: 1200px;
+    height: 1px;
+    background-color: #6a6a6a;
+    margin: 0 auto;
+    /* Specific offsets based on your inline styles, adjust as needed */
+    /* For value 1: */
+    margin-left: 150px;
+  }
+
+  .horizontalBar.one {
+    margin-left: 150px;
+  }
+
+  .horizontalBar.two {
+    margin-left: -150px;
+  }
+}
 .vrExperienceSection {
   position: relative;
   background: linear-gradient(
@@ -2258,6 +2693,7 @@ F .premiumContentWrapper {
   aspect-ratio: 2191 / 1228;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 .vrBackgroundImage {
@@ -2789,49 +3225,6 @@ F .premiumContentWrapper {
     padding: 2rem 0;
   }
 
-  .platformLogosWrapper {
-    height: 250px;
-  }
-
-  .platformLogo {
-    transform: scale(0.7);
-  }
-
-  .appleTvLogo {
-    top: -8vw;
-    left: -8vw;
-  }
-
-  .googlePlayLogo {
-    top: -12vw;
-    left: -2vw;
-  }
-
-  .appStoreLogo {
-    top: -8vw;
-    left: 1vw;
-  }
-
-  .rokuLogo {
-    top: -6vw;
-    left: -6vw;
-  }
-
-  .metaLogo {
-    top: -1vw;
-    left: -8vw;
-  }
-
-  .fireTvLogo {
-    top: 1vw;
-    left: -1vw;
-  }
-
-  .lgLogo {
-    top: -3vw;
-    left: 4vw;
-  }
-
   .SeamlessHeading {
     font-size: clamp(1.1rem, 2.5vw, 48px);
   }
@@ -2877,5 +3270,38 @@ F .premiumContentWrapper {
 
   .learnMoreButton {
     max-width: 250px;
+  }
+}
+@media screen and (min-width: 330px) and (max-width: 425px) {
+  .vrExperienceWrapper {
+    max-height: 1228px;
+    max-width: 2191px;
+    left: -7vw;
+    position: relative;
+
+    aspect-ratio: 2191 / 1228;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .gradientOverlayHorizontal {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.4) 15.93%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    mix-blend-mode: multiply;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+  }
+
+  .appMockupContainer {
+    width: 200px;
+    height: 150px;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    position: relative;
   }
 }
