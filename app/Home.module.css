@@ -290,7 +290,7 @@
     font-size: clamp(1rem, 2vw, 16px);
   }
 }
-@media screen and (min-width: 330px) and (max-width: 425px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
   .heroBackground {
     background-position: cover;
     background-size: 100%;
@@ -399,7 +399,7 @@
   min-height: 650px; /* ensure it never collapses too small */
   background-color: #000;
   overflow: hidden;
-  margin-top: -0.25rem;
+
   box-sizing: border-box;
 }
 
@@ -435,7 +435,7 @@
 }
 
 .transformHeadingWrapper {
-  margin-top: 5rem;
+  margin-top: 10rem;
   margin-left: 8%; /* 157px / 1920px ≈ 8% */
 }
 
@@ -457,22 +457,22 @@
 }
 
 .usersIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
   color: #9ca3af;
   margin-right: 0.5rem;
 }
 
 .usersText {
-  font-size: 0.875rem;
+  font-size: 1.875rem;
   color: #9ca3af;
 }
 
 /* Network Visualization */
 .networkVisualization {
   position: relative;
-  margin-top: 20vh; /* 373px / 1920px ≈ 19.5vh */
-  margin-right: 25%; /* 470px / 1920px ≈ 24.5% */
+  margin-top: 1vh; /* 373px / 1920px ≈ 19.5vh */
+  left: 35%; /* 470px / 1920px ≈ 24.5% */
 }
 
 .networkGlobe {
@@ -483,7 +483,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   position: relative;
-  animation: rotate-clockwise 30s linear infinite;
+  animation: rotate-clockwise 15s linear infinite;
 }
 
 .networkPeopleImage {
