@@ -9,6 +9,7 @@
 }
 .ContentWrapper {
   position: relative;
+
   z-index: 2;
 }
 
