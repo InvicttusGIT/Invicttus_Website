@@ -12,7 +12,6 @@
   z-index: 2;
 }
 
-/* Hero Section */
 .ProductHero {
   position: relative;
   width: 100%;
@@ -82,11 +81,119 @@
   background: none;
   cursor: pointer;
 }
+
 .OurProductButton:hover {
   color: #0090ff;
   border-color: #0090ff;
 }
 
+/* 1. Small phones (max-width: 425px) */
+@media (max-width: 425px) {
+  .ProductHero {
+    height: auto;
+    min-width: auto;
+    padding: 2rem 1rem;
+  }
+
+  .ProductHerobg {
+    width: 100%;
+    height: 300px;
+    background-position: center top;
+  }
+
+  .ProductHeroContent {
+    margin-bottom: 80px;
+    padding: 0 1rem;
+  }
+
+  .ProductHeroHeading {
+    font-size: 28px;
+    max-width: 100%;
+  }
+
+  .ProductHeroSubheading {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .OurProductButton {
+    padding: 14px 40px;
+    font-size: 18px;
+    margin-top: 60px;
+  }
+}
+
+/* 2. Large phones and small tablets (426px to 767px) */
+@media (min-width: 426px) and (max-width: 767px) {
+  .ProductHero {
+    height: 600px;
+    min-width: auto;
+    padding: 3rem 2rem;
+  }
+
+  .ProductHerobg {
+    width: 100%;
+    height: 400px;
+    background-position: center top;
+  }
+
+  .ProductHeroContent {
+    margin-bottom: 120px;
+    padding: 0 2rem;
+  }
+
+  .ProductHeroHeading {
+    font-size: 42px;
+    max-width: 90%;
+  }
+
+  .ProductHeroSubheading {
+    font-size: 22px;
+    max-width: 90%;
+  }
+
+  .OurProductButton {
+    padding: 20px 60px;
+    font-size: 24px;
+    margin-top: 100px;
+  }
+}
+
+/* 3. Tablets and small desktops (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ProductHero {
+    height: 800px;
+    min-width: auto;
+    padding: 4rem 3rem;
+  }
+
+  .ProductHerobg {
+    width: 100%;
+    height: 600px;
+    background-position: center top;
+  }
+
+  .ProductHeroContent {
+    margin-bottom: 180px;
+    padding: 0 3rem;
+  }
+
+  .ProductHeroHeading {
+    font-size: 54px;
+    max-width: 85%;
+  }
+
+  .ProductHeroSubheading {
+    font-size: 28px;
+    max-width: 85%;
+  }
+
+  .OurProductButton {
+    padding: 24px 70px;
+    font-size: 28px;
+    margin-top: 130px;
+  }
+}
 /* Products Section */
 .ProductsSection {
   max-width: 1536px;
@@ -588,8 +695,458 @@
     )
   );
 }
+/* Base: up to 425px (mobile small) */
+@media (max-width: 425px) {
+  .ProductsSection {
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 24px;
+  }
 
-/* Bottom Slogan */
+  .ProductsSectionbg {
+    width: 100vw;
+    height: 500px;
+    margin-left: 10px;
+    margin-bottom: 100px;
+    margin-top: -150px;
+    opacity: 1;
+  }
+
+  .ProductsSectiotLeft {
+    flex: unset;
+    width: 100%;
+  }
+
+  .LeftHeading {
+    font-size: 36px;
+    width: 100%;
+    line-height: 1.2;
+  }
+
+  .LeftSubHeading {
+    display: none;
+  }
+
+  .PrductsSectionFilter {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .FilterButton,
+  .PlatformButtonWithIcon {
+    font-size: 18px;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .productSectionRight {
+    flex: 1;
+    display: flex;
+
+    position: absolute;
+
+    border-radius: 0.75rem;
+
+    width: 100%;
+    height: auto;
+    background: #18181b;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    margin-left: 0;
+    background-image: url("/flagship.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 4px solid #fff;
+    border-radius: 24px;
+  }
+
+  .FlagshipAppconatiner {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Flagship {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .ProductSectionImage {
+    width: 357.244px;
+    height: 293.329px;
+    flex-shrink: 0;
+    border-radius: 24.638px;
+    position: relative;
+    max-width: 357.244px;
+    max-height: 293.329px;
+    margin-top: 11.8rem;
+    margin-left: 5.3rem;
+  }
+  .ProductSectionLeft h4 {
+    color: #0d0d0d;
+    font-family: Manrope;
+    font-size: 45.654px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 5.313rem;
+    margin-top: 4.25rem;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+  }
+  .ProductSectionFlagship {
+    width: 272px;
+    height: 62px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 0px 34.5px;
+    background: #b32700;
+  }
+  .ProductSectionFlagship h2 {
+    color: #fff;
+
+    font-family: Inter;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: capitalize;
+    width: 272px;
+    height: 62px;
+    flex-shrink: 0;
+    border-radius: 0px 24px 0px 34.5px;
+    background: #b32700;
+    margin-left: 210px;
+    text-align: center;
+  }
+  /* Apps Grid */
+  .productsgridSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.125rem;
+    flex: 1;
+    margin-top: 11rem;
+
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+  .ProductSectionStats {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3.125rem;
+    margin-left: 3.125rem;
+  }
+  .ProductSectionStatBox {
+    width: 205px;
+    height: 81px;
+    flex-shrink: 0;
+    border-radius: 8.847px;
+    border: 1.712px solid #101010;
+
+    background: #49bfff;
+    color: #101010;
+  }
+  .ProductSectionStatBox p {
+    font-family: Manrope;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .ProductSectionSeeMoreButton {
+    width: 219px;
+    height: 68px;
+    flex-shrink: 0;
+
+    border-radius: 9.437px;
+    border: 1.786px solid #343434;
+    margin-top: 3.438rem;
+    margin-left: 13.375rem;
+  }
+  .ProductSectionSeeMoreButton a {
+    width: 160px;
+    height: 36.881px;
+    flex-shrink: 0;
+    color: #111;
+    font-family: Manrope;
+    font-size: 26.796px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135.938%;
+    margin-right: 2.5rem;
+  }
+
+  .AppsgridContainer {
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .Appsgridimages {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .AppsGridRight {
+    margin-left: 0;
+    gap: 1rem;
+  }
+
+  .AppsStats {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .SeemoreButton {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .LoadMoreButton {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+
+/* 426px to 767px (mobile large to small tablet) */
+@media (min-width: 426px) and (max-width: 767px) {
+  .ProductsSection {
+    flex-direction: column;
+    padding: 32px 32px;
+    gap: 32px;
+  }
+
+  .ProductsSectionbg {
+    width: 120vw;
+    height: 800px;
+    margin-left: -60vw;
+    margin-bottom: 150px;
+    margin-top: -200px;
+    opacity: 0.4;
+  }
+
+  .ProductsSectiotLeft {
+    width: 100%;
+  }
+
+  .LeftHeading {
+    font-size: 56px;
+    width: 100%;
+  }
+
+  .LeftSubHeading {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .PrductsSectionFilter {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .FilterButton,
+  .PlatformButtonWithIcon {
+    width: 200px;
+    font-size: 22px;
+    padding: 12px 24px;
+    height: 60px;
+  }
+
+  .productSectionRight {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-left: 0;
+    border-radius: 20px;
+    background-size: contain;
+  }
+
+  .ProductSectionImage {
+    width: 250px;
+    height: 200px;
+    margin-top: 6rem;
+    margin-left: 1rem;
+  }
+
+  .ProductSectionLeft h4 {
+    font-size: 36px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .productsgridSection {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 6rem;
+  }
+
+  .AppsgridContainer {
+    width: 100%;
+    height: 380px;
+    padding: 1.5rem 2rem;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .Appsgridimages {
+    width: 180px;
+    height: 140px;
+    margin-left: 1rem;
+  }
+
+  .AppsGridRight {
+    margin-left: 1rem;
+  }
+
+  .AppsStats {
+    margin-left: 1rem;
+  }
+
+  .SeemoreButton {
+    margin-left: 1rem;
+    width: 180px;
+  }
+
+  .LoadMoreButton {
+    width: 250px;
+    padding: 18px 0;
+  }
+}
+
+/* 768px to 1023px (tablet to small desktop) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ProductsSection {
+    flex-direction: row;
+    padding: 48px 40px;
+    gap: 40px;
+  }
+
+  .ProductsSectionbg {
+    width: 1350px;
+    height: 1200px;
+    margin-left: -650px;
+    margin-bottom: 150px;
+    margin-top: -250px;
+    opacity: 0.5;
+  }
+
+  .ProductsSectiotLeft {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .LeftHeading {
+    font-size: 72px;
+    width: 100%;
+  }
+
+  .LeftSubHeading {
+    font-size: 28px;
+    width: 100%;
+  }
+
+  .PrductsSectionFilter {
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .FilterButton,
+  .PlatformButtonWithIcon {
+    width: 220px;
+    font-size: 28px;
+    padding: 14px 32px;
+    height: 70px;
+  }
+
+  .productSectionRight {
+    position: absolute;
+    width: 700px;
+    height: 450px;
+    margin-left: 600px;
+    border-radius: 24px;
+    background-size: cover;
+  }
+
+  .ProductSectionImage {
+    width: 300px;
+    height: 250px;
+    margin-top: 9rem;
+    margin-left: 4rem;
+  }
+
+  .ProductSectionLeft h4 {
+    font-size: 42px;
+    margin-left: 4rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .productsgridSection {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 8rem;
+  }
+
+  .AppsgridContainer {
+    width: 820px;
+    height: 400px;
+    padding: 2rem 2.5rem;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .Appsgridimages {
+    width: 200px;
+    height: 160px;
+    margin-left: 3rem;
+  }
+
+  .AppsGridRight {
+    margin-left: 2rem;
+  }
+
+  .AppsStats {
+    margin-left: 4rem;
+    margin-top: 5rem;
+  }
+
+  .SeemoreButton {
+    margin-left: 2.5rem;
+    width: 210px;
+  }
+
+  .LoadMoreButton {
+    width: 280px;
+    padding: 20px 0;
+  }
+}
+
 .ProductsBottomSection {
   width: 100%;
   display: flex;
@@ -597,56 +1154,106 @@
   align-items: center;
   justify-content: center;
 
-  padding-top: 6rem; /* Reduced padding */
+  padding-top: 6rem;
   padding-bottom: 4rem;
-  background: none; /* Remove background from here */
   position: relative;
   z-index: 2;
   background: none;
 }
+
 .ProductsBottomBg {
   position: absolute;
-  top: 600px; /* Yeh important hai taake full height cover ho */
+  top: 600px;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url("/ProductBottomBg.png");
-  background-size: 100%; /* ya contain ya auto try karo */
+  background-size: cover; /* changed to cover for better scaling */
   background-repeat: no-repeat;
-  background-position: bottom; /* Try 'top', 'center top', '50% 0%' */
+  background-position: bottom center;
   z-index: 0;
   pointer-events: none;
   opacity: 0.7;
 }
+
+/* Heading */
 .ProductBottomheading {
   display: flex;
-  width: 527.995px;
-  height: 491.977px;
+  width: 528px; /* approx */
+  height: 492px; /* approx */
   flex-direction: column;
   justify-content: center;
   flex-shrink: 0;
   text-align: center;
-  font-family: Manrope;
+  font-family: Manrope, sans-serif;
   font-size: 128px;
-  font-style: normal;
   font-weight: 800;
-  line-height: 128%; /* 163.84px */
+  line-height: 128%;
   text-transform: uppercase;
-  background: var(
-    --Linear,
-    linear-gradient(
-      119deg,
-      #fff 3.3%,
-      #a7a7a7 41.66%,
-      #7b7b7b 61.27%,
-      #4f4f4f 97.98%
-    )
+  background: linear-gradient(
+    119deg,
+    #fff 3.3%,
+    #a7a7a7 41.66%,
+    #7b7b7b 61.27%,
+    #4f4f4f 97.98%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 16.063rem;
 }
+
+/* Responsive adjustments */
+
+@media (max-width: 1200px) {
+  .ProductsBottomBg {
+    top: 400px;
+    background-position: center bottom;
+  }
+
+  .ProductBottomheading {
+    width: 400px;
+    height: auto;
+    font-size: 90px;
+    margin-top: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ProductsBottomSection {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .ProductsBottomBg {
+    top: 300px;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  .ProductBottomheading {
+    width: 90%;
+    font-size: 60px;
+    line-height: 1.1;
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ProductsBottomBg {
+    top: 200px;
+    background-size: contain;
+    background-position: center bottom;
+  }
+
+  .ProductBottomheading {
+    width: 100%;
+    font-size: 40px;
+    margin-top: 4rem;
+    padding: 0 1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .ProductBottomheading {
     font-size: 3rem;
