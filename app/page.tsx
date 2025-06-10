@@ -53,7 +53,6 @@ export default function Home() {
 
   return (
     <div className={styles.hero}>
-      {/* <div className={styles.topRatedBackground1}></div> */}
       {/* Hero Section */}
       <section className={styles.heroSection}>
         {/* Background Image */}
