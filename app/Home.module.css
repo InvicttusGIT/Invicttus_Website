@@ -100,8 +100,8 @@
   justify-content: center;
   max-width: 19.625rem;
   max-height: 16.75rem;
-  width: 19.625rem;
-  height: 16.75rem;
+  width: 100%;
+  height: 100%;
   padding: 2rem;
   gap: 1rem;
   border-radius: 22px;
@@ -141,7 +141,7 @@
 }
 
 /* Responsive Styles */
-@media screen and (min-width: 1024px) and (max-width: 1280px) {
+@media screen and (max-width: 1024px) {
   .heroHeading {
     margin-top: 9.5rem;
     font-size: clamp(2rem, 6vw, 75px);
@@ -180,7 +180,7 @@
   }
 }
 
-@media screen and (min-width: 1281px) and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .heroHeading {
     margin-top: 9.5rem;
     font-size: clamp(2rem, 6vw, 65px);
@@ -218,7 +218,7 @@
     font-size: clamp(1rem, 2vw, 16px);
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .heroSection {
     height: 100%;
   }
@@ -301,7 +301,7 @@
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .heroSection {
     height: 100vh;
   }
@@ -3820,170 +3820,40 @@ F .premiumContentWrapper {
   }
 }
 /* Base styles (for large screens) */
-
 .vrExperienceWrapper {
   position: relative;
   overflow: hidden;
   aspect-ratio: 2190.86 / 1228.08;
   width: 100vw;
   height: auto;
-  max-width: 2190.859px;
-  max-height: 1228.079px;
+  max-width: 100%;
   left: -7vw;
-  padding: 17rem 0 0 40rem;
+  padding: 17rem 0 0 20vw;
 }
 
 .appMockupContainer {
   position: relative;
   aspect-ratio: 980 / 673.6;
   width: 100%;
-  max-width: 980px;
+  max-width: 45vw;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8rem;
+  margin: 8rem auto 0 auto;
 }
 
 /* Mobile: 330px to 425px */
 @media (max-width: 425px) {
   .vrExperienceWrapper {
-    position: relative;
-    overflow: hidden;
     aspect-ratio: 700 / 500;
     width: 100vw;
     height: auto;
-    max-width: 700px;
-    max-height: 500px;
+    max-width: 100%;
     left: -7vw;
-    padding: 1rem 0 0 4rem;
+    padding: 1rem 0 0 10vw;
   }
 
   .appMockupContainer {
     max-width: 95%;
     margin-top: 4rem;
-  }
-}
-
-/* Tablet: 426px to 767px */
-@media (min-width: 426px) and (max-width: 767px) {
-  .vrExperienceWrapper {
-    left: 0;
-    width: 100vw;
-    height: auto;
-    padding: 1rem 0 0 10rem;
-  }
-
-  .appMockupContainer {
-    max-width: 70%;
-    margin-top: 6rem;
-  }
-}
-
-/* Small Desktop: 768px to 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .vrExperienceWrapper {
-    left: 0;
-    width: 100vw;
-    height: auto;
-  }
-
-  .appMockupContainer {
-    max-width: 90%;
-    margin-top: 8rem;
-  }
-}
-/* For value 1 and 3: right-aligned */
-.valueBlock .one {
-  display: block;
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-}
-
-/* For value 2: left-aligned */
-.valueBlock .two {
-  display: block;
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* --- Animations --- */
-@keyframes rotate-clockwise {
-  from {
-    transform: rotate(-7.872deg);
-  }
-  to {
-    transform: rotate(352.128deg);
-  }
-}
-
-@keyframes rotate-counterclockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-/* For value 1 and 3: right-aligned */
-.valueBlock .one {
-  display: block;
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-}
-
-/* For value 2: left-aligned */
-.valueBlock .two {
-  display: block;
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
-}
-
-/* --- Animations --- */
-@keyframes rotate-clockwise {
-  from {
-    transform: rotate(-7.872deg);
-  }
-  to {
-    transform: rotate(352.128deg);
-  }
-}
-
-@keyframes rotate-counterclockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes rotate-counterclockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-/* Additional Responsive Breakpoints */
-
-/* Top Rated Apps Section Responsive Styles */
-
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .vrExperienceWrapper {
-    max-height: 1228px;
-    max-width: 2191px;
-    left: -7vw;
-    position: relative;
-
-    aspect-ratio: 2191 / 1228;
-    width: 100vw;
-    height: 100vh;
   }
 
   .gradientOverlayHorizontal {
@@ -4000,10 +3870,74 @@ F .premiumContentWrapper {
   }
 
   .appMockupContainer {
-    width: 200px;
-    height: 150px;
-    margin-left: 5rem;
+    width: 60vw;
+    height: auto;
+    margin-left: 5vw;
     margin-top: 2rem;
-    position: relative;
+  }
+}
+
+/* Tablet: 426px to 767px */
+@media (min-width: 426px) and (max-width: 767px) {
+  .vrExperienceWrapper {
+    left: 0;
+    width: 100vw;
+    height: auto;
+    padding: 1rem 0 0 10vw;
+  }
+
+  .appMockupContainer {
+    max-width: 70%;
+    margin-top: 6rem;
+  }
+}
+
+/* Small Desktop: 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .vrExperienceWrapper {
+    left: 0;
+    width: 100vw;
+    height: auto;
+    padding: 8rem 0 0 10vw;
+  }
+
+  .appMockupContainer {
+    max-width: 90%;
+    margin-top: 8rem;
+  }
+}
+
+/* Right-aligned blocks (value 1 and 3) */
+.valueBlock .one {
+  display: block;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Left-aligned block (value 2) */
+.valueBlock .two {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* --- Animations --- */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(-7.872deg);
+  }
+  to {
+    transform: rotate(352.128deg);
+  }
+}
+
+@keyframes rotate-counterclockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
   }
 }
