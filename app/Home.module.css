@@ -77,10 +77,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 19.625rem;
-  max-height: 16.75rem;
-  width: 100%;
-  height: 100%;
+  width: 19.625rem;
+  height: 16.75rem;
 
   gap: 1rem;
   border-radius: 22px;
@@ -117,22 +115,92 @@
   text-transform: capitalize;
   margin-top: 0.5rem;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
+  .heroBackground {
+    border-radius: 80px 80px 0 0;
+  }
+
   .heroHeading {
-    font-size: clamp(2rem, 6vw, 75px);
+    margin-top: 15rem;
+    font-size: clamp(2rem, 6vw, 65px);
+
     white-space: wrap;
   }
 
+  .heroHeadingBlue {
+    color: #0090ff;
+    font-weight: 600;
+    font-size: 5rem;
+  }
+
   .heroDescription {
-    font-size: 20px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: capitalize;
+    text-align: center;
+
+    white-space: wrap;
+
+    margin-top: 2rem;
   }
 
   .statCardsContainer {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 4rem 4rem;
+    margin-top: 2rem;
+  }
+
+  .statCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15.625rem;
+    height: 12.75rem;
+
+    gap: 1rem;
+    border-radius: 22px;
+    border: 1px solid #fff;
+
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .statValue {
+    color: white;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(2rem, 6vw, 80px);
+    font-weight: 800;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+  }
+
+  .statSuffix {
+    font-size: clamp(1rem, 2vw, 28px);
+    margin-left: 0.25rem;
+    vertical-align: middle;
+    text-transform: lowercase;
+  }
+
+  .statLabel {
+    color: white;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(1rem, 2vw, 22px);
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
   }
 }
 
@@ -289,9 +357,16 @@
 
 /* Transform Section */
 .transformSection {
-  min-height: 650px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  background-image: url("/Transfromsection-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .transformBackground {
@@ -404,22 +479,20 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .transformSection {
+    margin-top: 4rem;
     height: 100vh;
   }
 
   .transformBackground {
-    top: -1rem;
-    width: 1023px;
-    height: 655px;
+    width: 100%;
+    height: 100vh; /* Larger screen can show more */
   }
 
   .transformContentContainer {
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
-    padding: 0 2rem;
+
     width: 100%;
-    max-width: 1023px;
-    min-width: 768px;
   }
 
   .transformHeading br {
@@ -429,19 +502,23 @@
   .transformFlexContainer {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .transformHeading {
     color: #fff;
     font-family: Manrope;
-    font-size: 40px;
+    font-size: 32px;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 200;
     line-height: normal;
     text-transform: capitalize;
-    width: 500px;
+
     max-width: 100%;
     white-space: nowrap;
   }
@@ -450,40 +527,40 @@
   .usersWorldwide {
     display: flex;
     align-items: center;
-    margin-top: 1rem;
+
     padding: 0;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
 
   .usersIcon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     color: #9ca3af;
-    margin-right: 0.75rem;
+    margin-right: 0.5rem;
   }
 
   .usersText {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #9ca3af;
-    line-height: 1.2rem;
+    line-height: 1rem;
     white-space: nowrap;
   }
 
   /* Network Visualization */
 
   .networkGlobe {
-    width: clamp(500px, 35vw, 600px);
+    width: clamp(400px, 30vw, 520px);
     height: auto;
     aspect-ratio: 1/1;
     transform: rotate(-7.872deg);
     border-radius: 50%;
     flex-shrink: 0;
-    position: relative;
+    margin-top: 19rem;
+
     animation: rotate-clockwise 20s linear infinite;
   }
 
   .networkPeopleImage {
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -492,14 +569,15 @@
     animation: rotate-counterclockwise 25s linear infinite;
   }
 }
+
 @media screen and (min-width: 426px) and (max-width: 767px) {
   .transformSection {
     height: 100vh;
   }
 
   .transformBackground {
-    width: 800px;
-    height: 600px; /* Larger screen can show more */
+    width: 100%;
+    height: 100vh; /* Larger screen can show more */
   }
 
   .transformContentContainer {
@@ -569,6 +647,7 @@
     transform: rotate(-7.872deg);
     border-radius: 50%;
     flex-shrink: 0;
+    margin-top: 19rem;
 
     animation: rotate-clockwise 20s linear infinite;
   }
@@ -699,12 +778,12 @@
 }
 .premiumSection {
   padding-top: 0;
-
+  z-index: 2;
   width: 100%;
 }
 F .premiumContentWrapper {
   width: 100%;
-
+  height: 100%;
   z-index: 10;
 }
 
@@ -955,6 +1034,7 @@ F .premiumContentWrapper {
 /* Top Rated Apps / Platform Experience Section */
 .topRatedSection {
   width: 100%;
+  height: 100vh;
   padding: 5rem 0;
   background-color: transparent;
   z-index: -1;
@@ -998,12 +1078,14 @@ F .premiumContentWrapper {
 /* Text side wrapper */
 .textSideWrapper {
   width: 100%;
+
   box-sizing: border-box;
-
-  margin-top: 15rem;
-  padding: 0 0 10rem 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 12rem 0 0 12rem;
 }
-
 /* Headings and paragraphs */
 .SeamlessHeading {
   font-family: Manrope, sans-serif;
@@ -1069,9 +1151,8 @@ F .premiumContentWrapper {
   justify-content: flex-end;
   align-items: center;
   margin-top: 5rem;
-  width: 90%;
-  max-width: 520px;
-  aspect-ratio: 520/140;
+  width: 80%;
+
   padding: clamp(1rem, 3vw, 34px) clamp(2rem, 5vw, 65px);
   gap: clamp(2rem, 6vw, 120px);
   border-radius: 80px;
@@ -1273,8 +1354,7 @@ F .premiumContentWrapper {
   /* Learn More button */
   .learnMoreButton {
     width: 80%;
-    max-width: 400px;
-    aspect-ratio: 400/110;
+
     padding: clamp(1rem, 3vw, 24px) clamp(2rem, 5vw, 65px);
   }
   .learnMoreText {
@@ -1416,9 +1496,7 @@ F .premiumContentWrapper {
   .textSideWrapper {
     width: 100%;
     box-sizing: border-box;
-    margin-left: 12rem;
-    margin-top: -7rem;
-    padding: 0 0 1rem 17rem;
+    padding: 2rem 0 0 12rem;
   }
 
   .SeamlessHeading {
@@ -1458,10 +1536,11 @@ F .premiumContentWrapper {
   }
 
   .learnMoreButton {
-    width: 260px;
-    height: 70px;
-    margin-top: 20px;
-    gap: 20px;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 153 / 41;
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   .learnMoreButton:hover {
@@ -1484,8 +1563,8 @@ F .premiumContentWrapper {
   }
 
   .learnMoreArrow {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
@@ -1947,27 +2026,19 @@ F .premiumContentWrapper {
 /* Three Containers Section */
 .threeContainersSection {
   background-color: transparent;
-  margin-top: 5rem; /* 430px ≈ 25rem */
-  padding: 5rem 0; /* py-20 */
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-  overflow: hidden;
+  background-image: url("/3containerbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
 }
 
 /* Decorative rotated backdrop */
-.threeContainerBackground {
-  top: 0;
-  left: 0;
-  width: clamp(30rem, 60vw, 48rem); /* 770px max */
-  aspect-ratio: 770 / 743;
-  transform: rotate(11deg);
-  border-radius: 48rem; /* 770px */
-  background: transparent;
-  opacity: 1;
-  z-index: 0;
-  object-fit: cover;
-  object-position: center;
-}
 
 /* Inner content wrapper */
 .threeContainersInner {
@@ -1975,7 +2046,7 @@ F .premiumContentWrapper {
   margin: 0 auto;
   padding: 0 1rem;
   width: 90%;
-  max-width: 1200px;
+
   box-sizing: border-box;
 }
 
@@ -2132,44 +2203,42 @@ F .premiumContentWrapper {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .threeContainersSection {
-    margin-top: 5rem;
-    padding: 5rem 0;
+    padding: 0 0;
   }
 
   .threeContainerBackground {
-    width: 80%;
-    aspect-ratio: 770 / 743;
-    transform: rotate(8deg);
-    border-radius: 3rem;
-    opacity: 0.6;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 2rem;
   }
 
   .threeContainersInner {
-    padding: 0 2rem;
-    width: 95%;
+    padding: 0 1.5rem;
+    width: 100%;
   }
 
   .flexContainer,
   .topRowContainers {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
     align-items: center;
   }
 
   .singleContainer,
   .bottomContainer {
-    width: 80%;
-    padding: 3rem;
+    width: 90%;
+    padding: 2rem;
     aspect-ratio: auto;
-    border-radius: 1.25rem;
+    border-radius: 1rem;
   }
 
   .containerTitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .containerTitleHighlight {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .valueBlock,
@@ -2177,8 +2246,8 @@ F .premiumContentWrapper {
   .valueBlockRight {
     flex-direction: column;
     gap: 2rem;
-    padding-bottom: 3rem;
-    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
     align-items: center;
     text-align: center;
   }
@@ -2188,34 +2257,34 @@ F .premiumContentWrapper {
   }
 
   .valueNumber {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .valueTitle {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-left: 0;
   }
 
   .valueDescription {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin: 0 2rem;
   }
 
   .highlightedText1,
   .highlightedText2,
   .highlightedText3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .learnMoreButton {
     width: 100%;
     height: auto;
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .learnMoreArrow {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .barline {
@@ -2233,9 +2302,8 @@ F .premiumContentWrapper {
   .threeContainerBackground {
     width: 90%;
     aspect-ratio: 1 / 1;
-    transform: rotate(5deg);
+
     border-radius: 2rem;
-    opacity: 0.4;
   }
 
   .threeContainersInner {
@@ -2320,16 +2388,14 @@ F .premiumContentWrapper {
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .threeContainersSection {
-    margin-top: 1rem;
-    padding: 4rem 0;
+    padding: 0 0;
   }
 
   .threeContainerBackground {
     width: 100%;
     aspect-ratio: 1 / 1;
-    transform: rotate(0deg);
+
     border-radius: 0;
-    opacity: 0.3;
   }
 
   .threeContainersInner {
@@ -2420,19 +2486,18 @@ F .premiumContentWrapper {
 
 /* --- General Section Spacing & Layout --- */
 .lifeAtSection {
-  margin-top: 11;
   position: relative;
   overflow: hidden;
 }
 
 .backgroundOverlay {
-  width: 2121.181px;
-  height: 1595.864px;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   aspect-ratio: 2121.18 / 1595.86;
   filter: grayscale(100%);
   background-size: cover;
-  background-position: 50%;
+  background-position: 100%;
   background-repeat: no-repeat;
   transition: all 0.7s; /* Keep transition for image change */
   position: absolute;
@@ -2516,14 +2581,14 @@ F .premiumContentWrapper {
   position: relative;
   margin-top: 334px;
   margin-bottom: 468px;
-  margin-left: -100px;
 }
 
 .mainImageDisplay {
-  width: 1508px;
-  height: 793px;
+  width: 90%;
+  height: 100vh;
   position: relative;
   z-index: 20;
+  border-radius: 30px;
 }
 
 .thumbnailContainer {
@@ -3019,7 +3084,10 @@ F .premiumContentWrapper {
 /* --- Company Values Section --- */
 .valuesSection {
   z-index: 20;
-  margin-top: 156px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .valuesContainer {
@@ -3047,7 +3115,11 @@ F .premiumContentWrapper {
   /* Specific offsets based on your inline styles, adjust as needed */
   /* For value 1: */
 }
-
+.valueNumber.one {
+  left: 80%;
+  margin-top: 10rem;
+  margin-left: 1540px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
+}
 .valueTitle {
   font-size: 100px;
   font-weight: 700;
@@ -3062,12 +3134,22 @@ F .premiumContentWrapper {
   /* Specific offsets based on your inline styles, adjust as needed */
   /* For value 1: */
 }
-
+.valueTitle.one {
+  margin-left: 45rem;
+}
 .barline3 {
   width: 20rem;
   height: 1px;
   background-color: #474646;
   margin: 2rem auto;
+}
+.valueNumber.two {
+  left: 40%;
+}
+.valueNumber.three {
+  left: 80%;
+  margin-top: 10rem;
+  margin-left: 1540px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
 }
 .valueDescription {
   color: #e7e7e7;
@@ -3085,10 +3167,6 @@ F .premiumContentWrapper {
 
 .valueDescription.one {
   margin-left: 600px;
-}
-
-.valueDescription.two {
-  margin-left: -160px;
 }
 
 .valueDescription3 {

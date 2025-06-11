@@ -52,7 +52,7 @@ export default function Footer() {
             </p>
 
             <div className={styles.buttonGroup}>
-              <Link
+              {/* <Link
                 href="/careers"
                 className={styles.button}
                 onMouseEnter={handleMouseEnter}
@@ -82,7 +82,7 @@ export default function Footer() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </Link>
+              </Link> */}
 
               <Link
                 href="/contact"
@@ -123,9 +123,7 @@ export default function Footer() {
       {/* Bottom Footer Section */}
       <div className={styles.bottomfooterWrapper}>
         <div className={styles.bottomcontainer}>
-          <div className={styles.footerBgImage}>
-         
-          </div>
+          <div className={styles.footerBgImage}></div>
 
           <div className={styles.gridSection}>
             <div className={styles.companyColumn}>
@@ -142,9 +140,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/careers" className={styles.link}>
+                  {/* <Link href="/careers" className={styles.link}>
                     Careers
-                  </Link>
+                  </Link> */}
                 </li>
                 <li>
                   <Link href="/contact" className={styles.link}>
@@ -198,7 +196,7 @@ export default function Footer() {
                     </g>
                   </svg>
                 </Link>
-                <Link href="#">
+                {/* <Link href="#">
                   <span className="sr-only">Instagram</span>
                   <svg
                     className={styles.iconSvg}
@@ -243,7 +241,7 @@ export default function Footer() {
                       />
                     </g>
                   </svg>
-                </Link>
+                </Link> */}
               </div>
             </div>
 

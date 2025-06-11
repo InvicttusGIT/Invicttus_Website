@@ -333,7 +333,7 @@ export default function Home() {
                   Mobile Phones, VR and Beyond.
                 </p>
 
-                <Link
+                {/* <Link
                   href="/about"
                   className={styles.learnMoreButton}
                   onMouseEnter={(e) => {
@@ -357,7 +357,7 @@ export default function Home() {
                 >
                   <span className={styles.learnMoreText}>Learn More</span>
                   <ArrowRight className={styles.learnMoreArrow} />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
@@ -368,46 +368,41 @@ export default function Home() {
       <section className={styles.threeContainersSection}>
         {/* Background Image */}
         <div className={styles.threeContainerBackground}>
-          <Image
-            src="/3containerbg.png"
-            alt="three container background"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-        <div className={styles.threeContainersInner}>
-          <div className={styles.flexContainer}>
-            {/* Top row containers */}
-            <div className={styles.topRowContainers}>
-              {/* Left Container - Unbeatable in Vision */}
-              <div className={styles.singleContainer}>
+          <div className={styles.threeContainersInner}>
+            <div className={styles.flexContainer}>
+              {/* Top row containers */}
+              <div className={styles.topRowContainers}>
+                {/* Left Container - Unbeatable in Vision */}
+                <div className={styles.singleContainer}>
+                  <h3 className={styles.containerTitle}>
+                    Unbeatable in
+                    <br />
+                    <span className={styles.containerTitleHighlight}>
+                      Vision
+                    </span>
+                  </h3>
+                </div>
+                {/* Right Container - Unmatched In Innovation */}
+                <div className={styles.singleContainer}>
+                  <h3 className={styles.containerTitle}>
+                    Unstoppable&nbsp;in
+                    <br />
+                    <span className={styles.containerTitleHighlight}>
+                      Action.
+                    </span>
+                  </h3>
+                </div>
+              </div>
+              {/* Bottom Container - Unrivaled In Impact */}
+              <div
+                className={`${styles.singleContainer} ${styles.bottomContainer}`}
+              >
                 <h3 className={styles.containerTitle}>
-                  Unbeatable in
+                  Unconquerable&nbsp;in
                   <br />
-                  <span className={styles.containerTitleHighlight}>Vision</span>
+                  <span className={styles.containerTitleHighlight}>Spirit</span>
                 </h3>
               </div>
-              {/* Right Container - Unmatched In Innovation */}
-              <div className={styles.singleContainer}>
-                <h3 className={styles.containerTitle}>
-                  Unstoppable&nbsp;in
-                  <br />
-                  <span className={styles.containerTitleHighlight}>
-                    Action.
-                  </span>
-                </h3>
-              </div>
-            </div>
-            {/* Bottom Container - Unrivaled In Impact */}
-            <div
-              className={`${styles.singleContainer} ${styles.bottomContainer}`}
-            >
-              <h3 className={styles.containerTitle}>
-                Unconquerable&nbsp;in
-                <br />
-                <span className={styles.containerTitleHighlight}>Spirit</span>
-              </h3>
             </div>
           </div>
         </div>

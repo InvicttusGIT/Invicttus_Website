@@ -31,9 +31,7 @@ export default function Header() {
           <Link href="/products" className={styles.NavLink}>
             Products
           </Link>
-          <Link href="/careers" className={styles.NavLink}>
-            Careers
-          </Link>
+
           <Link href="/contact" className={styles.NavLink}>
             Contact Us
           </Link>
