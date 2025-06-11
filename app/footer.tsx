@@ -124,13 +124,7 @@ export default function Footer() {
       <div className={styles.bottomfooterWrapper}>
         <div className={styles.bottomcontainer}>
           <div className={styles.footerBgImage}>
-            <Image
-              src="/invicttus footer.png"
-              alt="bottomFooter bg"
-              fill
-              className={styles.bottomfooterImage}
-              priority
-            />
+         
           </div>
 
           <div className={styles.gridSection}>

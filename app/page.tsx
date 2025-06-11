@@ -56,57 +56,54 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.heroSection}>
         {/* Background Image */}
-        <div className={styles.heroBackground}></div>
+        <div className={styles.heroBackground}>
+          <div className={styles.heroContentContainer}>
+            <div className={styles.heroTextContainer}>
+              <h1 className={styles.heroHeading}>
+                Where <span className={styles.heroHeadingBlue}>Vision</span>{" "}
+                Meets <span className={styles.heroHeadingBlue}>Innovation</span>
+              </h1>
 
-        <div className={styles.heroContentContainer}>
-          <div className={styles.heroTextContainer}>
-            <h1 className={styles.heroHeading}>
-              Where <span className={styles.heroHeadingBlue}>Vision</span> Meets{" "}
-              <span className={styles.heroHeadingBlue}>Innovation</span>
-            </h1>
+              <p className={styles.heroDescription}>
+                At Invicttus, We Push The Boundaries Of Innovation, Delivering
+                Cutting-Edge Products <wbr />
+                That Redefine How Tech Consumers Engage With The Digital World.
+              </p>
 
-            <p className={styles.heroDescription}>
-              At Invicttus, We Push The Boundaries Of Innovation, Delivering
-              Cutting-Edge Products
-              <wbr />{" "}
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              &nbsp;&nbsp;&nbsp;&nbsp; That Redefine How Tech Consumers Engage
-              With The Digital World.
-            </p>
-
-            {/* Stat Cards */}
-            <div className={styles.statCardsContainer}>
-              {[
-                { value: "40+", label: "Total Apps &  Games" },
-                { value: "2M+", label: "User Base", highlighted: true },
-                { value: "300", suffix: "hrs", label: "Streaming Time" },
-                { value: "1M", label: "Apps Downloads" },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className={styles.statCard}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background =
-                      "linear-gradient(127deg, #000000 17.06%, #00152C 38.41%, #002958 59.76%, #002958 60.36%, #001329 84.94%)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 20px rgba(0, 144, 255, 0.5)";
-                    e.currentTarget.style.transform = "translateY(-50px)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "black";
-                    e.currentTarget.style.boxShadow = "none";
-                    e.currentTarget.style.transform = "translateY(0)";
-                  }}
-                >
-                  <p className={styles.statValue}>
-                    {item.value}
-                    {item.suffix && (
-                      <span className={styles.statSuffix}>{item.suffix}</span>
-                    )}
-                  </p>
-                  <p className={styles.statLabel}>{item.label}</p>
-                </div>
-              ))}
+              {/* Stat Cards */}
+              <div className={styles.statCardsContainer}>
+                {[
+                  { value: "40+", label: "Total Apps &  Games" },
+                  { value: "2M+", label: "User Base", highlighted: true },
+                  { value: "300", suffix: "hrs", label: "Streaming Time" },
+                  { value: "1M", label: "Apps Downloads" },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className={styles.statCard}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background =
+                        "linear-gradient(127deg, #000000 17.06%, #00152C 38.41%, #002958 59.76%, #002958 60.36%, #001329 84.94%)";
+                      e.currentTarget.style.boxShadow =
+                        "0 0 20px rgba(0, 144, 255, 0.5)";
+                      e.currentTarget.style.transform = "translateY(-50px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = "black";
+                      e.currentTarget.style.boxShadow = "none";
+                      e.currentTarget.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <p className={styles.statValue}>
+                      {item.value}
+                      {item.suffix && (
+                        <span className={styles.statSuffix}>{item.suffix}</span>
+                      )}
+                    </p>
+                    <p className={styles.statLabel}>{item.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -116,48 +113,44 @@ export default function Home() {
       <section className={styles.transformSection}>
         {/* Background Image */}
         <div className={styles.transformBackground}>
-          <Image
-            src="/Transfromsection-bg.png"
-            alt="Network Globe Background"
-            fill
-            className={styles.transformBackground} // Changed this to the correct style class
-            priority
-          />
-        </div>
-        <div className={styles.transformContentContainer}>
-          {/* Transform Content */}
-          <div className={styles.transformFlexContainer}>
-            {/* Main Heading */}
-            <div className={styles.transformHeadingWrapper}>
-              <h2 className={styles.transformHeading}>
-                Transform &nbsp;
-                <br />
-                Ideas &nbsp;
-                <br />
-                Into &nbsp;
-                <br />
-                Reality &nbsp;
-                <br />
-                Together &nbsp;
-              </h2>
+          {" "}
+          <div className={styles.transformContentContainer}>
+            {/* Transform Content */}
+            <div className={styles.transformFlexContainer}>
+              {/* Main Heading */}
+              <div className={styles.transformHeadingWrapper}>
+                <h2 className={styles.transformHeading}>
+                  Transform &nbsp;
+                  <br />
+                  Ideas &nbsp;
+                  <br />
+                  Into &nbsp;
+                  <br />
+                  Reality &nbsp;
+                  <br />
+                  Together &nbsp;
+                </h2>
 
-              {/* Users Worldwide Text */}
-              <div className={styles.usersWorldwide}>
-                <Users className={styles.usersIcon} />
-                <p className={styles.usersText}>Millions of Users Worldwide</p>
+                {/* Users Worldwide Text */}
+                <div className={styles.usersWorldwide}>
+                  <Users className={styles.usersIcon} />
+                  <p className={styles.usersText}>
+                    Millions of Users Worldwide
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Network Visualization */}
-            <div className={styles.networkVisualization}>
-              <div className={styles.networkGlobe}>
-                <Image
-                  src="/network-people.png"
-                  alt="Network of People"
-                  fill
-                  className={styles.networkPeopleImage}
-                  priority
-                />
+              {/* Network Visualization */}
+              <div className={styles.networkVisualization}>
+                <div className={styles.networkGlobe}>
+                  <Image
+                    src="/network-people.png"
+                    alt="Network of People"
+                    fill
+                    className={styles.networkPeopleImage}
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -489,115 +482,99 @@ export default function Home() {
               </button>
             ))}
           </div>
+        </div>
+      </section>
+      {/* Company Values Section */}
+      <div className={styles.valuesSection}>
+        <div className={styles.valuesContainer}>
+          {/* Value 1: Collaborative (right) */}
+          <div className={`${styles.valueBlock}`}>
+            <div className={`${styles.valueTitleWrapper} ${styles.one}`}>
+              <span className={`${styles.valueNumber} ${styles.one}`}>01</span>
+              <span className={`${styles.valueTitle} ${styles.one}`}>
+                Collaborative
+              </span>
+              <p className={`${styles.valueDescription} ${styles.one}`}>
+                Innovation Thrives When People Work Together, Sharing Ideas And
+                Skills To Achieve Greater Success. A Collaborative Mindset
+                Fosters Trust, Creativity, And Groundbreaking Solutions.
+                {""}
+                <span className={styles.highlightedText1}>
+                  "Teamwork Drives Innovation"
+                </span>
+              </p>
+              <div className={styles.barline}></div>
+            </div>
+          </div>
 
-          {/* Company Values Section */}
-          <div className={styles.valuesSection}>
-            <div className={styles.valuesContainer}>
-              {/* Value 1: Collaborative (right) */}
-              <div className={`${styles.valueBlock}`}>
-                <div className={`${styles.valueTitleWrapper} ${styles.one}`}>
-                  <span className={`${styles.valueNumber} ${styles.one}`}>
-                    01
-                  </span>
-                  <span className={`${styles.valueTitle} ${styles.one}`}>
-                    Collaborative
-                  </span>
-                  <p className={`${styles.valueDescription} ${styles.one}`}>
-                    Innovation Thrives When People Work Together, Sharing Ideas
-                    And Skills To Achieve Greater Success. A Collaborative
-                    Mindset Fosters Trust, Creativity, And Groundbreaking
-                    Solutions.
-                    {""}
-                    <span className={styles.highlightedText1}>
-                      "Teamwork Drives Innovation"
-                    </span>
-                  </p>
-                  <div className={styles.barline}></div>
-                </div>
-              </div>
+          {/* Value 2: Creative (left) */}
+          <div className={`${styles.valueBlock}`}>
+            <div className={`${styles.valueTitleWrapper} ${styles.two}`}>
+              <span className={`${styles.valueNumber} ${styles.two}`}>02</span>
+              <span className={`${styles.valueTitle} ${styles.two}`}>
+                Creative
+              </span>
+              <p className={`${styles.valueDescription} ${styles.two}`}>
+                Creativity Fuels Innovation By Encouraging New Ideas And Fresh
+                Perspectives. It Pushes Boundaries, Transforming Imagination
+                Into Impactful Experiences.{" "}
+                <span className={styles.highlightedText2}>
+                  "Ideas Thrive Here"
+                </span>
+              </p>
+              <div className={styles.barline}></div>
+            </div>
+          </div>
 
-              {/* Value 2: Creative (left) */}
-              <div className={`${styles.valueBlock}`}>
-                <div className={`${styles.valueTitleWrapper} ${styles.two}`}>
-                  <span className={`${styles.valueNumber} ${styles.two}`}>
-                    02
-                  </span>
-                  <span className={`${styles.valueTitle} ${styles.two}`}>
-                    Creative
-                  </span>
-                  <p className={`${styles.valueDescription} ${styles.two}`}>
-                    Creativity Fuels Innovation By Encouraging New Ideas And
-                    Fresh Perspectives. It Pushes Boundaries, Transforming
-                    Imagination Into Impactful Experiences.{" "}
-                    <span className={styles.highlightedText2}>
-                      "Ideas Thrive Here"
-                    </span>
-                  </p>
-                  <div className={styles.barline}></div>
-                </div>
-              </div>
+          {/* Value 3: Team-Oriented (right) */}
+          <div className={`${styles.valueBlock}`}>
+            <div className={`${styles.valueTitleWrapper} ${styles.three}`}>
+              <span className={`${styles.valueNumber} ${styles.three}`}>
+                03
+              </span>
+              <span className={`${styles.valueTitle} ${styles.three}`}>
+                Team-Oriented
+              </span>
+              <p className={styles.valueDescription3}>
+                A Strong Team Culture Values Collective Effort And Shared
+                Success. When People Collaborate, They Achieve More, Innovate
+                Faster, And Build A Supportive Work Environment.{" "}
+                <span className={styles.highlightedText3}>
+                  "Together We Build The Future"
+                </span>
+              </p>
+              <div className={styles.barline3}></div>
+            </div>
+          </div>
 
-              {/* Value 3: Team-Oriented (right) */}
-              <div className={`${styles.valueBlock}`}>
-                <div className={`${styles.valueTitleWrapper} ${styles.three}`}>
-                  <span className={`${styles.valueNumber} ${styles.three}`}>
-                    03
-                  </span>
-                  <span className={`${styles.valueTitle} ${styles.three}`}>
-                    Team-Oriented
-                  </span>
-                  <p className={styles.valueDescription3}>
-                    A Strong Team Culture Values Collective Effort And Shared
-                    Success. When People Collaborate, They Achieve More,
-                    Innovate Faster, And Build A Supportive Work Environment.{" "}
-                    <span className={styles.highlightedText3}>
-                      "Together We Build The Future"
-                    </span>
-                  </p>
-                  <div className={styles.barline3}></div>
-                </div>
-              </div>
+          {/* VR Experience Section - Added right after Team-Oriented */}
+          <section className={styles.vrExperienceSection}>
+            <div className={styles.vrExperienceWrapper}>
+              {/* Background VR Image */}
+              <div className={styles.vrBackgroundImage}>
+                {/* Overlay gradients */}
+                <div className={styles.gradientOverlayHorizontal}></div>
+                <div className={styles.gradientOverlayBottom}></div>
 
-              {/* VR Experience Section - Added right after Team-Oriented */}
-              <section className={styles.vrExperienceSection}>
-                <div className={styles.vrExperienceWrapper}>
-                  {/* Background VR Image */}
-                  <div
-                    className={`${styles.vrBackgroundImage} absolute inset-0 z-0`}
-                  >
-                    <Image
-                      src="/vr-experience-neon.png"
-                      alt="VR Experience"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                  </div>
-
-                  {/* Overlay gradients */}
-                  <div className={styles.gradientOverlayHorizontal}></div>
-                  <div className={styles.gradientOverlayBottom}></div>
-
-                  {/* Content container */}
-                  <div className={styles.vrContentContainer}>
-                    <div className={styles.vrGrid}>
-                      {/* Right side - App Mockups */}
-                      <div className={styles.appMockupContainer}>
-                        <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MOCKUPPPPP%201-YtO6McUyoxLDWHiasHQ4OeaXDdVqUY.png"
-                          alt="Jellyfish App Mockup"
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
+                {/* Content container */}
+                <div className={styles.vrContentContainer}>
+                  <div className={styles.vrGrid}>
+                    {/* Right side - App Mockups */}
+                    <div className={styles.appMockupContainer}>
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MOCKUPPPPP%201-YtO6McUyoxLDWHiasHQ4OeaXDdVqUY.png"
+                        alt="Jellyfish App Mockup"
+                        fill
+                        className="object-contain"
+                      />
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
