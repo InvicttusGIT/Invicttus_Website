@@ -346,7 +346,7 @@
   }
 
   .heroContentContainer {
-    position: relative;
+    display: flex;
     justify-content: start;
     padding: 1rem;
   }
@@ -414,112 +414,116 @@
   }
 }
 
-/* Transform Section */
+/* Section Wrapper */
 .transformSection {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  align-items: center;
+  padding: 10rem 10rem;
   background-image: url("/Transfromsection-bg.png");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+  width: 100%;
+  height: 100vw;
 }
 
+/* Background Container */
 .transformBackground {
-  right: 0;
-  bottom: 0;
-  width: 125vw; /* 2357 / 1920 ≈ 1.23 → 123vw */
-  max-width: none;
-  height: auto; /* 1508 / 1920 ≈ 78.5vh */
-  object-fit: contain;
-  object-position: right;
-  z-index: 0;
-}
-
-.transformContentContainer {
-  z-index: 10;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Content Wrapper */
+.transformContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transform: translateX(-5%); /* 👈 Shift content slightly to the left */
+}
+
+/* Flex Container for Two Columns */
 .transformFlexContainer {
   display: flex;
-  flex-direction: row;
-
+  justify-content: space-between;
   align-items: center;
-  padding: 5rem 3rem; /* vertical 5rem, horizontal 1rem */
-  height: 100%;
-  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
+/* Left Column - Heading and Users */
 .transformHeadingWrapper {
-  margin-top: 10rem;
-  margin-left: 10%; /* 157px / 1920px ≈ 8% */
+  flex: 1;
+  min-width: 280px;
 }
 
+/* Main Heading */
 .transformHeading {
-  color: #fff;
-  font-family: Manrope, sans-serif;
-  font-size: clamp(2rem, 4vw, 6rem); /* scales from 32px to 96px */
-  font-weight: 600;
+  font-size: 6rem;
+  font-weight: 700;
   line-height: 1.2;
-  text-transform: capitalize;
-  text-align: left;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
 }
-
-/* Users Worldwide */
+.transformHeading span {
+  margin-bottom: 0.5rem;
+}
+/* Users Section */
 .usersWorldwide {
   display: flex;
   align-items: center;
-  margin-top: 5vh; /* 100px / 1920px ≈ 5vh */
+  gap: 0.75rem;
+  margin-top: 1rem;
 }
 
 .usersIcon {
-  width: 2.25rem;
-  height: 2.25rem;
-  color: #9ca3af;
-  margin-right: 0.5rem;
+  width: 70px;
+  height: 37px;
+  color: #fff;
 }
 
 .usersText {
-  font-size: 1.875rem;
-  color: #9ca3af;
+  color: #fff;
+  font-size: 2.5rem;
   white-space: nowrap;
 }
 
-/* Network Visualization */
+/* Right Column - Globe Image */
 .networkVisualization {
-  margin-top: 19rem; /* 373px / 1920px ≈ 19.5vh */
-  /* 470px / 1920px ≈ 24.5% */
+  flex: 1;
+  min-width: 230px;
+  display: flex;
+
+  align-items: center;
+  margin-top: 20rem; /* 👈 Push the image downward */
+}
+.usersWorldwide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 0;
 }
 
 .networkGlobe {
-  width: clamp(200px, 36vw, 690px); /* scales between 200px and 690px */
-  height: auto;
-  aspect-ratio: 1/1; /* keep square */
-  transform: rotate(-7.872deg);
-  border-radius: 50%;
-  flex-shrink: 0;
-
-  animation: rotate-clockwise 15s linear infinite;
+  width: 100%;
+  max-width: 690px;
+  aspect-ratio: 1 / 1;
 }
 
 .networkPeopleImage {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   object-fit: contain;
-  animation: rotate-counterclockwise 25s linear infinite;
+  animation: rotateClockwise 45s linear infinite;
 }
-
-/* Keyframes unchanged */
-@keyframes rotate-clockwise {
+@keyframes rotateClockwise {
   from {
     transform: rotate(0deg);
   }
@@ -527,299 +531,87 @@
     transform: rotate(360deg);
   }
 }
-
-@keyframes rotate-counterclockwise {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
 @media screen and (max-width: 1024px) {
-  .transformSection {
-    margin-top: 4rem;
-    height: 100vh;
-  }
-
-  .transformBackground {
+  .networkGlobe {
     width: 100%;
-    height: 100vh; /* Larger screen can show more */
-  }
-
-  .transformContentContainer {
-    flex-direction: column;
-    height: 100%;
-
-    width: 100%;
-  }
-
-  .transformHeading br {
-    display: none;
-  }
-
-  .transformFlexContainer {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    height: 100%;
-    box-sizing: border-box;
-    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
   }
 
   .transformHeading {
-    color: #fff;
-    font-family: Manrope;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
-    text-transform: capitalize;
-
-    max-width: 100%;
-    white-space: nowrap;
-  }
-
-  /* Users Worldwide */
-  .usersWorldwide {
-    display: flex;
-    align-items: center;
-
-    padding: 0;
-    margin-left: 1.5rem;
-  }
-
-  .usersIcon {
-    width: 2rem;
-    height: 2rem;
-    color: #9ca3af;
-    margin-right: 0.5rem;
+    font-size: 4rem;
+    text-align: center;
+    justify-content: space-between;
   }
 
   .usersText {
-    font-size: 2rem;
-    color: #9ca3af;
-    line-height: 1rem;
-    white-space: nowrap;
+    font-size: 1.8rem;
   }
 
-  /* Network Visualization */
-
-  .networkGlobe {
-    width: clamp(400px, 30vw, 520px);
+  .usersIcon {
+    width: 50px;
     height: auto;
-    aspect-ratio: 1/1;
-    transform: rotate(-7.872deg);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 19rem;
-
-    animation: rotate-clockwise 20s linear infinite;
-  }
-
-  .networkPeopleImage {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: contain;
-    animation: rotate-counterclockwise 25s linear infinite;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .transformSection {
-    height: 100vh;
-  }
-
-  .transformBackground {
-    width: 100%;
-    height: 100vh; /* Larger screen can show more */
-  }
-
-  .transformContentContainer {
-    flex-direction: row;
-    height: 100%;
-
-    width: 100%;
-  }
-
-  .transformHeading br {
-    display: none;
-  }
-
   .transformFlexContainer {
-    display: flex;
     flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+  }
 
-    height: 100%;
-    box-sizing: border-box;
+  .networkGlobe {
     width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
   }
 
   .transformHeading {
-    color: #fff;
-    font-family: Manrope;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
-    text-transform: capitalize;
-
-    max-width: 100%;
-    white-space: nowrap;
-  }
-
-  /* Users Worldwide */
-  .usersWorldwide {
-    display: flex;
-    align-items: center;
-
-    padding: 0;
-    margin-left: 1.5rem;
-  }
-
-  .usersIcon {
-    width: 2rem;
-    height: 2rem;
-    color: #9ca3af;
-    margin-right: 0.5rem;
+    font-size: 2.5rem;
+    flex-direction: row;
+    font-weight: 500;
+    text-align: center;
+    justify-content: space-between;
   }
 
   .usersText {
-    font-size: 2rem;
-    color: #9ca3af;
-    line-height: 1rem;
-    white-space: nowrap;
+    font-size: 1.2rem;
   }
 
-  /* Network Visualization */
-
-  .networkGlobe {
-    width: clamp(400px, 30vw, 520px);
+  .usersIcon {
+    width: 30px;
     height: auto;
-    aspect-ratio: 1/1;
-    transform: rotate(-7.872deg);
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-top: 19rem;
-
-    animation: rotate-clockwise 20s linear infinite;
   }
 
-  .networkPeopleImage {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: contain;
-    animation: rotate-counterclockwise 25s linear infinite;
+  .networkVisualization {
+    margin-top: 1rem;
   }
 }
 
-/* Smaller screens adjustments */
-
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .transformSection {
-    height: auto;
-  }
-
-  .transformBackground {
-    width: 316px; /* 2357 / 1920 ≈ 1.23 → 123vw */
-  }
-
-  .transformContentContainer {
-    flex-direction: row;
-    height: 100%;
-    padding: 0;
-    width: 100%;
-    max-width: 425px;
-    min-width: none;
-  }
-  .transformHeading br {
-    display: none;
-  }
-
+@media screen and (max-width: 480px) {
   .transformFlexContainer {
-    display: flex;
     flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 5rem 0 0 3rem; /* vertical 5rem, horizontal 1rem */
-    height: 100%;
-    box-sizing: border-box;
-    width: 100%;
+    align-items: none;
   }
-
-  .transformHeadingWrapper {
-    margin-top: 2rem;
-    margin-left: 1%; /* 157px / 1920px ≈ 8% */
-  }
-
-  .transformHeading {
-    color: #fff;
-    font-family: Manrope;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 100;
-    line-height: normal;
-    text-transform: capitalize;
-
-    width: 300px;
-    max-width: 100%;
-    white-space: nowrap; /* allow wrapping */
-  }
-
-  /* Users Worldwide */
-  .usersWorldwide {
-    display: flex;
-    align-items: center;
-    margin-top: 0.1rem; /* 100px / 1920px ≈ 5vh */
-    padding: 0;
-    margin-left: 1rem;
-  }
-
-  .usersIcon {
-    width: 1rem;
-    height: 1rem;
-    color: #9ca3af;
-    margin-right: 0.5rem;
-  }
-
-  .usersText {
-    font-size: 1rem;
-    color: #9ca3af;
-    line-height: 4px;
-  }
-
-  /* Network Visualization */
-  .networkVisualization {
-    display: flex;
-    margin-top: 1vh;
-  }
-
   .networkGlobe {
-    width: clamp(150px, 24vw, 490px); /* scales between 200px and 690px */
-    height: auto;
-    aspect-ratio: 1/1; /* keep square */
-    transform: rotate(-7.872deg);
-    border-radius: 50%;
-    flex-shrink: 0;
-
-    animation: rotate-clockwise 15s linear infinite;
+    width: 100%;
+    max-width: 230px;
+    aspect-ratio: 1 / 1;
   }
-
-  .networkPeopleImage {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: contain;
-    animation: rotate-counterclockwise 25s linear infinite;
+  .transformHeading {
+    font-size: 1rem;
+    flex-direction: row;
+    font-weight: 300;
+    justify-content: space-between;
+  }
+  .usersText {
+    font-size: 0.8rem;
+  }
+  .usersIcon {
+    width: 15px;
+  }
+  .networkVisualization {
+    margin-top: 0; /* 👈 Push the image downward */
   }
 }
 /* Premium Quality Solutions Section */
@@ -840,7 +632,7 @@
   z-index: 2;
   width: 100%;
 }
-F .premiumContentWrapper {
+.premiumContentWrapper {
   width: 100%;
   height: 100%;
   z-index: 10;
@@ -1392,14 +1184,11 @@ F .premiumContentWrapper {
   }
   .textSideWrapper {
     width: 100%;
-    padding: 0rem 10rem;
-    margin-left: 40rem;
-    margin-top: -20vw;
+    padding: 0rem 1rem;
   }
   .SeamlessHeading {
     font-size: clamp(1.5rem, 4vw, 28px);
     text-wrap: nowrap;
-    margin-top: 20rem;
   }
 
   .SeamlessSpan {
@@ -1749,22 +1538,10 @@ F .premiumContentWrapper {
     box-sizing: border-box;
   }
 
-  .platformLogo {
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-
-  .platformLogoInner {
-    border-radius: 9999px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
   .textSideWrapper {
     width: 100%;
     box-sizing: border-box;
-    padding: 2rem 0 0 12rem;
+    padding: 2rem 0 0 1rem;
   }
 
   .SeamlessHeading {
@@ -1785,7 +1562,6 @@ F .premiumContentWrapper {
   }
 
   .seamlessPara {
-    margin-top: 2rem;
     color: #fff;
     font-family: Manrope, sans-serif;
     font-size: 14px;
@@ -2576,7 +2352,7 @@ F .premiumContentWrapper {
 
 .mainHeadingLogo {
   display: inline-block;
-  width: 178px !important;
+  width: 600px !important;
   height: 250px !important; /* Adjust height as needed for alignment */
   object-fit: contain;
 }
@@ -2722,8 +2498,8 @@ F .premiumContentWrapper {
 
   .mainHeadingLogo {
     display: inline-block;
-    width: 148px !important;
-    height: 210px !important; /* Adjust height as needed for alignment */
+    width: 500px !important;
+    height: 250px !important; /* Adjust height as needed for alignment */
     object-fit: contain;
   }
   .carouselWrapper {

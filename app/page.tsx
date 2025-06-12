@@ -120,15 +120,11 @@ export default function Home() {
               {/* Main Heading */}
               <div className={styles.transformHeadingWrapper}>
                 <h2 className={styles.transformHeading}>
-                  Transform &nbsp;
-                  <br />
-                  Ideas &nbsp;
-                  <br />
-                  Into &nbsp;
-                  <br />
-                  Reality &nbsp;
-                  <br />
-                  Together &nbsp;
+                  <span>Transform</span>
+                  <span>Ideas</span>
+                  <span>Into</span>
+                  <span>Reality</span>
+                  <span>Together</span>
                 </h2>
 
                 {/* Users Worldwide Text */}
@@ -146,7 +142,8 @@ export default function Home() {
                   <Image
                     src="/network-people.png"
                     alt="Network of People"
-                    fill
+                    width={690}
+                    height={690}
                     className={styles.networkPeopleImage}
                     priority
                   />
@@ -296,29 +293,8 @@ export default function Home() {
 
         {/* Top Rated Apps / Platform Experience Section */}
         <section className={styles.topRatedSection}>
-          {/* Background Image */}
-          <div className={styles.topRatedBackground1}>
-            {/* <Image
-            src="/roundbg.png"
-            alt="Top rated apps background"
-            fill
-            className={styles.topRatedimage} // Changed to use the style class
-            priority
-          /> */}
-          </div>
-          <div className={styles.topRatedBackground2}>
-            {/* <Image
-            src="/roundbg.png"
-            alt="Top rated apps background 2"
-            fill
-            className={styles.topRatedimage} // Changed to use the style class
-            priority
-          /> */}
-          </div>
-
           <div className={styles.topRatedContentContainer}>
             <div className={styles.topRatedFlexContainer}>
-              {/* Text Content Side */}
               <div className={styles.textSideWrapper}>
                 <h2 className={styles.SeamlessHeading}>
                   Powering
@@ -423,15 +399,13 @@ export default function Home() {
             className={`${styles.mainHeadingContainer} flex items-center justify-center`}
           >
             <div className={styles.mainHeadingRow}>
-              <span className={styles.mainHeadingText}>LIFE AT INVIC</span>
               <Image
-                src="/T.svg"
+                src="/INVtext.png"
                 alt="Invicttus Logo"
-                width={178}
+                width={500}
                 height={250}
                 className={styles.mainHeadingLogo}
               />
-              <span className={styles.mainHeadingText}>US</span>
             </div>
           </div>
         </div>
