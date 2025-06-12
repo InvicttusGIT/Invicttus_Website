@@ -72,7 +72,7 @@ export default function ProductsPage() {
             <p className={styles.ProductHeroSubheading}>
               Join Us in Shaping the Future with Innovation.
             </p>
-            <Link href="/careers">
+            <Link href="/products">
               <button className={styles.OurProductButton}>Our Products</button>
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function ProductsPage() {
           {/* Products Section */}
           <section className={styles.ProductsSection}>
             <div className={styles.ProductsSectionbg}></div>
-            <div className={styles.ProductsSectiotLeft}>
+            <div className={styles.ProductsSectionLeft}>
               <h2 className={styles.LeftHeading}>
                 Top Rated <span className={styles.Highlight}>App</span>
               </h2>
@@ -101,14 +101,15 @@ export default function ProductsPage() {
                 <Image
                   src="/guess-the-word.png"
                   alt="Guess The Word"
-                  fill
+                  width={357}
+                  height={293}
                   className={styles.ProductSectionImage}
                 />
               </div>
               <div className={styles.ProductSectionRightContent}>
-                <span className={styles.ProductSectionFlagship}>
+                <div className={styles.ProductSectionFlagship}>
                   <h2> Flagship App </h2>
-                </span>
+                </div>
                 <div className={styles.ProductSectionStats}>
                   <span className={styles.ProductSectionStatBox}>
                     <p>
@@ -123,9 +124,9 @@ export default function ProductsPage() {
                     </p>
                   </span>
                 </div>
-                <button className={styles.ProductSectionSeeMoreButton}>
-                  <Link href="/products/flagshipapp"> See More{">"}</Link>
-                </button>
+                {/* <button className={styles.ProductSectionSeeMoreButton}>
+                    <Link href="/products/flagshipapp"> See More{">"}</Link>
+                  </button> */}
               </div>
             </div>
           </section>
@@ -235,7 +236,6 @@ export default function ProductsPage() {
           </div>
           <div
             style={{
-              position: "relative",
               width: "100%",
             }}
           >

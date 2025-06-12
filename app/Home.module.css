@@ -119,6 +119,65 @@
 }
 
 /* Responsive Styles */
+@media screen and (max-width: 1440px) {
+  .heroBackground {
+    border-radius: 120px 120px 0 0;
+  }
+
+  .heroHeading {
+    margin-top: 15rem;
+    font-size: clamp(2rem, 6vw, 65px);
+
+    white-space: wrap;
+  }
+
+  .heroHeadingBlue {
+    color: #0090ff;
+    font-weight: 600;
+    font-size: 5rem;
+  }
+
+  .heroDescription {
+    font-size: 28px;
+    line-height: 48px;
+
+    white-space: wrap;
+
+    margin-top: 3rem;
+  }
+
+  .statCardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem;
+    margin-top: 2rem;
+  }
+
+  .statCard {
+    width: 250px;
+    height: 200px;
+    padding: 1px 2px;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+  }
+
+  .statValue {
+    font-size: clamp(2.5rem, 6vw, 70px);
+    font-weight: 800;
+  }
+
+  .statSuffix {
+    font-size: clamp(1.2rem, 2vw, 30px);
+  }
+
+  .statLabel {
+    font-size: clamp(1.2rem, 2vw, 24px);
+    font-weight: 600;
+  }
+}
 @media screen and (max-width: 1024px) {
   .heroBackground {
     border-radius: 80px 80px 0 0;
@@ -477,7 +536,7 @@
     transform: rotate(-360deg);
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .transformSection {
     margin-top: 4rem;
     height: 100vh;
@@ -570,7 +629,7 @@
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .transformSection {
     height: 100vh;
   }
@@ -798,7 +857,7 @@ F .premiumContentWrapper {
   text-align: center;
   margin-bottom: 1.5rem;
   width: 90%;
-  max-width: 1285px;
+
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -1037,7 +1096,7 @@ F .premiumContentWrapper {
   height: 100vh;
   padding: 5rem 0;
   background-color: transparent;
-  z-index: -1;
+
   box-sizing: border-box;
 }
 
@@ -1188,7 +1247,7 @@ F .premiumContentWrapper {
   height: clamp(1.5rem, 4vw, 50px);
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .topRatedBackgroundWrapper {
     background-repeat: no-repeat;
     background-size: 100%;
@@ -1362,7 +1421,10 @@ F .premiumContentWrapper {
     text-wrap: nowrap;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
+  .hero {
+    overflow-x: hidden;
+  }
   .topRatedBackgroundWrapper {
     background-position: center 200px;
   }
@@ -1568,7 +1630,7 @@ F .premiumContentWrapper {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .topRatedBackgroundWrapper {
     background-position: center 250px;
   }
@@ -1779,9 +1841,6 @@ F .premiumContentWrapper {
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .topRatedBackgroundWrapper {
     background-position: center 100px;
-  }
-  .premiumSection {
-    margin-top: -35vh;
   }
 
   .premiumDescription {
@@ -2025,6 +2084,7 @@ F .premiumContentWrapper {
 }
 /* Three Containers Section */
 .threeContainersSection {
+  z-index: -1;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -2201,7 +2261,7 @@ F .premiumContentWrapper {
   background-color: #474646;
   margin: 1rem auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .threeContainersSection {
     padding: 0 0;
   }
@@ -2293,7 +2353,7 @@ F .premiumContentWrapper {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .threeContainersSection {
     margin-top: 4rem;
     padding: 4rem 0;
@@ -2580,7 +2640,6 @@ F .premiumContentWrapper {
 .carouselWrapper {
   position: relative;
   margin-top: 334px;
-  margin-bottom: 468px;
 }
 
 .mainImageDisplay {
@@ -2743,7 +2802,7 @@ F .premiumContentWrapper {
     transition: all 0.3s; /* transition-all duration-300 */
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .lifeAtSection {
     position: relative;
     overflow: hidden;
@@ -2856,7 +2915,7 @@ F .premiumContentWrapper {
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .lifeAtSection {
     position: relative;
     overflow: hidden;
@@ -3082,486 +3141,125 @@ F .premiumContentWrapper {
   }
 }
 /* --- Company Values Section --- */
+/* valuesSection Wrapper */
 .valuesSection {
-  z-index: 20;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(180deg, #000, #111);
+  color: white;
+  padding: 6rem 2rem;
+  width: 100%;
+  height: auto;
 }
 
+/* Container */
 .valuesContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 8rem;
+}
+
+/* Block */
+.valueBlock,
+.valueBlock1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .valueTitleWrapper {
-  margin-bottom: 2rem; /* mb-8 */
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.one {
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.two {
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.three {
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .valueNumber {
-  transform: translate(-50%, -50%); /* Center the number */
-  font-size: 250px;
-  font-weight: 700; /* font-bold */
-  color: #2f2f2f;
-  opacity: 1; /* opacity-100 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  /* Specific offsets based on your inline styles, adjust as needed */
-  /* For value 1: */
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+  margin-bottom: -2rem;
 }
-.valueNumber.one {
-  left: 80%;
-  margin-top: 10rem;
-  margin-left: 1540px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
-}
+
 .valueTitle {
-  font-size: 100px;
+  font-size: 2.5rem;
   font-weight: 700;
-  line-height: 163%;
-  text-transform: capitalize;
-  color: #fff;
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  text-align: justify; /* textAlign: "justify" */
+  color: white;
+}
 
-  z-index: 10;
-  /* Specific offsets based on your inline styles, adjust as needed */
-  /* For value 1: */
-}
-.valueTitle.one {
-  margin-left: 45rem;
-}
-.barline3 {
-  width: 20rem;
-  height: 1px;
-  background-color: #474646;
-  margin: 2rem auto;
-}
-.valueNumber.two {
-  left: 40%;
-}
-.valueNumber.three {
-  left: 80%;
-  margin-top: 10rem;
-  margin-left: 1540px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
-}
 .valueDescription {
-  color: #e7e7e7;
-  text-align: justify;
-  font-family: "Manrope", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 163%;
-  text-transform: capitalize;
-
-  /* Specific offsets based on your inline styles, adjust as needed */
-  /* For value 1: */
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
 }
 
-.valueDescription.one {
-  margin-left: 600px;
+.barline {
+  width: 80px;
+  height: 4px;
+  background-color: #00ffe0;
+  margin-top: 1rem;
 }
 
-.valueDescription3 {
-  width: 1119px;
-  color: #e7e7e7;
-  text-align: justify;
-  font-family: "Manrope", sans-serif;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 163%;
-  text-transform: capitalize;
+.highlightedText1,
+.highlightedText2,
+.highlightedText3 {
+  display: block;
+  color: #00ffe0;
+  margin-top: 1rem;
+  font-weight: bold;
 }
 
-.highlightedText {
-  color: #0190ff;
-  font-family: "Manrope", sans-serif;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 163%;
-  text-transform: capitalize;
-}
-
-.horizontalBar {
-  width: 1200px;
+/* Divider line */
+.barline,
+.barline3 {
+  width: 100%;
   height: 1px;
-  background-color: #6a6a6a;
-  margin: 0 auto;
-  /* Specific offsets based on your inline styles, adjust as needed */
-  /* For value 1: */
-  margin-left: 150px;
+  background-color: #444;
+  opacity: 0.5;
+  margin-top: 2rem;
 }
 
-.horizontalBar.one {
-  margin-left: 150px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .valueNumber {
+    font-size: 4rem;
+  }
 
-@media screen and (min-width: 1025px) and (max-width: 1440px) {
-  .valuesSection {
-    position: relative;
-    z-index: 20;
-    margin-top: 156px;
+  .valueTitle {
+    font-size: 2rem;
+    margin-top: -2rem;
+  }
+
+  .valueDescription,
+  .valueDescription3 {
+    font-size: 0.95rem;
   }
 
   .valuesContainer {
-    max-width: 80rem; /* max-w-6xl */
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .valueBlock {
-    margin-bottom: 4rem; /* mb-16 */
-    padding-bottom: 3rem; /* pb-12 */
-    /* Tailwind: mt-241 is an unusual class name; converting to margin-top */
-  }
-
-  .valueBlock.creative {
-    /* Specific for the second value block */
-    margin-top: 241px;
-  }
-
-  .valueTitleWrapper {
-    position: relative;
-    margin-bottom: 2rem; /* mb-8 */
-    text-align: center;
-  }
-
-  .valueNumber {
-    position: absolute;
-
-    transform: translate(-50%, -50%); /* Center the number */
-    font-size: 200px;
-    font-weight: 700; /* font-bold */
-    color: #2f2f2f;
-    opacity: 1; /* opacity-100 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 0;
-    /* Specific offsets based on your inline styles, adjust as needed */
-    /* For value 1: */
-    margin-left: 1240px; /* This will be tricky to generalize in CSS; consider grid/flex for layout */
-    margin-bottom: 70px;
-  }
-
-  .valueNumber.one {
-    left: 80%;
-  }
-
-  .valueNumber.two {
-    left: 10%;
-  }
-
-  .valueNumber.three {
-    left: -20%;
-  }
-
-  .valueTitle {
-    font-size: 70px;
-    font-weight: 500;
-  }
-
-  .valueTitle.one {
-    margin-right: 100px;
-  }
-
-  .valueTitle.two {
-    margin-left: 40rem;
-  }
-
-  .valueTitle.three {
-    margin-left: 600px;
-    margin-top: 141px; /* mt-141px */
-  }
-  .barline3 {
-    width: 20rem;
-    height: 1px;
-    background-color: #474646;
-    margin: 2rem auto;
-  }
-  .valueDescription {
-    width: 900px;
-    color: #e7e7e7;
-    text-align: justify;
-    font-family: "Manrope", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 163%;
-    text-transform: capitalize;
-
-    /* Specific offsets based on your inline styles, adjust as needed */
-    /* For value 1: */
-  }
-
-  .valueDescription.one {
-    margin-left: 200px;
-  }
-
-  .valueDescription.two {
-    margin-left: -160px;
-  }
-
-  .valueDescription3 {
-    width: 900px;
-    color: #e7e7e7;
-    text-align: justify;
-    font-family: "Manrope", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 163%;
-    text-transform: capitalize;
-    margin-left: 15rem;
-  }
-
-  .highlightedText {
-    color: #0190ff;
-    font-family: "Manrope", sans-serif;
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 163%;
-    text-transform: capitalize;
-  }
-
-  .horizontalBar {
-    width: 1200px;
-    height: 1px;
-    background-color: #6a6a6a;
-    margin: 0 auto;
-    /* Specific offsets based on your inline styles, adjust as needed */
-    /* For value 1: */
-    margin-left: 150px;
-  }
-
-  .horizontalBar.one {
-    margin-left: 150px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .valueBlock {
-    flex-direction: column !important;
-    text-align: center !important;
-  }
-
-  .valueNumber {
-    font-size: 100px;
-    width: 100%;
-    opacity: 0.1;
-    margin-bottom: 1rem;
-  }
-  .valueTitle.one {
-    margin-right: 200px;
-  }
-  .valueText {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .valueTitle {
-    font-size: 36px;
-  }
-
-  .valueDescription {
-    font-size: 18px;
-  }
-}
-.vrExperienceSection {
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    #000 8.1%,
-    rgba(0, 0, 0, 0) 71.04%,
-    #000 98.32%
-  );
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .valuesSection {
-    margin-top: 120px;
-  }
-
-  .valueBlock {
-    margin-bottom: 3.5rem;
-    padding-bottom: 3rem;
-  }
-
-  .valueBlock.creative {
-    margin-top: 200px;
-  }
-
-  .valueNumber {
-    font-size: 200px;
-    margin-left: 0;
-    margin-bottom: 60px;
-    left: 50% !important;
-  }
-
-  .valueTitle {
-    font-size: 64px;
-    margin-left: 0 !important;
-    text-align: center;
-  }
-
-  .valueTitle.three {
-    margin-top: 100px;
-  }
-
-  .valueDescription,
-  .valueDescription3 {
-    width: 85%;
-    font-size: 26px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem;
-  }
-
-  .barline3 {
-    width: 16rem;
-    margin: 2rem auto;
-  }
-
-  .highlightedText {
-    font-size: 28px;
-  }
-
-  .horizontalBar,
-  .horizontalBar.one,
-  .horizontalBar.two {
-    width: 75%;
-    margin-left: auto !important;
-    margin-right: auto;
+    gap: 5rem;
   }
 }
 
-@media screen and (min-width: 426px) and (max-width: 767px) {
-  .valuesSection {
-    margin-top: 100px;
-  }
-
-  .valueBlock {
-    margin-bottom: 3rem;
-    padding-bottom: 2.5rem;
-  }
-
-  .valueBlock.creative {
-    margin-top: 150px;
-  }
-
-  .valueNumber {
-    font-size: 140px;
-    margin-left: 0;
-    margin-bottom: 50px;
-    left: 50% !important;
-  }
-
-  .valueTitle {
-    font-size: 48px;
-    margin-left: 0 !important;
-    text-align: center;
-  }
-
-  .valueTitle.three {
-    margin-top: 80px;
-  }
-
-  .valueDescription,
-  .valueDescription3 {
-    width: 90%;
-    font-size: 22px;
-    margin-left: 0 !important;
-    padding: 0 1rem;
-  }
-
-  .barline3 {
-    width: 14rem;
-    margin: 1.5rem auto;
-  }
-
-  .highlightedText {
-    font-size: 24px;
-  }
-
-  .horizontalBar,
-  .horizontalBar.one,
-  .horizontalBar.two {
-    width: 85%;
-    margin-left: auto !important;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  .valuesSection {
-    margin-top: 80px;
-  }
-
-  .valueBlock {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .valueBlock.creative {
-    margin-top: 100px;
-  }
-
-  .valueNumber {
-    font-size: 80px;
-    margin-left: 0;
-    margin-bottom: 30px;
-    left: 50% !important;
-  }
-  .valueNumber.one {
-    left: 50%;
-  }
-
-  .valueTitle {
-    font-size: 36px;
-    margin-left: 0 !important;
-    text-align: center;
-    left: 10%;
-  }
-
-  .valueTitle.three {
-    margin-top: 60px;
-  }
-  .valueTitle.one {
-    margin-right: 40rem;
-  }
-  .valueDescription,
-  .valueDescription3 {
-    width: 100%;
-    font-size: 18px;
-    margin-left: 0 !important;
-    padding: 0 1rem;
-  }
-
-  .barline3 {
-    width: 10rem;
-    margin: 1rem auto;
-  }
-
-  .highlightedText {
-    font-size: 20px;
-  }
-
-  .horizontalBar,
-  .horizontalBar.one,
-  .horizontalBar.two {
-    width: 90%;
-    margin-left: auto !important;
-    margin-right: auto;
-  }
-}
 /* Base styles (for large screens) */
 .vrExperienceWrapper {
   display: flex;
@@ -3605,7 +3303,7 @@ F .premiumContentWrapper {
       rgba(0, 0, 0, 0.7) 100%
     );
     mix-blend-mode: multiply;
-    position: absolute;
+
     inset: 0;
     z-index: 10;
   }
@@ -3619,7 +3317,7 @@ F .premiumContentWrapper {
 }
 
 /* Tablet: 426px to 767px */
-@media (min-width: 426px) and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .vrExperienceWrapper {
     left: 0;
     width: 100vw;
@@ -3634,7 +3332,7 @@ F .premiumContentWrapper {
 }
 
 /* Small Desktop: 768px to 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1024px) {
   .vrExperienceWrapper {
     left: 0;
     width: 100vw;

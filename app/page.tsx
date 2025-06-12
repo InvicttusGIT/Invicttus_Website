@@ -483,7 +483,7 @@ export default function Home() {
       <div className={styles.valuesSection}>
         <div className={styles.valuesContainer}>
           {/* Value 1: Collaborative (right) */}
-          <div className={`${styles.valueBlock}`}>
+          <div className={`${styles.valueBlock1}`}>
             <div className={`${styles.valueTitleWrapper} ${styles.one}`}>
               <span className={`${styles.valueNumber} ${styles.one}`}>01</span>
               <span className={`${styles.valueTitle} ${styles.one}`}>
@@ -555,14 +555,7 @@ export default function Home() {
                 <div className={styles.vrContentContainer}>
                   <div className={styles.vrGrid}>
                     {/* Right side - App Mockups */}
-                    <div className={styles.appMockupContainer}>
-                      <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MOCKUPPPPP%201-YtO6McUyoxLDWHiasHQ4OeaXDdVqUY.png"
-                        alt="Jellyfish App Mockup"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
+                    <div className={styles.appMockupContainer}></div>
                   </div>
                 </div>
               </div>
