@@ -22,15 +22,7 @@ export default function Footer() {
       {/* Top Footer Section */}
       <div className={styles.topFooter}>
         {/* Background Image */}
-        <div className={`${styles.topFooterBg} ${styles.footerWrapper}`}>
-          {/* <Image
-            src="/footer-background.png"
-            alt="Footer Background"
-            width={1920}
-            height={859}
-            className={styles.footerImage}
-          /> */}
-        </div>
+        <div className={`${styles.topFooterBg} ${styles.footerWrapper}`}></div>
 
         <div className={styles.container}>
           <div className={styles.wrapper}>
@@ -84,37 +76,39 @@ export default function Footer() {
                 </svg>
               </Link> */}
 
-              <Link
-                href="/contact"
-                className={styles.button}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <span className={styles.buttonText}>Contact</span>
-                <svg
-                  width="38.324"
-                  height="38.324"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={styles.svgIcon}
+              <div className={styles.buttonWrapper}>
+                <Link
+                  href="/contact"
+                  className={styles.button}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
-                  <path
-                    d="M7 3L13 9L7 15"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M13 9H1"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
+                  <span className={styles.buttonText}>Contact</span>
+                  <svg
+                    width="38.324"
+                    height="38.324"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={styles.svgIcon}
+                  >
+                    <path
+                      d="M7 3L13 9L7 15"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M13 9H1"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -123,8 +117,6 @@ export default function Footer() {
       {/* Bottom Footer Section */}
       <div className={styles.bottomfooterWrapper}>
         <div className={styles.bottomcontainer}>
-          <div className={styles.footerBgImage}></div>
-
           <div className={styles.gridSection}>
             <div className={styles.companyColumn}>
               <h4 className={styles.columnTitle}>Company</h4>
@@ -153,9 +145,7 @@ export default function Footer() {
             </div>
 
             <div className={styles.socialColumn}>
-              <h4 className={styles.columnTitleWide}>
-                Follow us on Social Media
-              </h4>
+              <h4 className={styles.columnTitle}>Follow us on Social Media</h4>
               <div className={styles.socialIcons}>
                 <Link href="#">
                   <span className="sr-only">LinkedIn</span>
@@ -246,44 +236,54 @@ export default function Footer() {
             </div>
 
             <div className={styles.contactColumn}>
-              <h4 className={styles.ContactTitle}>Reach us out</h4>
-              <p className={styles.contactText}>
+              <h4 className={styles.columnTitle}>Reach us out</h4>
+              <p className={styles.link}>
                 <a href="mailto:info@invicttus.com">info@invicttus.com</a>
               </p>
             </div>
 
             <div className={styles.homeButtonColumn}>
-              <Link href="/" className={styles.homeButton}>
-                <div className={styles.homeButtonCircle}>
-                  <svg
-                    className={styles.homeButtonIcon}
-                    width="58"
-                    height="104"
-                    viewBox="0 0 58 104"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="home btn">
-                      <rect
-                        id="Rectangle 14215"
-                        x="0.604651"
-                        y="0.604651"
-                        width="56.7907"
-                        height="102.791"
-                        rx="28.3953"
-                        stroke="#979797"
-                        strokeWidth="1.2093"
-                      />
-                      <path
-                        id="Vector"
-                        d="M24.8149 61.3821V56.8883C24.8149 55.7496 25.7408 54.8244 26.8878 54.8173H31.0992C32.2513 54.8173 33.1853 55.7445 33.1853 56.8883V61.369C33.1852 62.3567 33.9879 63.1594 34.9827 63.1666H37.8559C39.1978 63.17 40.4859 62.6432 41.436 61.7024C42.3861 60.7615 42.9201 59.484 42.9201 58.1518V45.3869C42.9201 44.3107 42.4396 43.2899 41.6081 42.5994L31.847 34.8493C30.1408 33.4937 27.7039 33.5375 26.0481 34.9535L16.497 42.5994C15.6262 43.2695 15.1058 44.2934 15.0801 45.3869V58.1387C15.0801 60.9155 17.3474 63.1666 20.1443 63.1666H22.9519C23.4309 63.17 23.8914 62.9835 24.2313 62.6485C24.5713 62.3135 24.7624 61.8576 24.7624 61.3821H24.8149Z"
-                        fill="white"
-                      />
-                    </g>
-                  </svg>
-                  <p className={styles.homeButtonText}>Back To Home</p>
-                </div>
-              </Link>
+              <div className={styles.homeButtonWrapper}>
+                <img
+                  src="/invicttus footer.png"
+                  alt="Your App Preview"
+                  width={313}
+                  height={437}
+                  className={styles.bottomfooterImage}
+                />
+
+                <Link href="/" className={styles.homeButton}>
+                  <div className={styles.homeButtonCircle}>
+                    <svg
+                      className={styles.homeButtonIcon}
+                      width="58"
+                      height="104"
+                      viewBox="0 0 58 104"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="home btn">
+                        <rect
+                          id="Rectangle 14215"
+                          x="0.604651"
+                          y="0.604651"
+                          width="56.7907"
+                          height="102.791"
+                          rx="28.3953"
+                          stroke="#979797"
+                          strokeWidth="1.2093"
+                        />
+                        <path
+                          id="Vector"
+                          d="M24.8149 61.3821V56.8883C24.8149 55.7496 25.7408 54.8244 26.8878 54.8173H31.0992C32.2513 54.8173 33.1853 55.7445 33.1853 56.8883V61.369C33.1852 62.3567 33.9879 63.1594 34.9827 63.1666H37.8559C39.1978 63.17 40.4859 62.6432 41.436 61.7024C42.3861 60.7615 42.9201 59.484 42.9201 58.1518V45.3869C42.9201 44.3107 42.4396 43.2899 41.6081 42.5994L31.847 34.8493C30.1408 33.4937 27.7039 33.5375 26.0481 34.9535L16.497 42.5994C15.6262 43.2695 15.1058 44.2934 15.0801 45.3869V58.1387C15.0801 60.9155 17.3474 63.1666 20.1443 63.1666H22.9519C23.4309 63.17 23.8914 62.9835 24.2313 62.6485C24.5713 62.3135 24.7624 61.8576 24.7624 61.3821H24.8149Z"
+                          fill="white"
+                        />
+                      </g>
+                    </svg>
+                    <p className={styles.homeButtonText}>Back To Home</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
