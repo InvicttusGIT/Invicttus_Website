@@ -1,296 +1,194 @@
-.contactHeroSection {
-  height: 140vh;
+.Contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  background-image: url("/Vector.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 5rem 2rem; /* Added horizontal padding for small screens */
+  box-sizing: border-box;
+}
+
+.contactHeroSection {
+  width: 100%;
+  max-width: 1500px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 40px;
+  background-image: url("/Contact Form.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem 8rem 2rem;
+  box-sizing: border-box;
+}
+
+.contactText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
-  padding: 0 20px;
 }
-.contactText {
-  max-width: 1655px;
-  max-height: 1057px;
-  height: 1057px;
-  width: 100%;
 
-  backdrop-filter: blur(2px);
-  margin-top: 200px;
-  border: 1px solid #3f3f3f;
-  border-radius: 50px;
-  background-color: #0a0d17;
-  backdrop-filter: blur(2px);
-
-  z-index: 10;
-  text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .contactHeading {
-  margin-top: 90px;
+  opacity: 0.9;
+  color: var(--Pure-White, #fff);
   font-family: Manrope;
-  font-size: clamp(2.5rem, 10vw, 105px);
+  font-size: 6vw;
   font-style: normal;
   font-weight: 800;
-  line-height: normal;
-  letter-spacing: -3.15px;
-  text-transform: capitalize;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0;
 }
+
+.contactHeading span {
+  color: #0190ff;
+}
+
 .contactSubheading {
-  max-width: 1091px;
   color: #fff;
   font-family: Manrope;
-  font-size: clamp(1.25rem, 5vw, 40px);
+  font-size: 2vw;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.8px;
-  margin-left: 300px;
-  margin-bottom: 2.5rem; /* Equivalent to mb-10 */
-  white-space: normal;
-  text-wrap: nowrap; /* Equivalent to whitespace-normal */
+  letter-spacing: -0.5px;
+  margin-top: 1rem;
 }
-.contactMailsection {
+
+.ContactWrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 90px;
-  margin-bottom: 100px;
-  gap: 49px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin-top: 3rem;
 }
-.contactMailtext {
+
+.contactContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 900px;
+  flex: 1;
+}
+
+.contactDescription {
   color: #fff;
-  font-family: Manrope, sans-serif;
+  text-align: justify;
+  font-family: Manrope;
+  font-size: 1.5rem;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: -0.72px;
-  max-width: 796px;
-  margin-bottom: 100px;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
 }
-.contactMailicon {
-  margin-top: 1.5rem; /* mt-6 */
+
+.contactMail {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.75rem; /* gap-3 */
-  width: 50px;
-  height: 50px;
-  margin-top: 157px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 3rem 0;
 }
-.contactMailtag {
-  max-width: 444px;
-  max-height: 71px;
+
+.mailText {
   color: #fff;
-  font-size: 20px;
-  text-decoration: underline;
-  transition: all 0.3s;
-}
-.contactMailtag:hover {
-  color: #60a5fa; /* Tailwind's blue-400 */
-}
-.contactMailframe {
-  width: 100%;
-  max-width: 604px;
-  height: auto;
-  object-fit: contain;
+  font-family: Manrope;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: start;
 }
 
-@media (min-width: 1280px) {
-  .contactMailframe {
-    margin-right: 103px;
-  }
+.ContactImage {
+  width: 45%;
+  transform: translateY(3rem); /* Reduced for better responsiveness */
+  max-width: 500px;
+  flex: 1;
 }
 
-@media (min-width: 640px) {
-  .contactMailtag {
-    font-size: 30px;
-  }
-}
-@media (min-width: 768px) {
-  .contactMailtag {
-    font-size: 40px;
-  }
-}
-@media (min-width: 1024px) {
-  .contactMailtag {
-    font-size: 50px;
-  }
-}
+/* ---------- Responsive Media Queries ---------- */
 
-@media (min-width: 640px) {
-  .contactMailicon {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-/* Responsive font sizes */
-@media (min-width: 640px) {
-  .contactMailtext {
-    font-size: 28px;
-  }
-}
-@media (min-width: 768px) {
-  .contactMailtext {
-    font-size: 32px;
-  }
-}
-@media (min-width: 1024px) {
-  .contactMailtext {
-    font-size: 36px;
-  }
-}
-/* Responsive styles */
-@media (min-width: 640px) {
-  .contactMailsection {
-    margin-top: 171px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media (min-width: 1280px) {
-  .contactMailsection {
-    flex-direction: row;
-    margin-left: 103px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contactHeroSection {
-    padding: 0 4vw;
-    height: auto;
-    min-height: 100vh;
-  }
-  .contactText {
-    max-width: 100%;
-    border-radius: 20px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    margin-top: 10px;
-  }
+@media (max-width: 1024px) {
   .contactHeading {
-    font-size: 2rem;
-    margin-top: 40px;
-    letter-spacing: -1.2px;
+    font-size: 8vw;
   }
+
   .contactSubheading {
-    font-size: 1rem;
-    margin-left: 0;
-    max-width: 100%;
-    white-space: normal;
-    text-wrap: wrap;
+    font-size: 3vw;
   }
-  .contactMailsection {
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+
+  .contactDescription {
+    font-size: 1.25rem;
   }
-  .contactMailtext {
-    font-size: 1rem;
-    margin-bottom: 40px;
-    max-width: 100%;
+
+  .mailText {
+    font-size: 1.75rem;
   }
-  .contactMailicon {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 40px;
-    width: 40px;
-    height: 40px;
+
+  .ContactImage {
+    width: 60%;
+    transform: translateY(2rem);
   }
-  .contactMailiconImg {
-    width: 40px;
-    height: 40px;
-  }
-  .contactMailtag {
-    font-size: 1rem;
-    max-width: 100%;
-    max-height: none;
-  }
-  .contactMailframe {
-    max-width: 100%;
-    margin-right: 0;
+  .ContactWrapper {
+    flex-direction: column-reverse;
   }
 }
 
-@media (max-width: 320px) {
-  .contactHeroSection {
-    padding: 0 2vw;
-  }
-  .contactHeading {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-  .contactSubheading {
-    font-size: 0.85rem;
-  }
-  .contactMailtext {
-    font-size: 0.85rem;
-  }
-  .contactMailiconImg {
-    width: 28px;
-    height: 28px;
-  }
-  .contactMailtag {
-    font-size: 0.85rem;
-  }
-}
-.contactHerobackgroundimage {
-  width: 2182.66px;
-  height: 766.364px;
-  position: fixed;
-  margin-top: 400px;
-  margin-left: -220px;
-
-  z-index: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  background-size: 100% 100%;
-  background-position: center;
-  position: absolute;
-  background-repeat: no-repeat;
-
-  flex-shrink: 0;
-  fill: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><linearGradient id="g" gradientTransform="rotate(127)"><stop offset="2.56%" stop-color="%23002958"/><stop offset="2.57%" stop-color="%23002958"/><stop offset="58.49%" stop-color="%2300152C"/><stop offset="79.04%" stop-color="%23000E1F"/><stop offset="99.86%" stop-color="%23001329"/></linearGradient><rect width="100%"  height="100%" fill="url(%23g)"/></svg>');
-}
-
-@media (max-width: 1280px) {
-  .contactHerobackgroundimage {
-    width: 100vw;
-    height: 400px;
-    margin-top: 100px;
-  }
-}
 @media (max-width: 768px) {
-  .contactHerobackgroundimage {
-    width: 100vw;
-    height: 220px;
-    margin-top: 60px;
+  .contactHeroSection {
+    padding: 3rem 1.5rem 6rem 1.5rem;
+  }
+
+  .contactHeading {
+    font-size: 9vw;
+  }
+
+  .contactSubheading {
+    font-size: 4vw;
+  }
+
+  .contactDescription {
+    font-size: 1.125rem;
+  }
+
+  .mailText {
+    font-size: 1.5rem;
+  }
+
+  .ContactImage {
+    width: 80%;
+    transform: translateY(1rem);
   }
 }
+
 @media (max-width: 480px) {
-  .contactHerobackgroundimage {
-    width: 100vw;
-    height: 120px;
-    margin-top: 30px;
+  .contactHeading {
+    font-size: 11vw;
   }
-}
-@media (max-width: 320px) {
-  .contactHerobackgroundimage {
-    width: 100vw;
-    height: 80px;
-    margin-top: 10px;
+
+  .contactSubheading {
+    font-size: 5vw;
+  }
+
+  .contactDescription {
+    font-size: 1rem;
+  }
+
+  .mailText {
+    font-size: 1.25rem;
+  }
+
+  .ContactImage {
+    width: 100%;
+    transform: translateY(0.5rem);
   }
 }

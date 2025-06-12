@@ -62,13 +62,7 @@ export default function Header() {
           >
             Products
           </Link>
-          <Link
-            href="/careers"
-            className={styles.NavLink}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Careers
-          </Link>
+
           <Link
             href="/contact"
             className={styles.NavLink}
