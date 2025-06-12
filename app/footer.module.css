@@ -324,3 +324,9 @@
     font-size: 12px;
   }
 }
+@media screen and (max-width: 1440px) {
+  .gridSection {
+    margin-top: 5rem;
+    gap: 4rem;
+  }
+}

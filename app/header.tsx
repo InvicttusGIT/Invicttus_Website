@@ -17,7 +17,8 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Invicttus Logo"
-              fill
+              width={250}
+              height={100}
               className="object-contain"
               priority
             />
