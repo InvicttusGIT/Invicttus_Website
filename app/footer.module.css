@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   background-image: url("/footer-background.png");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

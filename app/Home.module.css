@@ -1750,7 +1750,6 @@ F .premiumContentWrapper {
   }
 
   .platformLogo {
-    position: absolute;
     z-index: 10;
     transition: all 0.3s ease;
   }
@@ -1765,14 +1764,12 @@ F .premiumContentWrapper {
   .textSideWrapper {
     width: 100%;
     box-sizing: border-box;
-    margin-left: 10rem;
-    margin-top: -8rem;
-    padding: 0 0 1rem 15rem;
+    padding: 2rem 0 0 12rem;
   }
 
   .SeamlessHeading {
     font-family: Manrope, sans-serif;
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1.4;
     color: #fff;
@@ -1783,7 +1780,7 @@ F .premiumContentWrapper {
 
   .SeamlessSpan {
     color: #0090ff;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 700;
   }
 
@@ -1791,7 +1788,7 @@ F .premiumContentWrapper {
     margin-top: 2rem;
     color: #fff;
     font-family: Manrope, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.45;
     text-wrap: wrap;
@@ -1799,18 +1796,19 @@ F .premiumContentWrapper {
 
   .descriptionText {
     font-family: Manrope, sans-serif;
-    font-size: 15rem;
+    font-size: 3rem;
     font-weight: 400;
-    line-height: 2.45;
+    line-height: 2;
     color: #fff;
     margin-bottom: 0.5rem;
   }
 
   .learnMoreButton {
-    width: 240px;
-    height: 61px;
-    margin-top: 20px;
-    gap: 20px;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 153 / 41;
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   .learnMoreButton:hover {
@@ -1827,44 +1825,44 @@ F .premiumContentWrapper {
   }
 
   .learnMoreText {
-    font-size: 20px;
+    font-size: 22px;
     margin-right: 0.00001rem;
     white-space: nowrap;
   }
 
   .learnMoreArrow {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .topRatedBackgroundWrapper {
-    background-position: center 100px;
+    background-position: center 250px;
   }
 
   .premiumDescription {
-    font-size: 13px;
+    font-size: 32px;
     font-weight: 400;
     line-height: 152%;
   }
 
   .carouselContainer {
-    margin-top: -180px;
+    margin-top: -140px;
   }
 
   .paginationDots {
     display: flex;
     justify-content: center;
-    margin-top: -190px;
+    margin-top: -120px;
     position: relative;
     z-index: 30;
     gap: 0.5rem;
   }
 
   .paginationDot {
-    width: 0.25rem;
-    height: 0.25rem;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 9999px;
     transition: all 0.3s ease-in-out;
   }
@@ -1872,12 +1870,12 @@ F .premiumContentWrapper {
   .ctaButtonContainer {
     display: flex;
     justify-content: center;
-    margin-top: -14rem;
+    margin-top: -7rem;
     padding-left: 1rem;
   }
 
   .ctaButton {
-    max-width: 153px;
+    max-width: 253px;
     height: auto;
     aspect-ratio: 153 / 41;
     justify-content: center;
@@ -1924,9 +1922,7 @@ F .premiumContentWrapper {
     height: 2vw;
   }
 
-  /* Top Rated Apps / Platform Experience Section */
   .topRatedSection {
-    position: relative;
     width: 100%;
     padding: 5rem 0;
     background-color: transparent;
@@ -1934,9 +1930,6 @@ F .premiumContentWrapper {
     box-sizing: border-box;
   }
 
-  /* Large rotated shape on left */
-
-  /* Content wrapper centered to align text & logos */
   .topRatedContentContainer {
     z-index: 10;
     width: 90%;
@@ -1947,7 +1940,6 @@ F .premiumContentWrapper {
     height: 100%;
   }
 
-  /* Flex layout: column on mobile, row from tablet up */
   .topRatedFlexContainer {
     display: flex;
     flex-direction: column;
@@ -1956,18 +1948,14 @@ F .premiumContentWrapper {
     box-sizing: border-box;
   }
 
-  /* Logos wrapper */
   .platformLogosWrapper {
-    position: relative;
     width: 100%;
     height: auto;
     margin-bottom: 2rem;
     box-sizing: border-box;
   }
 
-  /* All logos absolutely positioned within wrapper; sizes now fluid */
   .platformLogo {
-    position: absolute;
     z-index: 10;
     transition: all 0.3s ease;
   }
@@ -1979,20 +1967,15 @@ F .premiumContentWrapper {
     object-fit: contain;
   }
 
-  /* Text side wrapper */
   .textSideWrapper {
     width: 100%;
     box-sizing: border-box;
-    margin-left: 2rem;
-
-    margin-top: -8rem;
-    padding: 0 0 1rem 7rem;
+    padding: 2rem 0 0 12rem;
   }
 
-  /* Headings and paragraphs */
   .SeamlessHeading {
     font-family: Manrope, sans-serif;
-    font-size: 15px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1.4;
     color: #fff;
@@ -2003,7 +1986,7 @@ F .premiumContentWrapper {
 
   .SeamlessSpan {
     color: #0090ff;
-    font-size: 20px;
+    font-size: 34px;
     font-weight: 700;
   }
 
@@ -2011,50 +1994,27 @@ F .premiumContentWrapper {
     margin-top: 2rem;
     color: #fff;
     font-family: Manrope, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.45;
     text-wrap: wrap;
   }
 
-  /* Main/sub head and description */
-  .mainHeading,
-  .subHeading {
-    font-family: Manrope, sans-serif;
-    font-size: clamp(1.5rem, 4vw, 48px);
-    font-weight: 500;
-    line-height: 1.4;
-    color: #fff;
-    text-align: justify;
-    margin-bottom: 1rem;
-  }
-
-  .highlightedText {
-    position: absolute;
-    left: clamp(1rem, 12vw, 227px);
-    top: 1px;
-    font-family: Manrope, sans-serif;
-    font-size: clamp(2rem, 5vw, 60px);
-    font-weight: 700;
-    line-height: 1.4;
-    color: #0090ff;
-  }
-
   .descriptionText {
     font-family: Manrope, sans-serif;
-    font-size: clamp(1rem, 3vw, 36px);
+    font-size: 3rem;
     font-weight: 400;
-    line-height: 1.45;
+    line-height: 2;
     color: #fff;
     margin-bottom: 0.5rem;
   }
 
-  /* Learn More button */
   .learnMoreButton {
-    width: 140px;
-    height: 41px;
-    margin-top: 20px;
-    gap: 20px;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 153 / 41;
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   .learnMoreButton:hover {
@@ -2071,8 +2031,7 @@ F .premiumContentWrapper {
   }
 
   .learnMoreText {
-    font-size: 15px;
-
+    font-size: 22px;
     margin-right: 0.00001rem;
     white-space: nowrap;
   }
@@ -2082,6 +2041,7 @@ F .premiumContentWrapper {
     height: 2rem;
   }
 }
+
 /* Three Containers Section */
 .threeContainersSection {
   z-index: -1;
@@ -3140,10 +3100,10 @@ F .premiumContentWrapper {
     transition: all 0.3s; /* transition-all duration-300 */
   }
 }
+
 /* --- Company Values Section --- */
 /* valuesSection Wrapper */
 .valuesSection {
-  background: linear-gradient(180deg, #000, #111);
   color: white;
   padding: 6rem 2rem;
   width: 100%;
@@ -3194,15 +3154,15 @@ F .premiumContentWrapper {
 }
 
 .valueNumber {
-  font-size: 6rem;
+  font-size: 10rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.05);
   line-height: 1;
-  margin-bottom: -2rem;
+  margin-bottom: -4rem;
 }
 
 .valueTitle {
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   color: white;
 }
@@ -3223,8 +3183,7 @@ F .premiumContentWrapper {
 .highlightedText1,
 .highlightedText2,
 .highlightedText3 {
-  display: block;
-  color: #00ffe0;
+  color: #0190ff;
   margin-top: 1rem;
   font-weight: bold;
 }
@@ -3262,9 +3221,7 @@ F .premiumContentWrapper {
 
 /* Base styles (for large screens) */
 .vrExperienceWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   background-image: url("/vr-experience-neon.png");
 
   background-size: cover;
@@ -3282,12 +3239,8 @@ F .premiumContentWrapper {
 /* Mobile: 330px to 425px */
 @media (max-width: 425px) {
   .vrExperienceWrapper {
-    aspect-ratio: 700 / 500;
     width: 100vw;
     height: auto;
-    max-width: 100%;
-    left: -7vw;
-    padding: 1rem 0 0 10vw;
   }
 
   .appMockupContainer {
@@ -3322,7 +3275,6 @@ F .premiumContentWrapper {
     left: 0;
     width: 100vw;
     height: auto;
-    padding: 1rem 0 0 10vw;
   }
 
   .appMockupContainer {
@@ -3336,8 +3288,6 @@ F .premiumContentWrapper {
   .vrExperienceWrapper {
     left: 0;
     width: 100vw;
-    height: auto;
-    padding: 8rem 0 0 10vw;
   }
 
   .appMockupContainer {
@@ -3365,4 +3315,57 @@ F .premiumContentWrapper {
   to {
     transform: rotate(-360deg);
   }
+}
+
+.vrExperienceSection {
+  width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+
+  background: transparent;
+  overflow: visible;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+@media (max-width: 1024px) {
+  .vrExperienceSection {
+    min-height: 40vh;
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .vrExperienceSection {
+    min-height: 30vh;
+    padding: 1rem 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .vrExperienceSection {
+    min-height: 20vh;
+    padding: 0.5rem 0;
+  }
+}
+.vrGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.appMockupContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.vrOverlayImage {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
 }

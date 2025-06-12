@@ -543,26 +543,33 @@ export default function Home() {
           </div>
 
           {/* VR Experience Section - Added right after Team-Oriented */}
-          <section className={styles.vrExperienceSection}>
-            <div className={styles.vrExperienceWrapper}>
-              {/* Background VR Image */}
-              <div className={styles.vrBackgroundImage}>
-                {/* Overlay gradients */}
-                <div className={styles.gradientOverlayHorizontal}></div>
-                <div className={styles.gradientOverlayBottom}></div>
+        </div>
+      </div>
+      <section className={styles.vrExperienceSection}>
+        <div className={styles.vrExperienceWrapper}>
+          {/* Background VR Image */}
+          <div className={styles.vrBackgroundImage}>
+            {/* Overlay gradients */}
+            <div className={styles.gradientOverlayHorizontal}></div>
+            <div className={styles.gradientOverlayBottom}></div>
 
-                {/* Content container */}
-                <div className={styles.vrContentContainer}>
-                  <div className={styles.vrGrid}>
-                    {/* Right side - App Mockups */}
-                    <div className={styles.appMockupContainer}></div>
-                  </div>
+            {/* Content container */}
+            <div className={styles.vrContentContainer}>
+              <div className={styles.vrGrid}>
+                {/* Right side - App Mockups */}
+                <div className={styles.appMockupContainer}>
+                  {" "}
+                  <img
+                    src="/Vrmockup.svg"
+                    alt="Your App Preview"
+                    className={styles.vrOverlayImage}
+                  />
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
