@@ -421,7 +421,7 @@
   align-items: center;
   padding: 10rem 10rem;
   background-image: url("/Transfromsection-bg.png");
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
   width: 100%;
