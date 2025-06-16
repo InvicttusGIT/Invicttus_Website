@@ -57,7 +57,6 @@ const apps = [
 export default function ProductsPage() {
   return (
     <div className={styles.ProductPage}>
-      <div className={styles.ProductsBottomBg}></div>
       <div className={styles.ContentWrapper}>
         {/* Hero Section */}
         <div className={styles.ProductHero}>
@@ -107,9 +106,9 @@ export default function ProductsPage() {
                 />
               </div>
               <div className={styles.ProductSectionRightContent}>
-                <div className={styles.ProductSectionFlagship}>
+                {/* <div className={styles.ProductSectionFlagship}>
                   <h2> Flagship App </h2>
-                </div>
+                </div> */}
                 <div className={styles.ProductSectionStats}>
                   <span className={styles.ProductSectionStatBox}>
                     <p>
@@ -221,9 +220,9 @@ export default function ProductsPage() {
                         </p>
                       </span>
                     </div>
-                    <button className={styles.SeemoreButton}>
+                    {/* <button className={styles.SeemoreButton}>
                       <a href="See More ">See More </a>
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))}

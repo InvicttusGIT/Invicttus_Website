@@ -7,7 +7,8 @@
   overflow-x: hidden;
 }
 .ContentWrapper {
-  z-index: 2;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .ProductHero {
@@ -72,7 +73,7 @@
   color: #0090ff;
   border-color: #0090ff;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .ProductHero {
     width: 100%;
 
@@ -137,7 +138,12 @@
   justify-content: space-between;
   padding: 0 8rem;
 }
-
+@media screen and (max-width: 768px) {
+  .ProductsSection {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+}
 .ProductsSectiotLeft {
   display: flex;
   flex-direction: column;
@@ -146,7 +152,8 @@
   font-size: 64px;
 }
 .LeftSubHeading {
-  width: 646px;
+  max-width: 600px;
+  width: 100%;
   color: #c3c3c3;
   text-align: justify;
   font-family: Manrope;
@@ -205,38 +212,22 @@
 
 /* Right Section */
 .productSectionRight {
-  width: 935px;
+  max-width: 935px;
+  width: 100%;
   height: 563px;
   background: #18181b;
-  background-image: url("/flagship.png");
+  background-image: url("/flagshipbg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: cover;
   border: 4px solid #fff;
   border-radius: 24px;
-  padding: 3rem 3rem;
+  padding: 2rem;
+  gap: 12rem;
 
   display: flex;
 
   /* Center horizontally */
-
-  gap: 1rem;
-}
-
-.FlagshipAppconatiner {
-  inset: 0;
-  padding: 1.5rem;
-  display: flex;
-}
-
-.Flagship {
-  top: 0.5rem;
-  right: 0.5rem;
-  background: #ef4444;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.75rem;
 }
 
 .ProductSectionImage {
@@ -248,8 +239,8 @@
 .ProductSectionLeft {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
 }
 .ProductSectionLeft h4 {
   color: #0d0d0d;
@@ -267,7 +258,7 @@
 .ProductSectionRightContent {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   gap: 1rem;
 }
@@ -296,17 +287,16 @@
 
   text-align: end;
 }
+
 /* Apps Grid */
 .productsgridSection {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.125rem;
-  flex: 1;
-  margin-top: 11rem;
-
-  position: relative;
-  z-index: 2;
-  background-color: transparent;
+  grid-template-columns: 2fr;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  gap: 1rem;
+  background: none;
 }
 .ProductSectionStats {
   display: flex;
@@ -364,73 +354,30 @@
 }
 
 .AppsgridContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background: linear-gradient(
-      0deg,
-      rgba(17, 17, 17, 0.9) 0%,
-      rgba(17, 17, 17, 0.9) 100%
-    ),
-    url("/appgridbg.jpg") lightgray 824.903px 861.135px / -101.201% -176.59% no-repeat;
-
-  background-blend-mode: normal, luminosity;
-
-  border-radius: 0.75rem;
-  padding: 2rem 2.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  border: 1px solid #4b5563;
-  width: 819px;
-  height: 429px;
-  min-height: 320px;
-  margin: 0 auto 2rem auto;
-  gap: 2.5rem;
-  position: relative;
-}
-.AppsgridContainer {
-  position: relative;
   /* layout styles */
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  border-radius: 0.75rem;
-  padding: 2rem 2.5rem;
+  align-items: center;
+  justify-content: center;
+
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   border: 1px solid #4b5563;
-  width: 819px;
-  height: 429px;
-  min-height: 320px;
-  margin: 0 auto 2rem auto;
-  gap: 2.5rem;
-  z-index: 1;
-  overflow: hidden;
-  background-color: lightgray;
-}
-
-.AppsgridContainer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("/Appgrid.png");
-  background-size: cover;
-  /* background: linear-gradient(
-      0deg,
-      rgba(17, 17, 17, 0.9) 0%,
-      rgba(17, 17, 17, 0.9) 100%
-    ),
-    url("/Appgrid.png") center center / cover no-repeat; */
-  z-index: -1;
-  opacity: 10;
+  border-radius: 1rem;
+  max-width: 819px;
+  max-height: 429px;
+  height: 100%;
+  width: 100%;
+  background-image: url("/appgridbg.jpg");
+  padding: 3rem;
 }
 
 .AppsGridLeft {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
+  gap: 1rem;
 }
 
 .AppsName {
@@ -441,11 +388,8 @@
   font-weight: 700;
   line-height: normal;
   text-transform: capitalize;
-  margin-bottom: 1.5rem;
-  text-align: left;
-  white-space: nowrap;
-  margin-top: 3.4rem;
-  margin-left: 3.4rem;
+
+  text-align: center;
 }
 
 .Appsgridimages {
@@ -456,40 +400,41 @@
   margin: 0;
   position: relative;
   flex-shrink: 0;
-  margin-left: 3.4rem;
 }
 
 .AppsImages {
-  object-fit: cover;
   border-radius: 0.5rem;
+  max-width: 330px;
+  max-height: 250px;
+  width: 100%;
+  height: 100%;
+  min-width: 70px;
+  min-height: 70px;
 }
 
 .AppsGridRight {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 1.5rem;
-  margin-left: 2rem;
 }
 
 .AppsStats {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 23px;
-  margin-top: 5rem;
-  margin-left: 4.3rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .AppsStatBox {
-  margin-bottom: 0.5rem;
   display: inline-block;
-  min-width: 160px;
+  min-width: 60px;
   text-align: center;
-  width: 180px;
+  max-width: 180px;
+  width: 100%;
   height: 70.942px;
   flex-shrink: 0;
   border-radius: 7.751px;
@@ -542,20 +487,22 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  position: relative;
+
   z-index: 2;
 }
 
 .LoadMoreButton {
   display: flex;
-  width: 290px;
-  height: 80px;
+  max-width: 290px;
+  max-height: 80px;
+  width: 100%;
   padding: 21.818px 145.455px;
   justify-content: center;
   align-items: center;
   gap: 18.182px;
   flex-shrink: 0;
   border-radius: 90.909px;
+  border: 1px solid white;
   background: #282828;
   margin-top: 5.563rem;
 }
@@ -593,16 +540,12 @@
   }
 
   .ProductsSectionbg {
-    width: 100vw;
-    height: 500px;
-    margin-left: 10px;
-    margin-bottom: 100px;
-    margin-top: -150px;
+    width: 100%;
+
     opacity: 1;
   }
 
   .ProductsSectiotLeft {
-    flex: unset;
     width: 100%;
   }
 
@@ -617,9 +560,11 @@
   }
 
   .PrductsSectionFilter {
-    flex-wrap: wrap;
+    display: grid;
     gap: 1rem;
     justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
   }
 
   .FilterButton,
@@ -634,24 +579,8 @@
   .productSectionRight {
     flex: 1;
     display: flex;
-
-    position: absolute;
-
-    border-radius: 0.75rem;
-
-    width: 100%;
-    height: auto;
-    background: #18181b;
-    display: flex;
-    align-items: right;
-    justify-content: center;
-    margin-left: 0;
-    background-image: url("/flagship.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    border: 4px solid #fff;
-    border-radius: 24px;
+    background-size: cover;
+    gap: 2rem;
   }
 
   .FlagshipAppconatiner {
@@ -664,9 +593,6 @@
   }
 
   .Flagship {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
     background: #ef4444;
     color: #fff;
     font-size: 0.75rem;
@@ -675,33 +601,26 @@
   }
 
   .ProductSectionImage {
-    width: 357.244px;
-    height: 293.329px;
+    width: 150px;
+    height: 150px;
     flex-shrink: 0;
     border-radius: 24.638px;
-    position: relative;
+
     max-width: 357.244px;
     max-height: 293.329px;
-    margin-top: 11.8rem;
-    margin-left: 5.3rem;
   }
   .ProductSectionLeft h4 {
     color: #0d0d0d;
     font-family: Manrope;
-    font-size: 45.654px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
     text-transform: capitalize;
-    margin-left: 5.313rem;
-    margin-top: 4.25rem;
-    text-align: center;
-    display: block;
-    white-space: nowrap;
   }
   .ProductSectionFlagship {
-    width: 272px;
-    height: 62px;
+    width: 72px;
+    height: 12px;
     flex-shrink: 0;
     border-radius: 0px 0px 0px 34.5px;
     background: #b32700;
@@ -710,17 +629,16 @@
     color: #fff;
 
     font-family: Inter;
-    font-size: 30px;
+    font-size: 10px;
     font-style: italic;
     font-weight: 800;
     line-height: normal;
     text-transform: capitalize;
-    width: 272px;
-    height: 62px;
+    width: 100%;
+
     flex-shrink: 0;
     border-radius: 0px 24px 0px 34.5px;
-    background: #b32700;
-    margin-left: 210px;
+
     text-align: center;
   }
   /* Apps Grid */
@@ -729,22 +647,19 @@
     grid-template-columns: 1fr;
     gap: 3.125rem;
     flex: 1;
-    margin-top: 11rem;
 
-    position: relative;
     z-index: 2;
     background-color: transparent;
   }
+
   .ProductSectionStats {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 3.125rem;
-    margin-left: 3.125rem;
   }
   .ProductSectionStatBox {
-    width: 205px;
-    height: 81px;
+    width: 100px;
+    height: 41px;
     flex-shrink: 0;
     border-radius: 8.847px;
     border: 1.712px solid #101010;
@@ -754,15 +669,13 @@
   }
   .ProductSectionStatBox p {
     font-family: Manrope;
-    font-size: 26px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
     text-align: center;
     justify-content: center;
-    margin: auto;
-    margin-top: 1rem;
   }
   .ProductSectionSeeMoreButton {
     width: 219px;
@@ -791,14 +704,14 @@
     width: 100%;
     height: auto;
     padding: 1rem 1.5rem;
-    flex-direction: column;
+
     gap: 1rem;
   }
 
   .Appsgridimages {
     width: 100%;
     max-width: 100%;
-    height: auto;
+
     margin-left: 0;
   }
 
@@ -806,12 +719,20 @@
     margin-left: 0;
     gap: 1rem;
   }
-
+  .AppsName {
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+  }
   .AppsStats {
     margin-left: 0;
     margin-top: 2rem;
+    width: 100px;
+    height: 60px;
   }
-
+  .AppsStatBox p {
+    font-size: 14px;
+  }
   .SeemoreButton {
     margin-left: 0;
     width: 100%;
@@ -821,218 +742,25 @@
     width: 100%;
     padding: 15px 0;
   }
-}
-
-/* 426px to 767px (mobile large to small tablet) */
-@media (min-width: 426px) and (max-width: 767px) {
-  .ProductsSection {
-    flex-direction: column;
-    padding: 32px 32px;
-    gap: 32px;
-  }
-
-  .ProductsSectionbg {
-    width: 120vw;
-    height: 800px;
-    margin-left: -60vw;
-    margin-bottom: 150px;
-    margin-top: -200px;
-    opacity: 0.4;
-  }
-
-  .ProductsSectiotLeft {
-    width: 100%;
-  }
-
-  .LeftHeading {
-    font-size: 56px;
-    width: 100%;
-  }
-
-  .LeftSubHeading {
-    font-size: 24px;
-    width: 100%;
-  }
-
-  .PrductsSectionFilter {
-    gap: 1.25rem;
-    flex-wrap: wrap;
+  .AppsGridRight {
+    align-items: center;
     justify-content: center;
   }
-
-  .FilterButton,
-  .PlatformButtonWithIcon {
-    width: 200px;
-    font-size: 22px;
-    padding: 12px 24px;
-    height: 60px;
-  }
-
-  .productSectionRight {
-    width: 100%;
-    height: 400px;
-    margin-left: 0;
-    border-radius: 20px;
-  }
-
-  .ProductSectionImage {
-    width: 200px;
-    height: 150px;
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  .ProductSectionLeft h4 {
-    font-size: 36px;
-    margin-left: 1rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .productsgridSection {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 6rem;
-  }
-
-  .AppsgridContainer {
-    width: 100%;
-    height: 380px;
-    padding: 1.5rem 2rem;
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-
-  .Appsgridimages {
-    width: 180px;
-    height: 140px;
-    margin-left: 1rem;
-  }
-
-  .AppsGridRight {
-    margin-left: 1rem;
-  }
-
-  .AppsStats {
-    margin-left: 1rem;
-  }
-
-  .SeemoreButton {
-    margin-left: 1rem;
-    width: 180px;
-  }
-
   .LoadMoreButton {
-    width: 250px;
-    padding: 18px 0;
+    display: flex;
+    width: 90px;
+    height: 20px;
+
+    margin-top: 0;
+  }
+  .LoadMoreButton a {
+    width: 40px;
+
+    font-size: 9.091px;
   }
 }
 
 /* 768px to 1023px (tablet to small desktop) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .ProductsSection {
-    flex-direction: row;
-    padding: 48px 40px;
-    gap: 40px;
-  }
-
-  .ProductsSectionbg {
-    width: 1350px;
-    height: 1200px;
-    margin-left: -650px;
-    margin-bottom: 150px;
-    margin-top: -250px;
-    opacity: 0.5;
-  }
-
-  .ProductsSectiotLeft {
-    flex: 1;
-    max-width: 50%;
-  }
-
-  .LeftHeading {
-    font-size: 72px;
-    width: 100%;
-  }
-
-  .LeftSubHeading {
-    font-size: 28px;
-    width: 100%;
-  }
-
-  .PrductsSectionFilter {
-    justify-content: flex-start;
-    gap: 1.5rem;
-  }
-
-  .FilterButton,
-  .PlatformButtonWithIcon {
-    width: 220px;
-    font-size: 28px;
-    padding: 14px 32px;
-    height: 70px;
-  }
-
-  .productSectionRight {
-    position: absolute;
-    width: 700px;
-    height: 450px;
-    margin-left: 600px;
-    border-radius: 24px;
-    background-size: cover;
-  }
-
-  .ProductSectionImage {
-    width: 300px;
-    height: 250px;
-    margin-top: 9rem;
-    margin-left: 4rem;
-  }
-
-  .ProductSectionLeft h4 {
-    font-size: 42px;
-    margin-left: 4rem;
-    margin-top: 3rem;
-    text-align: center;
-  }
-
-  .productsgridSection {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 8rem;
-  }
-
-  .AppsgridContainer {
-    width: 820px;
-    height: 400px;
-    padding: 2rem 2.5rem;
-    flex-direction: row;
-    gap: 2rem;
-  }
-
-  .Appsgridimages {
-    width: 200px;
-    height: 160px;
-    margin-left: 3rem;
-  }
-
-  .AppsGridRight {
-    margin-left: 2rem;
-  }
-
-  .AppsStats {
-    margin-left: 4rem;
-    margin-top: 5rem;
-  }
-
-  .SeemoreButton {
-    margin-left: 2.5rem;
-    width: 210px;
-  }
-
-  .LoadMoreButton {
-    width: 280px;
-    padding: 20px 0;
-  }
-}
 
 .ProductsBottomSection {
   width: 100%;
@@ -1043,24 +771,12 @@
 
   padding-top: 6rem;
   padding-bottom: 4rem;
-  position: relative;
-  z-index: 2;
-  background: none;
-}
 
-.ProductsBottomBg {
-  position: absolute;
-  top: 600px;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url("/ProductBottomBg.png");
   background-size: cover; /* changed to cover for better scaling */
   background-repeat: no-repeat;
-  background-position: bottom center;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.7;
+  background-position: center;
+  z-index: 1;
 }
 
 /* Heading */
@@ -1087,65 +803,9 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 16.063rem;
 }
 
 /* Responsive adjustments */
-
-@media (max-width: 1200px) {
-  .ProductsBottomBg {
-    top: 400px;
-    background-position: center bottom;
-  }
-
-  .ProductBottomheading {
-    width: 400px;
-    height: auto;
-    font-size: 90px;
-    margin-top: 10rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .ProductsBottomSection {
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-  }
-
-  .ProductsBottomBg {
-    top: 300px;
-    background-size: contain;
-    background-position: center bottom;
-  }
-
-  .ProductBottomheading {
-    width: 90%;
-    font-size: 60px;
-    line-height: 1.1;
-    margin-top: 6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .ProductsBottomBg {
-    top: 200px;
-    background-size: contain;
-    background-position: center bottom;
-  }
-
-  .ProductBottomheading {
-    width: 100%;
-    font-size: 40px;
-    margin-top: 4rem;
-    padding: 0 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .ProductBottomheading {
-    font-size: 3rem;
-  }
-}
 
 .Block {
   display: block;
@@ -1157,85 +817,17 @@
   line-height: 128%; /* 163.84px */
   text-transform: uppercase;
 }
-
-@media (max-width: 1024px) {
-  .ProductsSectiotLeft {
-    margin-right: 0; /* Remove margin on smaller screens */
-    margin-bottom: 32px; /* Optional: add spacing below for stacked layout */
+@media screen and (max-width: 768px) {
+  .ProductBottomheading {
+    width: 100%;
+    height: auto;
+    font-size: 64px;
+    line-height: 1.2;
+    padding: 0 1rem;
   }
-}
 
-.PlatformDropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.PlatformButtonWithIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.PlatformDropdownIcon {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-left: 0.5rem;
-  pointer-events: none;
-  transition: transform 0.2s;
-}
-
-.PlatformDropdown:hover .PlatformDropdownIcon {
-  transform: rotate(180deg);
-}
-
-.PlatformOptions {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background: #000;
-
-  min-width: 180px;
-  z-index: 10;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  flex-direction: column;
-  width: 293px;
-  height: 54px;
-}
-
-.PlatformDropdown:hover .PlatformOptions {
-  display: flex;
-}
-
-.PlatformOption {
-  padding: 0.75rem 2.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  font-family: Manrope;
-  text-align: left;
-  cursor: pointer;
-  font-size: 1.375rem;
-  border-radius: 0;
-  transition: background 0.2s;
-  border: 0.5px solid #cbcbcb;
-  border-radius: 4px 4px 0px 0px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 18px; /* 81.818% */
-  letter-spacing: 0.66px;
-}
-
-.PlatformOption:hover {
-  background: #0090ff;
-}
-
-.DevicesDropdown {
-  position: relative;
-  display: inline-block;
-}
-.DevicesDropdown:hover .PlatformOptions {
-  display: flex;
+  .Block {
+    font-size: 64px;
+    line-height: 1.2;
+  }
 }
