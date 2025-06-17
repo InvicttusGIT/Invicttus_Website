@@ -330,3 +330,15 @@
     gap: 4rem;
   }
 }
+@media screen and (max-width: 1024px) {
+  .gridSection {
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+  .columnTitle {
+    font-size: 24px;
+  }
+  .link {
+    font-size: 20px;
+  }
+}

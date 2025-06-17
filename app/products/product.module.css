@@ -73,6 +73,7 @@
   color: #0090ff;
   border-color: #0090ff;
 }
+
 @media screen and (max-width: 768px) {
   .ProductHero {
     width: 100%;
@@ -535,6 +536,116 @@
       #001329 84.94%
     )
   );
+}
+@media screen and (max-width: 1024px) {
+  .ProductsSection {
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .ProductsSectionbg {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .ProductsSectiotLeft {
+    width: 100%;
+  }
+
+  .LeftHeading {
+    font-size: 48px;
+    width: 100%;
+    line-height: 1.2;
+  }
+
+  .LeftSubHeading {
+    display: none;
+  }
+
+  .PrductsSectionFilter {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+
+  .FilterButton,
+  .PlatformButtonWithIcon {
+    font-size: 18px;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 20px;
+    height: auto;
+  }
+  .productsgridSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.125rem;
+    flex: 1;
+
+    z-index: 2;
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ProductsSection {
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+
+  .ProductsSectionbg {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .ProductsSectiotLeft {
+    width: 100%;
+  }
+
+  .LeftHeading {
+    font-size: 36px;
+    width: 100%;
+    line-height: 1.2;
+  }
+
+  .LeftSubHeading {
+    display: none;
+  }
+
+  .PrductsSectionFilter {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+
+  .FilterButton,
+  .PlatformButtonWithIcon {
+    font-size: 18px;
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 20px;
+    height: auto;
+  }
+  .productSectionRight {
+    flex: 1;
+    display: flex;
+    background-size: cover;
+    gap: 2rem;
+  }
+  .productsgridSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.125rem;
+    flex: 1;
+
+    z-index: 2;
+    background-color: transparent;
+  }
 }
 /* Base: up to 425px (mobile small) */
 @media (max-width: 425px) {

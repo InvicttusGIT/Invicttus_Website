@@ -620,12 +620,13 @@
   background-image: url("/topratedbg.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: center 470px;
+  background-position: center;
   height: auto; /* 👈 isko barhao */
 
   top: 0;
   left: 0;
   width: 100%;
+  margin-bottom: -10vh;
 }
 .premiumSection {
   padding-top: 0;
@@ -902,7 +903,7 @@
 .topRatedContentContainer {
   z-index: 10;
   width: 90%;
-  max-width: 1280px;
+
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
@@ -914,17 +915,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100%;
   box-sizing: border-box;
 }
 
 /* Logos wrapper */
-.platformLogosWrapper {
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
-  box-sizing: border-box;
-}
 
 /* Text side wrapper */
 .textSideWrapper {
@@ -933,9 +929,8 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
-  align-items: end;
-  padding: 12rem 0 0 12rem;
 }
 /* Headings and paragraphs */
 .SeamlessHeading {
@@ -963,6 +958,7 @@
   font-weight: 400;
   line-height: 1.45;
   text-wrap: nowrap;
+  text-align: justify;
 }
 
 /* Main/sub head and description */
@@ -1709,11 +1705,11 @@
   .topRatedContentContainer {
     z-index: 10;
     width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
+
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    height: 100%;
+    height: 30%;
   }
 
   .topRatedFlexContainer {
@@ -1746,12 +1742,11 @@
   .textSideWrapper {
     width: 100%;
     box-sizing: border-box;
-    padding: 2rem 0 0 12rem;
   }
 
   .SeamlessHeading {
     font-family: Manrope, sans-serif;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.4;
     color: #fff;
@@ -1762,7 +1757,7 @@
 
   .SeamlessSpan {
     color: #0090ff;
-    font-size: 34px;
+    font-size: 22px;
     font-weight: 700;
   }
 
@@ -1815,6 +1810,140 @@
   .learnMoreArrow {
     width: 2rem;
     height: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .topRatedBackgroundWrapper {
+    background-position: center 250px;
+  }
+
+  .premiumDescription {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 152%;
+  }
+
+  .carouselContainer {
+    margin-top: -140px;
+  }
+
+  .paginationDots {
+    display: flex;
+    justify-content: center;
+    margin-top: -120px;
+    position: relative;
+    z-index: 30;
+    gap: 0.5rem;
+  }
+
+  .paginationDot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ctaButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: -7rem;
+    padding-left: 1rem;
+  }
+
+  .ctaButton {
+    max-width: 153px;
+    height: auto;
+    aspect-ratio: 153 / 41;
+    justify-content: center;
+    margin-top: 1px;
+  }
+
+  .ctaButton:hover .ctaButtonArrow {
+    transform: rotate(-45deg);
+  }
+
+  .ctaButtonText {
+    width: 33%;
+    height: auto;
+
+    left: 12%;
+    top: 30%;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(1rem, 3vw, 40px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .ctaButtonArrow {
+    width: 1rem;
+    height: 1rem;
+  }
+  .topRatedSection {
+    width: 100%;
+    padding: 5rem 0;
+    background-color: transparent;
+    z-index: -1;
+    box-sizing: border-box;
+  }
+
+  .topRatedContentContainer {
+    z-index: 10;
+    width: 90%;
+
+    margin: 0 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    height: 100%;
+  }
+  .topRatedFlexContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .platformLogosWrapper {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+  .platformLogo {
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  .platformLogoInner {
+    border-radius: 9999px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .textSideWrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .SeamlessHeading {
+    font-family: Manrope, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #fff;
+    text-align: justify;
+    margin: 0;
+    text-wrap: wrap;
+  }
+  .SeamlessSpan {
+    color: #0090ff;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .seamlessPara {
+    margin-top: 2rem;
+    color: #fff;
   }
 }
 
