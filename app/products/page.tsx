@@ -1,7 +1,8 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./product.module.css";
-import React from "react";
+import React, { use, useState } from "react";
 
 const apps = [
   {
@@ -55,6 +56,18 @@ const apps = [
 ];
 
 export default function ProductsPage() {
+  const [isDevicesOpen, setIsDevicesOpen] = useState(false);
+  const [isPlatformsOpen, setIsPlatformsOpen] = useState(false);
+
+  const toggleDevicesDropdown = () => {
+    setIsDevicesOpen(!isDevicesOpen);
+    setIsPlatformsOpen(false); // close other if open
+  };
+
+  const togglePlatformsDropdown = () => {
+    setIsPlatformsOpen(!isPlatformsOpen);
+    setIsDevicesOpen(false); // close other if open
+  };
   return (
     <div className={styles.ProductPage}>
       <div className={styles.ContentWrapper}>
@@ -138,6 +151,7 @@ export default function ProductsPage() {
             {/* Devices Dropdown */}
             <div className={styles.DevicesDropdown}>
               <button
+                onClick={toggleDevicesDropdown}
                 className={`${styles.FilterButton} ${styles.PlatformButtonWithIcon}`}
               >
                 Devices
@@ -153,16 +167,19 @@ export default function ProductsPage() {
                   </svg>
                 </span>
               </button>
-              <div className={styles.PlatformOptions}>
-                <button className={styles.PlatformOption}>Mobile</button>
-                <button className={styles.PlatformOption}>Website</button>
-                <button className={styles.PlatformOption}>Tablets</button>
-              </div>
+              {isDevicesOpen && (
+                <div className={styles.PlatformOptions}>
+                  <button className={styles.PlatformOption}>Mobile</button>
+                  <button className={styles.PlatformOption}>Website</button>
+                  <button className={styles.PlatformOption}>Tablets</button>
+                </div>
+              )}
             </div>
 
             {/* Platforms Dropdown */}
             <div className={styles.PlatformDropdown}>
               <button
+                onClick={togglePlatformsDropdown}
                 className={`${styles.FilterButton} ${styles.PlatformButtonWithIcon}`}
               >
                 Platforms
@@ -178,13 +195,15 @@ export default function ProductsPage() {
                   </svg>
                 </span>
               </button>
-              <div className={styles.PlatformOptions}>
-                <button className={styles.PlatformOption}>Roku TV</button>
-                <button className={styles.PlatformOption}>Fire TV</button>
-                <button className={styles.PlatformOption}>LGTV</button>
-                <button className={styles.PlatformOption}>Apple TV</button>
-                <button className={styles.PlatformOption}>Play Store</button>
-              </div>
+              {isPlatformsOpen && (
+                <div className={styles.PlatformOptions}>
+                  <button className={styles.PlatformOption}>Roku TV</button>
+                  <button className={styles.PlatformOption}>Fire TV</button>
+                  <button className={styles.PlatformOption}>LGTV</button>
+                  <button className={styles.PlatformOption}>Apple TV</button>
+                  <button className={styles.PlatformOption}>Play Store</button>
+                </div>
+              )}
             </div>
           </div>
 

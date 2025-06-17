@@ -297,6 +297,7 @@
   padding: 2rem 4rem;
   gap: 1rem;
   background: none;
+  margin-top: 20rem;
 }
 .ProductSectionStats {
   display: flex;
@@ -367,7 +368,9 @@
   max-height: 429px;
   height: 100%;
   width: 100%;
-  background-image: url("/appgridbg.jpg");
+  background-image: url("/Appgrid.png");
+  background-repeat: no-repeat;
+  background-position: cover;
   padding: 3rem;
 }
 
@@ -487,6 +490,8 @@
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  overflow: hidden;
+  background: transparent;
 
   z-index: 2;
 }
@@ -764,6 +769,7 @@
 
 .ProductsBottomSection {
   width: 100%;
+  height: 1900px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -776,6 +782,8 @@
   background-size: cover; /* changed to cover for better scaling */
   background-repeat: no-repeat;
   background-position: center;
+
+  margin-top: -300px;
   z-index: 1;
 }
 
@@ -829,5 +837,50 @@
   .Block {
     font-size: 64px;
     line-height: 1.2;
+  }
+}
+.PlatformOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+  border-radius: 0.75rem;
+  border: 1px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.PlatformOption {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.PlatformOption:hover,
+.PlatformOption:focus {
+  background-color: #007bff;
+  color: white;
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .PlatformOptions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .PlatformOption {
+    width: 100%;
+    text-align: center;
   }
 }
