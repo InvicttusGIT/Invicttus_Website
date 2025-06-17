@@ -22,10 +22,10 @@ export default function Home() {
 
   const teamImages = [
     "/team-mountain-group.png",
-    "/team-mountain-group.png",
-    "/collaborative-brainstorm.png",
-    "/team-mountain-group.png",
-    "/team-mountain-group.png",
+    "/WebsiteImage1.jpg",
+    "/WebsiteImage2.jpg",
+    "/WebsiteImage3.jpg",
+    "/WebsiteImage4.jpg",
   ]; // This array is not used in the provided code, can be removed if not needed elsewhere.
 
   // Function to handle slide change
@@ -386,11 +386,17 @@ export default function Home() {
       <section className={styles.lifeAtSection}>
         {/* Background Image with Gradient Overlay */}
         <div
-          className={`${styles.backgroundOverlay} transition-all duration-700`}
+          key={activeTeamImage} // <--- Force React to re-render this element
+          className={`${styles.backgroundOverlay}`}
           style={{
-            background: `linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%),
-                         linear-gradient(180deg, #000 3.2%, rgba(0, 0, 0, 0.00) 50.5%, #000 98.35%),
-                         url(${teamImages[activeTeamImage]}) darkgray 50% / cover no-repeat`,
+            backgroundImage: `
+      linear-gradient(0deg, rgba(0,0,0,0.28), rgba(0,0,0,0.28)),
+      linear-gradient(180deg, #000 3.2%, rgba(0,0,0,0) 50.5%, #000 98.35%),
+      url(${teamImages[activeTeamImage]})
+    `,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
           }}
         ></div>
 
