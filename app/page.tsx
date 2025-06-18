@@ -24,7 +24,7 @@ export default function Home() {
     "/team-mountain-group.png",
     "/WebsiteImage1.jpg",
     "/WebsiteImage2.jpg",
-    "/WebsiteImage3.jpg",
+    "/WhatsappImage6.jpg",
     "/WebsiteImage4.jpg",
   ]; // This array is not used in the provided code, can be removed if not needed elsewhere.
 
