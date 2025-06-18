@@ -678,6 +678,7 @@
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+    margin-top: 0;
   }
 
   .FilterButton,
@@ -751,7 +752,7 @@
     grid-template-columns: 1fr;
     gap: 3.125rem;
     flex: 1;
-
+    margin-top: 2rem;
     z-index: 2;
     background-color: transparent;
   }
@@ -935,9 +936,12 @@
 
   .Appsgridimages {
     width: 100%;
-    max-width: 100%;
 
-    margin-left: 0;
+    max-width: 220px;
+    max-height: 160px;
+    margin: 0;
+    position: relative;
+    flex-shrink: 0;
   }
 
   .AppsGridRight {
@@ -948,6 +952,15 @@
     font-size: 14px;
     text-align: center;
     white-space: nowrap;
+  }
+  .AppsStatBox {
+    width: 100px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 8.847px;
+    border: 1.712px solid white;
+
+    color: #101010;
   }
   .AppsStats {
     margin-left: 0;
@@ -1045,6 +1058,66 @@
   line-height: 128%; /* 163.84px */
   text-transform: uppercase;
 }
+@media screen and (max-width: 1440px) {
+  .ProductBottomheading {
+    width: 100%;
+    height: auto;
+    font-size: 192px;
+    line-height: 1.2;
+    padding: 0 6rem;
+  }
+
+  .Block {
+    font-size: 128px;
+    line-height: 1.2;
+  }
+  .ProductsBottomSection {
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -600px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .ProductBottomheading {
+    width: 100%;
+    height: auto;
+    font-size: 128px;
+    line-height: 1.2;
+    padding: 0 4rem;
+  }
+
+  .Block {
+    font-size: 96px;
+    line-height: 1.2;
+  }
+  .ProductsBottomSection {
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -600px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .ProductBottomheading {
+    width: 100%;
+    height: auto;
+    font-size: 96px;
+    line-height: 1.2;
+    padding: 0 2rem;
+  }
+
+  .Block {
+    font-size: 64px;
+    line-height: 1.2;
+  }
+  .ProductsBottomSection {
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -600px;
+  }
+}
 @media screen and (max-width: 768px) {
   .ProductBottomheading {
     width: 100%;
@@ -1055,7 +1128,13 @@
   }
 
   .Block {
-    font-size: 64px;
+    font-size: 32px;
     line-height: 1.2;
+  }
+  .ProductsBottomSection {
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -600px;
   }
 }

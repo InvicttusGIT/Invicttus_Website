@@ -417,7 +417,7 @@
 /* Section Wrapper */
 .transformSection {
   display: flex;
-  justify-content: center;
+
   align-items: center;
   padding: 1rem 10rem;
   background-image: url("/Transfromsection-bg.png");
@@ -445,7 +445,6 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  transform: translateX(-5%); /* 👈 Shift content slightly to the left */
 }
 
 /* Flex Container for Two Columns */
@@ -459,7 +458,6 @@
 
 /* Left Column - Heading and Users */
 .transformHeadingWrapper {
-  flex: 1;
   min-width: 280px;
 }
 
@@ -3019,7 +3017,6 @@
 .valuesContainer {
   display: flex;
   flex-direction: column;
-  gap: 8rem;
 }
 
 /* Block */
@@ -3070,6 +3067,7 @@
   font-size: 4.5rem;
   font-weight: 700;
   color: white;
+  margin-top: -1rem;
 }
 
 .valueDescription {

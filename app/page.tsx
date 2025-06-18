@@ -129,7 +129,13 @@ export default function Home() {
 
                 {/* Users Worldwide Text */}
                 <div className={styles.usersWorldwide}>
-                  <Users className={styles.usersIcon} />
+                  <Image
+                    src="usersicon.svg" // ✅ your custom image path
+                    alt="Users Icon"
+                    width={24} // ✅ Adjust size as needed
+                    height={24}
+                    className={styles.usersIcon}
+                  />
                   <p className={styles.usersText}>
                     Millions of Users Worldwide
                   </p>

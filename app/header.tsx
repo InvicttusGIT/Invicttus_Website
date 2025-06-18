@@ -5,10 +5,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import styles from "./header.module.css";
+import { useEffect } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+  }, [isMenuOpen]);
   return (
     <header className={styles.Header}>
       <div className={styles.LogoContainer}>
