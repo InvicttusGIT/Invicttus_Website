@@ -174,125 +174,124 @@ export default function Home() {
               </p>
 
               {/* Interactive Product Carousel with Overlapping Effect */}
-              <div className={styles.carouselContainer}>
-                {/* Navigation Arrows */}
-                <button
-                  onClick={prevSlide}
-                  className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
-                  aria-label="Previous slide"
-                >
-                  <ChevronLeft className={styles.carouselButtonIcon} />
-                </button>
+            </div>
+            <div className={styles.carouselContainer}>
+              {/* Navigation Arrows */}
+              <button
+                onClick={prevSlide}
+                className={`${styles.carouselButton} ${styles.carouselButtonLeft}`}
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className={styles.carouselButtonIcon} />
+              </button>
 
-                <button
-                  onClick={nextSlide}
-                  className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
-                  aria-label="Next slide"
-                >
-                  <ChevronRight className={styles.carouselButtonIcon} />
-                </button>
+              <button
+                onClick={nextSlide}
+                className={`${styles.carouselButton} ${styles.carouselButtonRight}`}
+                aria-label="Next slide"
+              >
+                <ChevronRight className={styles.carouselButtonIcon} />
+              </button>
 
-                {/* Carousel Container */}
-                <div className={styles.carouselContentWrapper}>
-                  {appSlides.map((app, index) => {
-                    // Calculate position relative to active slide
-                    const position =
-                      (index - activeSlide + appSlides.length) %
-                      appSlides.length;
+              {/* Carousel Container */}
+              <div className={styles.carouselContentWrapper}>
+                {appSlides.map((app, index) => {
+                  // Calculate position relative to active slide
+                  const position =
+                    (index - activeSlide + appSlides.length) % appSlides.length;
 
-                    // Determine if this app is the featured one (center position)
-                    const isFeatured = position === 0;
+                  // Determine if this app is the featured one (center position)
+                  const isFeatured = position === 0;
 
-                    // Determine class based on position relative to active
-                    let slideClassName = styles.carouselSlide;
-                    if (isFeatured) {
-                      slideClassName += ` ${styles.carouselSlideFeatured}`;
-                    } else if (position === 1 || position === -4) {
-                      slideClassName += ` ${styles.carouselSlideRight1}`;
-                    } else if (position === 2 || position === -3) {
-                      slideClassName += ` ${styles.carouselSlideRight2}`;
-                    } else if (position === -1 || position === 4) {
-                      slideClassName += ` ${styles.carouselSlideLeft1}`;
-                    } else if (position === -2 || position === 3) {
-                      slideClassName += ` ${styles.carouselSlideLeft2}`;
-                    }
+                  // Determine class based on position relative to active
+                  let slideClassName = styles.carouselSlide;
+                  if (isFeatured) {
+                    slideClassName += ` ${styles.carouselSlideFeatured}`;
+                  } else if (position === 1 || position === -4) {
+                    slideClassName += ` ${styles.carouselSlideRight1}`;
+                  } else if (position === 2 || position === -3) {
+                    slideClassName += ` ${styles.carouselSlideRight2}`;
+                  } else if (position === -1 || position === 4) {
+                    slideClassName += ` ${styles.carouselSlideLeft1}`;
+                  } else if (position === -2 || position === 3) {
+                    slideClassName += ` ${styles.carouselSlideLeft2}`;
+                  }
 
-                    // Only show 5 items (2 on each side of featured)
-                    const isVisible =
-                      Math.abs(position) <= 2 ||
-                      Math.abs(position) >= appSlides.length - 2;
+                  // Only show 5 items (2 on each side of featured)
+                  const isVisible =
+                    Math.abs(position) <= 2 ||
+                    Math.abs(position) >= appSlides.length - 2;
 
-                    if (!isVisible) return null;
+                  if (!isVisible) return null;
 
-                    return (
-                      <div
-                        key={app.id}
-                        className={slideClassName}
-                        onClick={() => {
-                          if (!isFeatured) {
-                            changeSlide(index);
-                          }
-                        }}
-                      >
-                        <div className={styles.carouselSlideImageWrapper}>
-                          <Image
-                            src={app.image || "/placeholder.svg"}
-                            alt={app.name}
-                            fill
-                            className={styles.carouselSlideImage}
-                          />
-                          {/* App name label - this div was empty, so it's kept as-is if it has purpose */}
-                          <div className="absolute bottom-0 left-0 right-0 p-2 text-center"></div>
-                        </div>
+                  return (
+                    <div
+                      key={app.id}
+                      className={slideClassName}
+                      onClick={() => {
+                        if (!isFeatured) {
+                          changeSlide(index);
+                        }
+                      }}
+                    >
+                      <div className={styles.carouselSlideImageWrapper}>
+                        <Image
+                          src={app.image || "/placeholder.svg"}
+                          alt={app.name}
+                          fill
+                          className={styles.carouselSlideImage}
+                        />
+                        {/* App name label - this div was empty, so it's kept as-is if it has purpose */}
+                        <div className="absolute bottom-0 left-0 right-0 p-2 text-center"></div>
                       </div>
-                    );
-                  })}
-                </div>
-                {/* Pagination Dots */}
-                <div className={styles.paginationDots}>
-                  {appSlides.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => changeSlide(index)}
-                      className={`${styles.paginationDot} ${
-                        activeSlide === index
-                          ? styles.paginationDotActive
-                          : styles.paginationDotInactive
-                      }`}
-                      aria-label={`Go to slide ${index + 1}`}
-                    />
-                  ))}
-                </div>
+                    </div>
+                  );
+                })}
               </div>
+              {/* Pagination Dots */}
+              <div className={styles.paginationDots}>
+                {appSlides.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => changeSlide(index)}
+                    className={`${styles.paginationDot} ${
+                      activeSlide === index
+                        ? styles.paginationDotActive
+                        : styles.paginationDotInactive
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
 
-              {/* CTA Button */}
-              <div className={styles.ctaButtonContainer}>
-                <Link
-                  href="/products"
-                  className={styles.ctaButton}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background =
-                      "linear-gradient(223deg, #000 -1.77%, #002958 32.19%, #002958 49.63%, #001F42 68.91%, #00152C 88.18%, #001329 137.44%)";
-                    e.currentTarget.style.border = "2px solid #0090FF";
-                    const arrow = e.currentTarget.querySelector("svg");
-                    if (arrow) {
-                      (arrow as unknown as HTMLElement).style.transform =
-                        "rotate(-45deg)";
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "";
-                    e.currentTarget.style.border = "2px solid #FFF";
-                    const arrow = e.currentTarget.querySelector("svg");
-                    if (arrow) {
-                      (arrow as unknown as HTMLElement).style.transform = "";
-                    }
-                  }}
-                >
-                  <span className={styles.ctaButtonText}>Our Apps</span>
-                  <ArrowRight className={styles.ctaButtonArrow} />
-                </Link>
-              </div>
+            {/* CTA Button */}
+            <div className={styles.ctaButtonContainer}>
+              <Link
+                href="/products"
+                className={styles.ctaButton}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background =
+                    "linear-gradient(223deg, #000 -1.77%, #002958 32.19%, #002958 49.63%, #001F42 68.91%, #00152C 88.18%, #001329 137.44%)";
+                  e.currentTarget.style.border = "2px solid #0090FF";
+                  const arrow = e.currentTarget.querySelector("svg");
+                  if (arrow) {
+                    (arrow as unknown as HTMLElement).style.transform =
+                      "rotate(-45deg)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "";
+                  e.currentTarget.style.border = "2px solid #FFF";
+                  const arrow = e.currentTarget.querySelector("svg");
+                  if (arrow) {
+                    (arrow as unknown as HTMLElement).style.transform = "";
+                  }
+                }}
+              >
+                <span className={styles.ctaButtonText}>Our Apps</span>
+                <ArrowRight className={styles.ctaButtonArrow} />
+              </Link>
             </div>
           </div>
         </section>

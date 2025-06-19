@@ -624,7 +624,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  margin-bottom: -10vh;
 }
 .premiumSection {
   width: 100%;
@@ -633,6 +632,10 @@
   width: 100%;
   height: 100%;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .premiumHeadingContainer {
@@ -678,9 +681,8 @@
   align-items: center;
   position: relative;
   width: 100%;
-  margin-bottom: 3rem;
-  height: 60vh;
-  max-height: 600px;
+  margin-top: 16rem;
+  height: auto;
 }
 
 .carouselButton {
@@ -792,7 +794,7 @@
 .paginationDots {
   display: flex;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 18rem;
 
   z-index: 30;
   gap: 0.75rem;
@@ -821,7 +823,7 @@
 .ctaButtonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .ctaButton {
@@ -831,6 +833,7 @@
   border-radius: 80px;
   padding: 1rem 2rem;
   width: 100%;
+  border: 2px solid #fff;
   max-width: 400px;
 }
 
@@ -947,7 +950,7 @@
   margin-top: 2rem;
   color: #fff;
   font-family: Manrope, sans-serif;
-  font-size: clamp(1rem, 3vw, 36px);
+  font-size: clamp(2rem, 3vw, 42px);
   font-weight: 400;
   line-height: 1.45;
   text-wrap: nowrap;
@@ -1028,866 +1031,73 @@
   height: clamp(1.5rem, 4vw, 50px);
   transition: transform 0.3s ease-in-out;
 }
-@media screen and (max-width: 1440px) {
-  .topRatedBackgroundWrapper {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center 220px;
-    height: auto; /* 👈 isko barhao */
-
-    top: 0;
-    left: 0;
+@media screen and (max-width: 768px) {
+  .topRatedSection {
+    height: 50vh;
+  }
+  .carouselContainer {
+    margin-top: 8rem;
+  }
+  .paginationDots {
+    margin-top: 9rem;
+  }
+  .paginationDot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .ctaButton {
     width: 100%;
-  }
-  .premiumHeadingContainer {
-    margin-bottom: 4rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    max-width: 200px;
+    padding: 0.5rem 1rem;
+    margin-top: 0;
+    border: 1px solid #fff;
   }
 
-  .premiumHeading {
-    font-size: 4vw;
+  .SeamlessHeading {
+    font-size: 1rem;
+    text-align: justify;
     white-space: wrap;
-    word-break: break-word;
   }
-
-  .premiumDescription {
-    margin-bottom: 4rem;
-  }
-
-  .paginationDots {
-    margin-top: 2.5rem;
-  }
-
-  .ctaButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    padding-left: 1rem;
-  }
-
-  .ctaButton {
-    width: 80%;
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 400 / 110;
-  }
-  .ctaButtonText {
-    font-size: 2.4rem;
-  }
-
-  .topRatedBackground1 {
-    display: flex;
-
-    width: 20rem;
-    height: 20rem;
-    aspect-ratio: 1 / 1.02;
-    transform: rotate(-126.46deg);
-
-    margin-left: -130px;
-  }
-
-  .topRatedBackground2 {
-    margin-right: -180px;
-    margin-top: -120px;
-  }
-
-  .topRatedimage {
-    object-fit: contain;
-    opacity: 0.8; /* Or any styling */
-  }
-
-  .topRatedContentContainer {
-    z-index: 10;
-    width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    height: 100%;
-    margin-top: 5rem;
-  }
-
-  .topRatedFlexContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  .platformLogoInner {
-    border-radius: 9999px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .textSideWrapper {
-    width: 100%;
-    padding: 0rem 1rem;
-  }
-  .SeamlessHeading {
-    font-size: clamp(1.5rem, 4vw, 28px);
-    text-wrap: nowrap;
-  }
-
   .SeamlessSpan {
-    font-size: clamp(2rem, 5vw, 38px);
+    font-size: 1.3rem;
   }
-
   .seamlessPara {
-    font-size: clamp(1rem, 3vw, 24px);
-  }
-
-  /* Learn More button */
-  .learnMoreButton {
-    width: 80%;
-
-    padding: clamp(1rem, 3vw, 24px) clamp(2rem, 5vw, 65px);
-  }
-  .learnMoreText {
-    font-size: 30px;
-    text-wrap: nowrap;
+    font-size: 0.9rem;
+    text-align: justify;
   }
 }
-@media screen and (max-width: 1024px) {
-  .hero {
-    overflow-x: hidden;
+@media screen and (max-width: 480px) {
+  .topRatedSection {
+    height: 0;
   }
-  .topRatedBackgroundWrapper {
-    background-position: center 200px;
-  }
-
-  .premiumDescription {
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 152%;
-  }
-
   .carouselContainer {
+    margin-top: 4rem;
+  }
+  .paginationDots {
+    margin-top: 4rem;
+  }
+  .paginationDot {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .ctaButton {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.5rem 1rem;
     margin-top: 0;
   }
 
-  .paginationDots {
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;
-    position: relative;
-    z-index: 30;
-    gap: 0.5rem;
-  }
-
-  .paginationDot {
-    width: 0.6rem;
-    height: 0.6rem;
-    border-radius: 9999px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .ctaButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: -5rem;
-    padding-left: 1rem;
-  }
-
-  .ctaButton {
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1px;
-  }
-
-  .ctaButton:hover {
-    background: linear-gradient(
-      223deg,
-      #000 -1.77%,
-      #002958 32.19%,
-      #002958 49.63%,
-      #001f42 68.91%,
-      #00152c 88.18%,
-      #001329 137.44%
-    );
-    border: 2px solid #0090ff;
-  }
-
-  .ctaButton:hover .ctaButtonArrow {
-    transform: rotate(-45deg);
-  }
-
-  .ctaButtonText {
-    width: 33%;
-    height: auto;
-
-    left: 12%;
-    top: 30%;
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
-    color: #fff;
-    font-family: Manrope;
-    font-size: 2.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .ctaButtonArrow {
-    width: 1.8vw;
-    height: 1.8vw;
-  }
-
-  .topRatedSection {
-    width: 100%;
-    padding: 5rem 0;
-    background-color: transparent;
-    z-index: -1;
-    box-sizing: border-box;
-  }
-
-  .topRatedContentContainer {
-    z-index: 10;
-    width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    height: 100%;
-  }
-
-  .topRatedFlexContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  .platformLogosWrapper {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-  }
-
-  .platformLogo {
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-
-  .platformLogoInner {
-    border-radius: 9999px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .textSideWrapper {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 0 0 12rem;
-  }
-
   .SeamlessHeading {
-    font-family: Manrope, sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #fff;
-    text-align: justify;
-    margin: 0;
-    text-wrap: wrap;
-  }
-
-  .SeamlessSpan {
-    color: #0090ff;
-    font-size: 34px;
-    font-weight: 700;
-  }
-
-  .seamlessPara {
-    margin-top: 2rem;
-    color: #fff;
-    font-family: Manrope, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.45;
-    text-wrap: wrap;
-  }
-
-  .descriptionText {
-    font-family: Manrope, sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 2;
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-
-  .learnMoreButton {
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .learnMoreButton:hover {
-    background: linear-gradient(
-      223deg,
-      #000 -1.77%,
-      #002958 32.19%,
-      #002958 49.63%,
-      #001f42 68.91%,
-      #00152c 88.18%,
-      #001329 137.44%
-    );
-    border: 2px solid #0090ff;
-  }
-
-  .learnMoreText {
-    font-size: 22px;
-    margin-right: 0.00001rem;
-    white-space: nowrap;
-  }
-
-  .learnMoreArrow {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topRatedBackgroundWrapper {
-    background-position: center 250px;
-  }
-
-  .premiumDescription {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 152%;
-  }
-
-  .carouselContainer {
-    margin-top: -140px;
-  }
-
-  .paginationDots {
-    display: flex;
-    justify-content: center;
-    margin-top: -120px;
-    position: relative;
-    z-index: 30;
-    gap: 0.5rem;
-  }
-
-  .paginationDot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 9999px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .ctaButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: -7rem;
-    padding-left: 1rem;
-  }
-
-  .ctaButton {
-    max-width: 253px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1px;
-  }
-
-  .ctaButton:hover {
-    background: linear-gradient(
-      223deg,
-      #000 -1.77%,
-      #002958 32.19%,
-      #002958 49.63%,
-      #001f42 68.91%,
-      #00152c 88.18%,
-      #001329 137.44%
-    );
-    border: 2px solid #0090ff;
-  }
-
-  .ctaButton:hover .ctaButtonArrow {
-    transform: rotate(-45deg);
-  }
-
-  .ctaButtonText {
-    width: 33%;
-    height: auto;
-
-    left: 12%;
-    top: 30%;
-    display: flex;
-    flex-wrap: nowrap;
+    font-size: 0.5rem;
     text-align: center;
-    color: #fff;
-    font-family: Manrope;
-    font-size: 3.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .ctaButtonArrow {
-    width: 2vw;
-    height: 2vw;
-  }
-
-  .topRatedSection {
-    width: 100%;
-    padding: 5rem 0;
-    background-color: transparent;
-    z-index: -1;
-    box-sizing: border-box;
-  }
-
-  .topRatedContentContainer {
-    z-index: 10;
-    width: 90%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    height: 100%;
-  }
-
-  .topRatedFlexContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  .platformLogosWrapper {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-  }
-
-  .textSideWrapper {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 2rem 0 0 1rem;
-  }
-
-  .SeamlessHeading {
-    font-family: Manrope, sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #fff;
-    text-align: justify;
-    margin: 0;
-    text-wrap: wrap;
-  }
-
-  .SeamlessSpan {
-    color: #0090ff;
-    font-size: 34px;
-    font-weight: 700;
-  }
-
-  .seamlessPara {
-    color: #fff;
-    font-family: Manrope, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.45;
-    text-wrap: wrap;
-  }
-
-  .descriptionText {
-    font-family: Manrope, sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 2;
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-
-  .learnMoreButton {
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .learnMoreButton:hover {
-    background: linear-gradient(
-      223deg,
-      #000 -1.77%,
-      #002958 32.19%,
-      #002958 49.63%,
-      #001f42 68.91%,
-      #00152c 88.18%,
-      #001329 137.44%
-    );
-    border: 2px solid #0090ff;
-  }
-
-  .learnMoreText {
-    font-size: 22px;
-    margin-right: 0.00001rem;
-    white-space: nowrap;
-  }
-
-  .learnMoreArrow {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topRatedBackgroundWrapper {
-    background-position: center 250px;
-  }
-
-  .premiumDescription {
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 152%;
-  }
-
-  .carouselContainer {
-    margin-top: -140px;
-  }
-
-  .paginationDots {
-    display: flex;
-    justify-content: center;
-    margin-top: -120px;
-    position: relative;
-    z-index: 30;
-    gap: 0.5rem;
-  }
-
-  .paginationDot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 9999px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .ctaButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: -7rem;
-    padding-left: 1rem;
-  }
-
-  .ctaButton {
-    max-width: 253px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1px;
-  }
-
-  .ctaButton:hover {
-    background: linear-gradient(
-      223deg,
-      #000 -1.77%,
-      #002958 32.19%,
-      #002958 49.63%,
-      #001f42 68.91%,
-      #00152c 88.18%,
-      #001329 137.44%
-    );
-    border: 2px solid #0090ff;
-  }
-
-  .ctaButton:hover .ctaButtonArrow {
-    transform: rotate(-45deg);
-  }
-
-  .ctaButtonText {
-    width: 33%;
-    height: auto;
-
-    left: 12%;
-    top: 30%;
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
-    color: #fff;
-    font-family: Manrope;
-    font-size: 3.5vw;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .ctaButtonArrow {
-    width: 2vw;
-    height: 2vw;
-  }
-
-  .topRatedSection {
-    width: 100%;
-    padding: 5rem 0;
-    background-color: transparent;
-    z-index: -1;
-    box-sizing: border-box;
-  }
-
-  .topRatedContentContainer {
-    z-index: 10;
-    width: 90%;
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 30%;
-  }
-
-  .topRatedFlexContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
-  .platformLogosWrapper {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-  }
-
-  .platformLogo {
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-
-  .platformLogoInner {
-    border-radius: 9999px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .textSideWrapper {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .SeamlessHeading {
-    font-family: Manrope, sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #fff;
-    text-align: justify;
-    margin: 0;
-    text-wrap: wrap;
-  }
-
-  .SeamlessSpan {
-    color: #0090ff;
-    font-size: 22px;
-    font-weight: 700;
-  }
-
-  .seamlessPara {
-    margin-top: 2rem;
-    color: #fff;
-    font-family: Manrope, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.45;
-    text-wrap: wrap;
-  }
-
-  .descriptionText {
-    font-family: Manrope, sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    line-height: 2;
-    color: #fff;
-    margin-bottom: 0.5rem;
-  }
-
-  .learnMoreButton {
-    max-width: 280px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-
-  .learnMoreButton:hover {
-    background: linear-gradient(
-      223deg,
-      #000 -1.77%,
-      #002958 32.19%,
-      #002958 49.63%,
-      #001f42 68.91%,
-      #00152c 88.18%,
-      #001329 137.44%
-    );
-    border: 2px solid #0090ff;
-  }
-
-  .learnMoreText {
-    font-size: 22px;
-    margin-right: 0.00001rem;
-    white-space: nowrap;
-  }
-
-  .learnMoreArrow {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-@media screen and (max-width: 425px) {
-  .topRatedBackgroundWrapper {
-    background-position: center 0;
-  }
-
-  .premiumDescription {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 152%;
-  }
-
-  .carouselContainer {
-    margin-top: 0;
-  }
-
-  .paginationDots {
-    display: flex;
-    justify-content: center;
-
-    position: relative;
-    z-index: 30;
-    gap: 0.5rem;
-  }
-
-  .paginationDot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 9999px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .ctaButtonContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: -7rem;
-    padding-left: 1rem;
-  }
-
-  .ctaButton {
-    max-width: 153px;
-    height: auto;
-    aspect-ratio: 153 / 41;
-    justify-content: center;
-    margin-top: 1px;
-  }
-
-  .ctaButton:hover .ctaButtonArrow {
-    transform: rotate(-45deg);
-  }
-
-  .ctaButtonText {
-    width: 33%;
-    height: auto;
-
-    left: 12%;
-    top: 30%;
-    display: flex;
-    flex-wrap: nowrap;
-    text-align: center;
-    color: #fff;
-    font-family: Manrope, sans-serif;
-    font-size: clamp(1rem, 3vw, 40px);
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-  }
-  .ctaButtonArrow {
-    width: 1rem;
-    height: 1rem;
-  }
-  .topRatedSection {
-    width: 100%;
-    padding: 5rem 0;
-    background-color: transparent;
-    z-index: -1;
-    box-sizing: border-box;
-  }
-
-  .topRatedContentContainer {
-    z-index: 10;
-    width: 90%;
-
-    margin: 0 0;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    height: 100%;
-  }
-  .topRatedFlexContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  .platformLogosWrapper {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-  }
-  .platformLogo {
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-  .platformLogoInner {
-    border-radius: 9999px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  .textSideWrapper {
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .SeamlessHeading {
-    font-family: Manrope, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #fff;
-    text-align: justify;
-    margin: 0;
-    text-wrap: wrap;
+    white-space: wrap;
   }
   .SeamlessSpan {
-    color: #0090ff;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 0.8rem;
   }
   .seamlessPara {
-    margin-top: 2rem;
-    color: #fff;
+    font-size: 0.4rem;
+    text-align: center;
   }
 }
 
@@ -2683,7 +1893,7 @@
 
   .mainHeadingLogo {
     display: inline-block;
-    width: 100px !important;
+    width: 300px !important;
     height: 110px !important;
     object-fit: contain;
   }
@@ -2796,7 +2006,7 @@
 
   .mainHeadingLogo {
     display: inline-block;
-    width: 80px !important;
+    width: 250px !important;
     height: 90px !important;
     object-fit: contain;
   }
@@ -2895,7 +2105,12 @@
     gap: 1.5rem; /* Adjust spacing as needed */
     width: 100%;
   }
-
+  .mainHeadingLogo {
+    display: inline-block;
+    width: 150px !important;
+    height: 90px !important;
+    object-fit: contain;
+  }
   .mainHeadingText {
     color: #fff;
     font-family: Manrope, sans-serif;
@@ -2907,12 +2122,6 @@
     letter-spacing: 2px;
   }
 
-  .mainHeadingLogo {
-    display: inline-block;
-    width: 48px !important;
-    height: 50px !important; /* Adjust height as needed for alignment */
-    object-fit: contain;
-  }
   .carouselWrapper {
     position: relative;
     margin-top: 40px;
