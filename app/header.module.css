@@ -52,6 +52,7 @@
   cursor: pointer;
 }
 
+
 /* Mobile menu (only shown when toggle is open) */
 .MobileMenu {
   position: fixed;

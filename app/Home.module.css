@@ -627,8 +627,6 @@
   margin-bottom: -10vh;
 }
 .premiumSection {
-  padding-top: 0;
-  z-index: 2;
   width: 100%;
 }
 .premiumContentWrapper {
@@ -638,23 +636,22 @@
 }
 
 .premiumHeadingContainer {
-  margin-bottom: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .premiumHeading {
   font-family: Manrope;
   text-align: center;
-  margin-bottom: 1.5rem;
+
   width: 90%;
 
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 6vw;
   font-weight: 800;
-  line-height: normal;
+
   background: linear-gradient(180deg, #fff 37.5%, #474646 93.56%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -668,14 +665,17 @@
   font-size: 2vw;
   font-weight: 400;
   line-height: 1.5;
-  width: 90%;
-  max-width: 1535px;
-  margin-left: auto;
-  margin-right: auto;
+
+  width: 70%;
+
   text-transform: capitalize;
 }
 
 .carouselContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
   margin-bottom: 3rem;
@@ -825,18 +825,13 @@
 }
 
 .ctaButton {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  transition-property: color;
-
-  width: 90%;
-  max-width: 520px;
-  height: auto;
-  aspect-ratio: 520 / 140;
-  justify-content: center;
-  margin-top: 40px;
+  justify-content: space-between;
   border-radius: 80px;
-  border: 2px solid #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+  max-width: 400px;
 }
 
 .ctaButton:hover {
@@ -1127,55 +1122,6 @@
     object-fit: contain;
   }
 
-  /* Individual logo positions & sizes */
-  .appleTvLogo {
-    margin-top: 22vw;
-    margin-left: -162px;
-    width: clamp(2rem, 8vw, 70px);
-    height: auto;
-  }
-
-  .googlePlayLogo {
-    margin-top: 22vw;
-    margin-left: -8vw;
-    width: clamp(2rem, 8vw, 75px);
-    height: auto;
-  }
-
-  .appStoreLogo {
-    margin-top: 22vw;
-    margin-left: -7vw;
-    width: clamp(2.5rem, 10vw, 90px);
-    height: auto;
-  }
-
-  .rokuLogo {
-    margin-top: 22vw;
-    margin-left: -13vw;
-    width: clamp(3rem, 12vw, 170px);
-    height: auto;
-  }
-
-  .metaLogo {
-    margin-top: 30vw;
-    margin-left: -15vw;
-    width: clamp(1.5rem, 6vw, 50px);
-    height: auto;
-  }
-
-  .fireTvLogo {
-    margin-top: 25vw;
-    margin-left: -12vw;
-    width: clamp(2.5rem, 10vw, 110px);
-    height: auto;
-  }
-
-  .lgLogo {
-    margin-top: 24vw;
-    margin-left: -6vw;
-    width: clamp(2rem, 8vw, 70px);
-    height: auto;
-  }
   .textSideWrapper {
     width: 100%;
     padding: 0rem 1rem;
@@ -1219,7 +1165,7 @@
   }
 
   .carouselContainer {
-    margin-top: -120px;
+    margin-top: 0;
   }
 
   .paginationDots {
@@ -1812,7 +1758,7 @@
 }
 @media screen and (max-width: 425px) {
   .topRatedBackgroundWrapper {
-    background-position: center 250px;
+    background-position: center 0;
   }
 
   .premiumDescription {
@@ -1822,13 +1768,13 @@
   }
 
   .carouselContainer {
-    margin-top: -140px;
+    margin-top: 0;
   }
 
   .paginationDots {
     display: flex;
     justify-content: center;
-    margin-top: -120px;
+
     position: relative;
     z-index: 30;
     gap: 0.5rem;
