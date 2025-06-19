@@ -2173,7 +2173,7 @@
 /* valuesSection Wrapper */
 .valuesSection {
   color: white;
-  padding: 6rem 2rem;
+  padding: 6rem 10rem;
   width: 100%;
   height: auto;
 }
@@ -2182,6 +2182,7 @@
 .valuesContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 /* Block */
@@ -2229,16 +2230,18 @@
 }
 
 .valueTitle {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 700;
   color: white;
   margin-top: -1rem;
+  white-space: nowrap;
 }
 
 .valueDescription {
   font-size: 1rem;
   line-height: 1.8;
   color: #ddd;
+  max-width: 800px;
 }
 
 .barline {
