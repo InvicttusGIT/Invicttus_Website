@@ -2242,6 +2242,7 @@
   line-height: 1.8;
   color: #ddd;
   max-width: 800px;
+  text-align: justify;
 }
 
 .barline {
@@ -2251,10 +2252,22 @@
   margin-top: 1rem;
 }
 
-.highlightedText1,
-.highlightedText2,
+.highlightedText1 {
+  color: #0190ff;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.highlightedText2 {
+  color: #0190ff;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
 .highlightedText3 {
   color: #0190ff;
+  font-size: 1.3rem;
   margin-top: 1rem;
   font-weight: bold;
 }
