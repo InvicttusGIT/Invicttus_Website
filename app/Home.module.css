@@ -27,9 +27,12 @@
 }
 
 .heroTextContainer {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   text-align: center;
   width: 100%;
+  padding: 0 2rem;
 }
 
 .heroHeading {
@@ -66,7 +69,7 @@
   display: flex;
   justify-content: center;
   gap: 4rem;
-
+  padding: 4rem 2rem;
   flex-wrap: nowrap;
   align-items: center;
   margin-top: 4rem;
@@ -210,10 +213,11 @@
   }
 
   .statCardsContainer {
+    margin-left: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    padding: 4rem 4rem;
+
     margin-top: 2rem;
   }
 
@@ -530,6 +534,10 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  .transformFlexContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
   .networkGlobe {
     width: 100%;
     max-width: 500px;
@@ -537,9 +545,11 @@
   }
 
   .transformHeading {
-    font-size: 4rem;
+    font-size: 2rem;
+    justify-content: space-between;
     text-align: center;
     justify-content: space-between;
+    flex-direction: row;
   }
 
   .usersText {
