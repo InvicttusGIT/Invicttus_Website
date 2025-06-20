@@ -7,7 +7,7 @@ import React, { useState } from "react";
 const apps = [
   {
     name: "Fireplace Ambiance",
-    image: "/fireplace-ambiance.png",
+    image: "/fireplace.png",
     featured: false,
     tag: "Utility",
     platform: ["LGTV"],
