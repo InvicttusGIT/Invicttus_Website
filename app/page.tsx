@@ -302,7 +302,7 @@ export default function Home() {
             <div className={styles.topRatedFlexContainer}>
               <div className={styles.textSideWrapper}>
                 <h2 className={styles.SeamlessHeading}>
-                  Powering
+                  Powering &nbsp;
                   <span className={styles.SeamlessSpan}>
                     Seamless Experiences
                   </span>
@@ -476,9 +476,8 @@ export default function Home() {
               </span>
               <p className={`${styles.valueDescription} ${styles.one}`}>
                 Innovation Thrives When People Work Together, Sharing Ideas And
-                Skills To Achieve Greater Success. A Collaborative Mindset
-                Fosters Trust, Creativity, And Groundbreaking Solutions.
-                {""}
+                Skills To Achieve Greater Success.A Collaborative Mindset
+                Fosters Trust, Creativity,And Groundbreaking Solutions.
                 <span className={styles.highlightedText1}>
                   "Teamwork Drives Innovation"
                 </span>
