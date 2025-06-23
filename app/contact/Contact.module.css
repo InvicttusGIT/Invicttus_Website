@@ -156,15 +156,18 @@
   .ContactWrapper {
     flex-direction: column-reverse;
   }
+  .contactContent {
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
   .contactHeroSection {
-    padding: 3rem 1.5rem 6rem 1.5rem;
+    padding: 3rem 1.5rem 0rem 1.5rem;
   }
 
   .contactHeading {
-    font-size: 9vw;
+    font-size: 8vw;
   }
 
   .contactSubheading {
@@ -187,15 +190,16 @@
 
 @media (max-width: 480px) {
   .contactHeading {
-    font-size: 11vw;
+    font-size: 9vw;
   }
 
   .contactSubheading {
-    font-size: 5vw;
+    font-size: 3.4vw;
+    white-space: wrap;
   }
 
   .contactDescription {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .mailText {
@@ -203,7 +207,10 @@
   }
 
   .ContactImage {
-    width: 100%;
+    max-width: 189px;
     transform: translateY(0.5rem);
+  }
+  .contactMail {
+    flex-wrap: nowrap;
   }
 }

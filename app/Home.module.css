@@ -48,13 +48,12 @@
 .heroHeadingBlue {
   color: #0090ff;
   font-weight: 600;
-  font-size: inherit;
 }
 
 .heroDescription {
   color: #fff;
   font-family: Manrope, sans-serif;
-  font-size: 35px;
+  font-size: clamp(1.5rem, 4vw, 35px);
   font-style: normal;
   font-weight: 400;
   line-height: 56px;
@@ -130,7 +129,7 @@
 
   .heroHeading {
     margin-top: 15rem;
-    font-size: clamp(2rem, 6vw, 65px);
+    font-size: clamp(2rem, 4vw, 85px);
 
     white-space: wrap;
   }
@@ -142,9 +141,8 @@
   }
 
   .heroDescription {
-    font-size: 28px;
     line-height: 48px;
-
+    font-size: clamp(0.5rem, 2.1vw, 2rem);
     white-space: wrap;
 
     margin-top: 3rem;

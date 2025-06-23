@@ -86,10 +86,10 @@ export default function Home() {
                         "linear-gradient(127deg, #000000 17.06%, #00152C 38.41%, #002958 59.76%, #002958 60.36%, #001329 84.94%)";
                       e.currentTarget.style.boxShadow =
                         "0 0 20px rgba(0, 144, 255, 0.5)";
-                      e.currentTarget.style.transform = "translateY(-50px)";
+                      e.currentTarget.style.transform = "translateY(-10px)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "black";
+                      e.currentTarget.style.background = "none";
                       e.currentTarget.style.boxShadow = "none";
                       e.currentTarget.style.transform = "translateY(0)";
                     }}

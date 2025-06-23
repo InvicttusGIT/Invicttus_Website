@@ -79,7 +79,7 @@
 
   .subheading {
     font-size: 1rem;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .button {
@@ -127,12 +127,18 @@
   justify-content: center;
   align-items: center;
 }
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+}
 .gridSection {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 3rem;
 }
 .columnTitle {
   color: #505050;
@@ -143,11 +149,17 @@
   font-weight: 400;
   line-height: 140.625%; /* 39.375px */
 }
+.linkList {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 .link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+
   color: white;
 
   font-family: Manrope;
@@ -167,6 +179,9 @@
   .footerContainer {
     gap: 1rem;
   }
+  .bottom {
+    flex-direction: column;
+  }
   .gridSection {
     flex-direction: column;
     align-items: center;
@@ -175,7 +190,9 @@
 
   .companyColumn,
   .socialColumn,
-  .contactColumn,
+  .contactColumn {
+    width: 100%;
+  }
   .homeButtonColumn {
     width: 100%;
   }
@@ -230,6 +247,13 @@
   font-weight: 400;
   line-height: normal;
 }
+.Homebutton {
+  width: 100%;
+  background-image: url("//invicttus footer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .homeButtonCircle {
   display: flex;
   align-items: center;
@@ -260,10 +284,10 @@
   grid-row: 1;
   grid-column: 1;
   z-index: 0;
-  opacity: 0.3;
+  opacity: 10;
   width: 100%;
   height: auto;
-  transform: translateY(-2rem); /* slight upward shift */
+  transform: translateX(-3rem); /* slight upward shift */
 }
 
 .homeButton {
@@ -340,5 +364,112 @@
   }
   .link {
     font-size: 20px;
+  }
+}
+
+.bottomFooterWrapper {
+  background-color: black;
+  justify-content: center;
+  color: white;
+  display: flex;
+
+  gap: 12rem;
+  padding: 2rem;
+}
+
+.footerTop {
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.columnTitle {
+  font-size: 1.85rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.75rem;
+  color: #fff;
+
+  font-family: Manrope;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140.625%;
+}
+
+.linkList a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkList a:hover {
+  color: #0090ff;
+}
+
+.footerBottom {
+  width: 270px;
+  height: 360px;
+  align-items: flex-end;
+  background: url("/invicttus footer.png") no-repeat center center;
+  background-size: cover;
+  opacity: 0.9;
+}
+.homeIconBox {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+}
+.homeIcon {
+  width: 64px;
+  height: 64px;
+  margin-right: 2rem;
+}
+
+.homeText {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+@media screen and (max-width: 1024px) {
+  .bottomFooterWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footerTop {
+    flex-direction: column;
+  }
+  .column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .linkList {
+    text-align: center;
+  }
+  .footerText {
+    font-size: clamp(1rem, 2vw, 2rem);
   }
 }
