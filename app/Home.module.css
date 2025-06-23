@@ -214,7 +214,6 @@
   }
 
   .statCardsContainer {
-    margin-left: 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -427,6 +426,7 @@
   padding: 1rem 10rem;
   background-image: url("/Transfromsection-bg.png");
   background-size: contain;
+
   background-repeat: no-repeat;
   background-position: right;
   width: 100%;
@@ -1042,6 +1042,7 @@
   height: clamp(1.5rem, 4vw, 50px);
   transition: transform 0.3s ease-in-out;
 }
+
 @media screen and (max-width: 768px) {
   .topRatedSection {
     height: 50vh;
@@ -1078,6 +1079,9 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .topRatedBackgroundWrapper {
+    background-position: center 0px;
+  }
   .topRatedSection {
     height: 0;
   }
@@ -1093,7 +1097,7 @@
   }
   .ctaButton {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     padding: 0.5rem 1rem;
     margin-top: 0;
   }

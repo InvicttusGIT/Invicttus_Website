@@ -237,8 +237,8 @@ export default function ProductsPage() {
 
                 <div
                   className={styles.DevicesDropdown}
-                  onMouseEnter={() => setIsDevicesOpen(true)}
-                  onMouseLeave={() => setIsDevicesOpen(false)}
+                  onMouseEnter={() => setIsPlatformsOpen(true)}
+                  onMouseLeave={() => setIsPlatformsOpen(false)}
                 >
                   <button
                     className={`${styles.FilterButton} ${styles.PlatformButtonWithIcon}`}
@@ -246,7 +246,7 @@ export default function ProductsPage() {
                     Platforms
                     <span
                       className={`${styles.PlatformDropdownIcon} ${
-                        isDevicesOpen ? styles.iconRotated : ""
+                        isPlatformsOpen ? styles.iconRotated : ""
                       }`}
                     >
                       <svg
@@ -266,7 +266,7 @@ export default function ProductsPage() {
                     </span>
                   </button>
 
-                  {isDevicesOpen && (
+                  {isPlatformsOpen && (
                     <div className={styles.PlatformOptions}>
                       <button
                         className={styles.PlatformOption}
