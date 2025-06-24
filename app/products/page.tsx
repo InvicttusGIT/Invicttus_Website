@@ -10,7 +10,7 @@ const apps = [
     image: "/fireplace.png",
     featured: false,
     tag: "Utility",
-    platform: ["LGTV"],
+    platform: ["LGTV", "Meta"],
     device: ["Website"],
   },
   {
@@ -70,6 +70,13 @@ const apps = [
     device: ["Website"],
   },
 ];
+const platformIcons: Record<string, string> = {
+  LGTV: "/7a5d366f552fa89268ad31d4dd492c8905557359.png",
+  Roku: "/24a3ecae62b20e1e34d699d3530f0fae45e74927.jpg",
+  FireTV: "/ff213f0660c12d6c8fc25c2cd96dc875cebd2f79.png",
+  Meta: "3ea30ddbd3c24854d46f1c9bd26285e77bed7fe6.png",
+  PlayStore: "e46ce093f4c3a285ee5bca933588d6cefa59a398.png",
+};
 export default function ProductsPage() {
   const [isDevicesOpen, setIsDevicesOpen] = useState(false);
   const [isPlatformsOpen, setIsPlatformsOpen] = useState(false);
@@ -307,6 +314,16 @@ export default function ProductsPage() {
                   <div key={app.name} className={styles.AppsgridContainer}>
                     <div className={styles.AppsGridLeft}>
                       <h4 className={styles.AppsName}>{app.name}</h4>
+                      <div className={styles.platformIcons}>
+                        {app.platform.map((platform, index) => (
+                          <img
+                            key={index}
+                            src={platformIcons[platform]}
+                            alt={platform}
+                            className={styles.platformIcon}
+                          />
+                        ))}
+                      </div>
                       <div className={styles.Appsgridimages}>
                         <Image
                           src={app.image}
