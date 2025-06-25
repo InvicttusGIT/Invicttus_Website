@@ -165,20 +165,20 @@ export default function Footer() {
 
           {/* Bottom Section with 350px height */}
           <div className={styles.footerBottom}>
-            <div className={styles.homeIconBox}>
+            <Link
+              href="/"
+              className={styles.homeIconBox}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                cursor: "pointer",
+              }}
+            >
               <div className={styles.homeIcon}>
-                <Image
-                  src="/homebtn.svg" // Your image path
-                  alt="Home"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/homebtn.svg" alt="Home" width={64} height={64} />
               </div>
-              <div>
-                {" "}
-                <p className={styles.homeText}>Return to Home</p>
-              </div>
-            </div>
+              <p className={styles.homeText}>Return to Home</p>
+            </Link>
           </div>
         </div>
         <div className={styles.footerContainer}>

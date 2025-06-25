@@ -339,7 +339,7 @@
   border-radius: 84.518px;
   border: 1.525px solid #9f9f9f;
   gap: 2.3rem;
-
+  background: #000;
   margin: 0;
   transition: background 0.2s, color 0.2s;
 }
@@ -516,7 +516,6 @@
   align-items: center;
 
   gap: 4rem;
-  margin-top: 12rem;
 }
 .ProductSectionStats {
   display: flex;
@@ -580,11 +579,11 @@
   justify-content: space-between;
 
   border: 1px solid #4b5563;
-
+  border-radius: 1rem;
   background-image: url("/Appgrid.png");
   background-repeat: no-repeat;
   background-size: cover; /* fixed from cover → background-size */
-  padding: 2rem;
+  padding: 4rem;
   gap: 4rem;
 
   width: 100%;

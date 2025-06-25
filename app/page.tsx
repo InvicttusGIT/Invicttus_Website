@@ -65,7 +65,7 @@ export default function Home() {
               </h1>
 
               <p className={styles.heroDescription}>
-                At Invicttus, We Push The Boundaries Of Innovation, Delivering
+                At Invicttus, We Push The Boundaries Of Innovation,Delivering
                 Cutting-Edge Products <wbr />
                 That Redefine How Tech Consumers Engage With The Digital World.
               </p>
@@ -475,9 +475,9 @@ export default function Home() {
                 Collaborative
               </span>
               <p className={`${styles.valueDescription} ${styles.one}`}>
-                Innovation Thrives When People Work Together, Sharing Ideas And
+                Innovation Thrives When People Work Together,Sharing Ideas And
                 Skills To Achieve Greater Success.A Collaborative Mindset
-                Fosters Trust, Creativity,And Groundbreaking Solutions.
+                Fosters Trust,Creativity,And Groundbreaking Solutions.
                 <span className={styles.highlightedText1}>
                   "Teamwork Drives Innovation"
                 </span>
@@ -495,8 +495,8 @@ export default function Home() {
               </span>
               <p className={`${styles.valueDescription} ${styles.two}`}>
                 Creativity Fuels Innovation By Encouraging New Ideas And Fresh
-                Perspectives. It Pushes Boundaries, Transforming Imagination
-                Into Impactful Experiences.{" "}
+                Perspectives.It Pushes Boundaries, Transforming Imagination Into
+                Impactful Experiences.{" "}
                 <span className={styles.highlightedText2}>
                   "Ideas Thrive Here"
                 </span>
@@ -516,7 +516,7 @@ export default function Home() {
               </span>
               <p className={styles.valueDescription3}>
                 A Strong Team Culture Values Collective Effort And Shared
-                Success. When People Collaborate, They Achieve More, Innovate
+                Success. When People Collaborate,They Achieve More,Innovate
                 Faster, And Build A Supportive Work Environment.{" "}
                 <span className={styles.highlightedText3}>
                   "Together We Build The Future"
