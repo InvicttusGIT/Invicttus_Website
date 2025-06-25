@@ -350,14 +350,15 @@
   .heroContentContainer {
     display: flex;
     justify-content: start;
-    padding: 1rem;
+    padding: 0 1rem;
+    margin-top: 2rem;
   }
 
   .heroTextContainer {
     text-align: center;
     max-width: 1404px;
     margin: 0 0;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
     text-align: center;
     width: 100%;
   }
@@ -377,8 +378,9 @@
     font-size: 2.5rem;
   }
   .heroDescription {
-    font-size: 14px;
-    line-height: 44px;
+    font-size: 1.8vh;
+    line-height: 20px;
+    text-align: justify;
     padding: 0;
     white-space: wrap;
   }
@@ -428,7 +430,6 @@
   background-repeat: no-repeat;
   background-position: right;
   width: 100%;
-  height: 100vw;
 }
 
 /* Background Container */
@@ -466,7 +467,7 @@
 
 /* Main Heading */
 .transformHeading {
-  font-size: 6rem;
+  font-size: 10vh;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
@@ -486,14 +487,13 @@
 }
 
 .usersIcon {
-  width: 70px;
-  height: 37px;
+  width: 6vh;
   color: #fff;
 }
 
 .usersText {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 4vh;
   white-space: nowrap;
 }
 
@@ -515,9 +515,7 @@
 }
 
 .networkGlobe {
-  width: 100%;
-  max-width: 690px;
-  aspect-ratio: 1 / 1;
+  width: 90vh;
 }
 
 .networkPeopleImage {
@@ -530,6 +528,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .transformSection {
+    height: 80vw;
+  }
+  .transformContentContainer {
+    padding: 0 4rem;
   }
 }
 @media screen and (max-width: 1024px) {

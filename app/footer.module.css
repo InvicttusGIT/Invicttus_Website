@@ -456,6 +456,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 2rem;
   }
   .footerTop {
     flex-direction: column;
@@ -472,4 +473,19 @@
   .footerText {
     font-size: clamp(1rem, 2vw, 2rem);
   }
+  .homeIconBox {
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .homeIcon {
+    margin-right: 0;
+  }
+}
+.homeText:hover {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+.homeIcon:hover {
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform: scale(1.1);
 }
