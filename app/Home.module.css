@@ -539,6 +539,9 @@
   }
 }
 @media screen and (max-width: 1024px) {
+  .transformSection {
+    height: 100vw;
+  }
   .transformFlexContainer {
     flex-direction: column-reverse;
     align-items: center;
