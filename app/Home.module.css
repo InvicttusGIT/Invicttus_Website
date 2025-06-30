@@ -350,7 +350,8 @@
   .heroContentContainer {
     display: flex;
     justify-content: start;
-    padding: 1rem;
+
+    padding: 0 1rem;
     margin-top: 2rem;
   }
 
@@ -378,8 +379,10 @@
     font-size: 2rem;
   }
   .heroDescription {
-    font-size: 14px;
-    line-height: 24px;
+
+    font-size: 1.8vh;
+    line-height: 20px;
+    text-align: justify;
     padding: 0;
     white-space: wrap;
     text-align: justify;
@@ -467,7 +470,7 @@
 
 /* Main Heading */
 .transformHeading {
-  font-size: 6rem;
+  font-size: 10vh;
   font-weight: 700;
   line-height: 1.2;
   color: #fff;
@@ -487,14 +490,13 @@
 }
 
 .usersIcon {
-  width: 70px;
-  height: 37px;
+  width: 6vh;
   color: #fff;
 }
 
 .usersText {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 4vh;
   white-space: nowrap;
 }
 
@@ -516,9 +518,7 @@
 }
 
 .networkGlobe {
-  width: 100%;
-  max-width: 690px;
-  aspect-ratio: 1 / 1;
+  width: 90vh;
 }
 
 .networkPeopleImage {
@@ -537,8 +537,15 @@
   .transformSection {
     height: 80vw;
   }
+
+  .transformContentContainer {
+    padding: 0 4rem;
+  }
 }
 @media screen and (max-width: 1024px) {
+  .transformSection {
+    height: 100vw;
+  }
   .transformFlexContainer {
     flex-direction: column-reverse;
     align-items: center;
@@ -702,7 +709,7 @@
 
 .carouselButton {
   position: absolute;
-  top: 50%;
+  top: 0;
   transform: translateY(-50%);
   z-index: 30;
   background-color: rgba(0, 0, 0, 0.5);
@@ -946,7 +953,7 @@
 /* Headings and paragraphs */
 .SeamlessHeading {
   font-family: Manrope, sans-serif;
-  font-size: clamp(1.5rem, 4vw, 32px);
+  font-size: clamp(2rem, 4vh, 48px);
   font-weight: 500;
   line-height: 1.4;
   color: #fff;
@@ -957,7 +964,7 @@
 
 .SeamlessSpan {
   color: #0090ff;
-  font-size: clamp(2rem, 5vw, 48px);
+  font-size: clamp(2rem, 5vh, 60px);
   font-weight: 700;
 }
 
@@ -965,7 +972,7 @@
   margin-top: 2rem;
   color: #fff;
   font-family: Manrope, sans-serif;
-  font-size: clamp(2rem, 3vw, 16px);
+  font-size: clamp(2rem, 3vh, 36px);
   font-weight: 400;
   line-height: 1.45;
   text-wrap: nowrap;
@@ -1046,10 +1053,22 @@
   height: clamp(1.5rem, 4vw, 50px);
   transition: transform 0.3s ease-in-out;
 }
-
+@media screen and (max-width: 1024px) {
+  .textSideWrapper {
+    align-items: center;
+    margin-top: 26rem;
+  }
+  .SeamlessHeading {
+    text-align: center;
+  }
+  .seamlessPara {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .topRatedSection {
-    height: 70vh;
+
+    height: 100vh;
   }
   .carouselContainer {
     margin-top: 8rem;
@@ -1068,18 +1087,13 @@
     margin-top: 0;
     border: 1px solid #fff;
   }
+  .textSideWrapper {
+    align-items: center;
+    margin-top: 40rem;
+  }
 
-  .SeamlessHeading {
-    font-size: 1rem;
-    text-align: justify;
-    white-space: wrap;
-  }
-  .SeamlessSpan {
-    font-size: 1.3rem;
-  }
-  .seamlessPara {
-    font-size: 0.9rem;
-    text-align: justify;
+  .ctaButtonContainer {
+    margin-top: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1087,35 +1101,41 @@
     background-position: center 0px;
   }
   .topRatedSection {
-    height: 0;
+    height: 50vh;
   }
   .carouselContainer {
     margin-top: 4rem;
   }
   .paginationDots {
-    margin-top: 4rem;
+    margin-top: 5rem;
+    gap: 0.4rem;
   }
   .paginationDot {
     width: 0.5rem;
     height: 0.5rem;
   }
+  .textSideWrapper {
+    align-items: center;
+    margin-top: 0rem;
+  }
   .ctaButton {
     width: 100%;
-    max-width: 150px;
+    max-width: 153px;
     padding: 0.5rem 1rem;
     margin-top: 0;
   }
 
   .SeamlessHeading {
-    font-size: 0.9rem;
 
+    font-size: 1rem;
+    text-align: center;
     white-space: wrap;
   }
   .SeamlessSpan {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
   .seamlessPara {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: center;
   }
 }

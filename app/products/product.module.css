@@ -257,8 +257,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url("/Productspage.svg") top center no-repeat,
-    url("/ProductBottomBg.png") bottom center no-repeat;
+  background: url("/Productspage.svg"), url("/Productspagebg.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top, bottom;
+
   background-size: contain, contain; /* or use `auto`, `100%`, etc. */
   z-index: 1;
 }
@@ -301,7 +303,7 @@
   color: #c3c3c3;
 
   font-family: Manrope;
-  font-size: 2rem;
+  font-size: 2.5vh;
   font-style: normal;
   font-weight: 400;
   line-height: 152%; /* 48.64px */
@@ -1175,7 +1177,7 @@
 
 .ProductsBottomSection {
   width: 100%;
-  height: 80vw; /* Adjusted to fill the viewport */
+  height: 60vw; /* Adjusted to fill the viewport */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -355,15 +355,13 @@ export default function ProductsPage() {
                 <button className={styles.LoadMoreButton}>
                   <a href="#">Load More</a>
                 </button>
-              </div>{" "}
-              <div style={{ width: "100%" }}>
-                <div className={styles.ProductsBottomSection}>
-                  <h2 className={styles.ProductBottomheading}>
-                    <span className={styles.Block}>ACTION.</span>
-                    <span className={styles.Block}>VISION.</span>
-                    <span className={styles.Block}>SPIRIT.</span>
-                  </h2>
-                </div>
+              </div>
+              <div className={styles.ProductsBottomSection}>
+                <h2 className={styles.ProductBottomheading}>
+                  <span className={styles.Block}>ACTION.</span>
+                  <span className={styles.Block}>VISION.</span>
+                  <span className={styles.Block}>SPIRIT.</span>
+                </h2>
               </div>
             </section>
           </div>
