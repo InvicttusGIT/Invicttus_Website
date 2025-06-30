@@ -124,6 +124,7 @@ export default function ProductsPage() {
 
         <div>
           <div className={styles.ProductSection}>
+            {" "}
             <section className={styles.ProductsSection}>
               <div className={styles.topApp}>
                 <div className={styles.ProductsSectionLeft}>

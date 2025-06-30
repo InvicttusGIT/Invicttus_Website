@@ -350,13 +350,14 @@
   .heroContentContainer {
     display: flex;
     justify-content: start;
+
     padding: 0 1rem;
     margin-top: 2rem;
   }
 
   .heroTextContainer {
     text-align: center;
-    max-width: 1404px;
+
     margin: 0 0;
     padding-bottom: 0;
     text-align: center;
@@ -364,8 +365,8 @@
   }
 
   .heroHeading {
-    margin-top: 1.5rem;
-    font-size: clamp(2rem, 6vw, 85px);
+    margin-top: 0;
+    font-size: 1.5rem;
     margin-left: 0;
     margin-right: 0;
     padding: 0 0;
@@ -375,14 +376,16 @@
     color: #0090ff;
     font-weight: 600;
 
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .heroDescription {
+
     font-size: 1.8vh;
     line-height: 20px;
     text-align: justify;
     padding: 0;
     white-space: wrap;
+    text-align: justify;
   }
 
   .statCardsContainer {
@@ -534,6 +537,7 @@
   .transformSection {
     height: 80vw;
   }
+
   .transformContentContainer {
     padding: 0 4rem;
   }
@@ -1063,6 +1067,7 @@
 }
 @media screen and (max-width: 768px) {
   .topRatedSection {
+
     height: 100vh;
   }
   .carouselContainer {
@@ -1121,6 +1126,7 @@
   }
 
   .SeamlessHeading {
+
     font-size: 1rem;
     text-align: center;
     white-space: wrap;
@@ -1324,7 +1330,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 425px) {
   .threeContainersSection {
-    padding: 0 0;
+    padding: 0rem 2rem;
   }
 
   .threeContainerBackground {
@@ -2018,6 +2024,7 @@
 }
 
 .valueNumber {
+  opacity: 100;
   font-size: 10rem;
   font-weight: 800;
   color: rgba(255, 255, 255, 0.05);
@@ -2102,7 +2109,7 @@
 }
 @media screen and (max-width: 768px) {
   .valueTitleWrapper {
-    max-width: 90%;
+    max-width: 100%;
   }
   .valuesSection {
     padding: 2rem 1rem;
@@ -2146,7 +2153,7 @@
   .highlightedText1,
   .highlightedText2,
   .highlightedText3 {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
   }
 }

@@ -165,6 +165,7 @@ export default function Footer() {
 
           {/* Bottom Section with 350px height */}
           <div className={styles.footerBottom}>
+
             <div className={styles.homeIconBox}>
               <Link
                 href="/"
