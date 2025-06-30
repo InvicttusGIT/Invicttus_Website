@@ -435,6 +435,7 @@ export default function Home() {
               priority
             />
           </div>
+          <div className={styles.carouselbar}></div>
 
           {/* Thumbnails */}
           <div

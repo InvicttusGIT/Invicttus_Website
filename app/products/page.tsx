@@ -10,7 +10,7 @@ const apps = [
     image: "/fireplace.png",
     featured: false,
     tag: "Utility",
-    platform: ["LGTV", "Meta"],
+    platform: ["FireTV", "Roku"],
     device: ["Website"],
   },
   {
@@ -18,7 +18,7 @@ const apps = [
     image: "/jellyfish-aquarium.png",
     featured: false,
     tag: "Featured",
-    platform: ["LGTV"],
+    platform: ["Roku", "FireTV"],
     device: ["Website"],
   },
   {
@@ -26,7 +26,7 @@ const apps = [
     image: "/Usbplayer.png",
     featured: false,
     tag: "Utility",
-    platform: ["LGTV"],
+    platform: ["Roku"],
     device: ["Website"],
   },
   {
@@ -34,7 +34,7 @@ const apps = [
     image: "/guess-the-word.png",
     featured: false,
     tag: "Game",
-    platform: ["LGTV"],
+    platform: ["FireTV", "Roku"],
     device: ["Website"],
   },
   {
@@ -42,7 +42,7 @@ const apps = [
     image: "/wordscrapes.png",
     featured: false,
     tag: "Utility",
-    platform: ["LGTV"],
+    platform: ["FireTV", "Roku"],
     device: ["Website"],
   },
   {
@@ -50,7 +50,7 @@ const apps = [
     image: "/word-search-puzzle.png",
     featured: false,
     tag: "Game",
-    platform: ["LGTV"],
+    platform: ["FireTV", "Roku"],
     device: ["Website"],
   },
   {
@@ -58,7 +58,7 @@ const apps = [
     image: "/alarm-app.png",
     featured: false,
     tag: "Utility",
-    platform: ["LGTV"],
+    platform: ["FireTV"],
     device: ["Website"],
   },
   {
@@ -66,7 +66,7 @@ const apps = [
     image: "/Clockfaces.png",
     featured: false,
     tag: "Utility",
-    platform: ["LGTV"],
+    platform: ["FireTV"],
     device: ["Website"],
   },
 ];

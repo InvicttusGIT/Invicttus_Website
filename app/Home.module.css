@@ -1500,6 +1500,7 @@
   border: 1px solid; /* For border-gray-700 / border-primary */
   transform: scale(1); /* Initial state for transition */
   transition: all 0.3s; /* transition-all duration-300 */
+  cursor: pointer;
 }
 
 .thumbnailButton:hover {
@@ -1509,6 +1510,25 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
 }
 
+.thumbnailButton.active {
+  transform: scale(1.1);
+  z-index: 30;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  opacity: 1;
+}
+.thumbnailButton.inactive {
+  opacity: 0.4;
+  filter: blur(0.3px); /* optional for dim effect */
+}
+.carouselbar {
+  width: 100%; /* Allows it to shrink on smaller screens */
+  max-width: 755px; /* Keeps it from exceeding Figma design */
+  height: 25px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 auto; /* Centers it horizontally */
+}
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   .lifeAtSection {
     position: relative;
@@ -1699,6 +1719,9 @@
     border: 1px solid;
     transform: scale(1);
     transition: all 0.3s;
+  }
+  .carouselbar {
+    width: 40%;
   }
 }
 
@@ -1893,6 +1916,10 @@
     border: 1px solid; /* For border-gray-700 / border-primary */
     transform: scale(1); /* Initial state for transition */
     transition: all 0.3s; /* transition-all duration-300 */
+  }
+  .carouselbar {
+    width: 40%;
+    height: 15px;
   }
 }
 
