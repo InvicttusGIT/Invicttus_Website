@@ -142,7 +142,7 @@ export default function ProductsPage() {
                       Guess The Word
                     </h4>
                     <Image
-                      src="/guess-the-word.png"
+                      src="/9ad56e4d22b398af9bd855825f4c44222d3b7971.png"
                       alt="Guess The Word"
                       width={357}
                       height={293}

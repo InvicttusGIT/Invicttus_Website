@@ -35,7 +35,7 @@
 }
 
 .ProductHeroHeading {
-  margin-top: 10rem;
+  margin-top: 5rem;
   font-size: 65px;
   font-weight: 600;
   text-transform: capitalize;
@@ -287,7 +287,7 @@
   flex-direction: column;
 }
 .LeftHeading {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .Highlight2 {
   background: linear-gradient(180deg, #fff 37.5%, #474646 93.56%);
@@ -456,7 +456,7 @@
   width: 357.244px;
   height: 293.329px;
   border-radius: 24.638px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .ProductSectionLeft {
   display: flex;

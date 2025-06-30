@@ -1096,7 +1096,7 @@
     background-position: center 0px;
   }
   .topRatedSection {
-    height: 50vh;
+    height: 39vh;
   }
   .carouselContainer {
     margin-top: 4rem;
@@ -1111,7 +1111,7 @@
   }
   .textSideWrapper {
     align-items: center;
-    margin-top: 0rem;
+    margin-top: 8rem;
   }
   .ctaButton {
     width: 100%;
@@ -1378,6 +1378,7 @@
 .backgroundOverlay {
   width: 100%;
   height: 100%;
+
   flex-shrink: 0;
   aspect-ratio: 2121.18 / 1595.86;
   filter: grayscale(100%);
@@ -1464,12 +1465,16 @@
 /* --- Image Carousel --- */
 .carouselWrapper {
   position: relative;
-  margin-top: 334px;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .mainImageDisplay {
-  width: 90%;
-  height: 100vh;
+  width: 70%;
+  height: 70vh;
   position: relative;
   z-index: 20;
   border-radius: 30px;
@@ -1483,6 +1488,7 @@
   display: flex;
   justify-content: center;
   /* Tailwind: mt-4 space-x-2 is now handled by gap */
+  margin-bottom: 10rem;
 }
 
 .thumbnailButton {
@@ -1503,37 +1509,10 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05); /* hover:shadow-xl */
 }
 
-.thumbnailButton.active {
-  border-color: var(
-    --color-primary,
-    #0190ff
-  ); /* Use CSS variable for primary color if defined */
-  transform: scale(1.05); /* scale-105 */
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
-  /* If you have a Tailwind primary color setup, you'd use a custom property for shadow-primary/30 */
-  box-shadow: 0 10px 15px -3px rgba(1, 144, 255, 0.3),
-    0 4px 6px -2px rgba(1, 144, 255, 0.1); /* Approximate shadow-primary/30 */
-}
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   .lifeAtSection {
     position: relative;
     overflow: hidden;
-  }
-
-  .backgroundOverlay {
-    width: 1500.181px;
-    height: 1080.864px;
-    flex-shrink: 0;
-    aspect-ratio: 1500.181 / 1080.864;
-    filter: grayscale(100%);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    transition: all 0.7s; /* Keep transition for image change */
-    position: absolute;
-    inset: 0;
-    z-index: 0;
   }
 
   .contentContainer {
@@ -1593,8 +1572,6 @@
   }
   .carouselWrapper {
     position: relative;
-    margin-top: 34px;
-    margin-left: 50px;
   }
 
   .mainImageDisplay {
@@ -1614,6 +1591,7 @@
     display: flex;
     justify-content: center;
     /* Tailwind: mt-4 space-x-2 is now handled by gap */
+    margin-bottom: 10rem;
   }
 
   .thumbnailButton {
@@ -1631,21 +1609,6 @@
   .lifeAtSection {
     position: relative;
     overflow: hidden;
-  }
-
-  .backgroundOverlay {
-    width: 1023px;
-    height: 600px;
-    flex-shrink: 0;
-    aspect-ratio: 1023 / 600;
-    filter: grayscale(100%);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    transition: all 0.7s;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
   }
 
   .contentContainer {
@@ -1706,12 +1669,10 @@
 
   .carouselWrapper {
     position: relative;
-    margin-top: 80px;
-    margin-left: 30px;
   }
 
   .mainImageDisplay {
-    width: 90vw;
+    width: 70%;
     height: 45vw;
     position: relative;
     z-index: 20;
@@ -1726,6 +1687,7 @@
     z-index: 20;
     display: flex;
     justify-content: center;
+    margin-bottom: 7rem;
   }
 
   .thumbnailButton {
@@ -1744,21 +1706,6 @@
   .lifeAtSection {
     position: relative;
     overflow: hidden;
-  }
-
-  .backgroundOverlay {
-    width: 767px;
-    height: 500px;
-    flex-shrink: 0;
-    aspect-ratio: 767 / 500;
-    filter: grayscale(100%);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    transition: all 0.7s;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
   }
 
   .contentContainer {
@@ -1824,8 +1771,8 @@
   }
 
   .mainImageDisplay {
-    width: 90vw;
-    height: 50vw;
+    width: 70%;
+
     position: relative;
     z-index: 20;
     border-radius: 20px;
@@ -1857,21 +1804,6 @@
   .lifeAtSection {
     position: relative;
     overflow: hidden;
-  }
-
-  .backgroundOverlay {
-    width: 424.181px;
-    height: 350.864px;
-    flex-shrink: 0;
-    aspect-ratio: 424 /500;
-    filter: grayscale(100%);
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    transition: all 0.7s; /* Keep transition for image change */
-    position: absolute;
-    inset: 0;
-    z-index: 0;
   }
 
   .contentContainer {
@@ -1935,8 +1867,7 @@
   }
 
   .mainImageDisplay {
-    width: 90vw;
-    height: 60vw;
+    width: 70%;
     position: relative;
     z-index: 20;
     border-radius: 20px;
@@ -1954,8 +1885,8 @@
   }
 
   .thumbnailButton {
-    width: 40px;
-    height: 20px;
+    width: 60px;
+    height: 30px;
     position: relative;
     overflow: hidden;
     border-radius: 0.25rem; /* rounded-lg */
@@ -2020,7 +1951,7 @@
 .valueNumber {
   font-size: 10rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.05);
+  color: #2f2f2f;
   line-height: 1;
   margin-bottom: -4rem;
 }
@@ -2124,7 +2055,7 @@
 }
 @media screen and (max-width: 425px) {
   .valueTitleWrapper {
-    max-width: 90%;
+    max-width: 100%;
   }
   .valuesSection {
     padding: 1rem;
@@ -2136,7 +2067,7 @@
   }
 
   .valueNumber {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .valueDescription,
@@ -2146,7 +2077,7 @@
   .highlightedText1,
   .highlightedText2,
   .highlightedText3 {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
   }
 }

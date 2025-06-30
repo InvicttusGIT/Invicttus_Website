@@ -23,7 +23,7 @@ export default function Home() {
   const teamImages = [
     "/team-mountain-group.png",
     "/WebsiteImage1.jpg",
-    "/WebsiteImage2.jpg",
+
     "/WhatsappImage6.jpg",
     "/WebsiteImage4.jpg",
   ]; // This array is not used in the provided code, can be removed if not needed elsewhere.
@@ -425,7 +425,7 @@ export default function Home() {
         <div className={styles.carouselWrapper}>
           {/* Main Image Display */}
           <div
-            className={`${styles.mainImageDisplay} mx-auto overflow-hidden rounded-lg border border-gray-800`}
+            className={`${styles.mainImageDisplay}  mx-auto overflow-hidden rounded-lg border border-gray-800`}
           >
             <Image
               src={teamImages[activeTeamImage] || "/placeholder.svg"}
