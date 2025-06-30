@@ -287,24 +287,24 @@ export default function ProductsPage() {
                       >
                         Fire TV
                       </button>
-                      <button
+                      {/* <button
                         className={styles.PlatformOption}
                         onClick={() => setSelectedPlatform("LGTV")}
                       >
                         LGTV
-                      </button>
-                      <button
+                      </button> */}
+                      {/* <button
                         className={styles.PlatformOption}
                         onClick={() => setSelectedPlatform("Apple TV")}
                       >
                         Apple TV
-                      </button>
-                      <button
+                      </button> */}
+                      {/* <button
                         className={styles.PlatformOption}
                         onClick={() => setSelectedPlatform("Play Store")}
                       >
                         Play Store
-                      </button>
+                      </button> */}
                     </div>
                   )}
                 </div>
