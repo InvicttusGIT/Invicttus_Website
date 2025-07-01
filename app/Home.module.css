@@ -33,7 +33,8 @@
   text-align: center;
   text-align: center;
   width: 100%;
-  padding: 0 2rem;
+  padding: 4rem 2rem;
+  max-width: 1400px;
 }
 
 .heroHeading {
@@ -62,7 +63,8 @@
 
   white-space: nowrap;
   width: 100%;
-  margin-top: 5rem;
+
+  margin-top: 3rem;
 }
 
 .statCardsContainer {
@@ -120,9 +122,17 @@
   flex-wrap: wrap;
   text-align: center;
 }
+@media screen and (max-width: 1600px) {
+  .heroContentContainer {
+    margin-top: 10rem;
+  }
+}
 
 /* Responsive Styles */
 @media screen and (max-width: 1440px) {
+  .heroContentContainer {
+    margin-top: 0rem;
+  }
   .heroBackground {
     border-radius: 120px 120px 0 0;
   }
@@ -423,7 +433,7 @@
   display: flex;
 
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1rem 5rem;
   background-image: url("/Transfromsection-bg.png");
   background-size: contain;
 
@@ -435,7 +445,7 @@
 /* Background Container */
 .transformBackground {
   width: 100%;
-  max-width: 1300px;
+
   height: 100%;
   display: flex;
   justify-content: center;
@@ -515,7 +525,7 @@
 }
 
 .networkGlobe {
-  width: 90vh;
+  width: 100%;
 }
 
 .networkPeopleImage {
@@ -530,9 +540,24 @@
     transform: rotate(360deg);
   }
 }
+@media screen and (max-width: 1600px) {
+  .transformSection {
+    height: 80vw;
+    padding: 0 2rem;
+  }
+  .transformContentContainer {
+    padding: 0 4rem;
+  }
+  .networkGlobe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+  }
+}
 @media screen and (max-width: 1440px) {
   .transformSection {
     height: 80vw;
+    padding: 0 2rem;
   }
   .transformContentContainer {
     padding: 0 4rem;
@@ -1048,6 +1073,19 @@
   width: clamp(1.5rem, 4vw, 50px);
   height: clamp(1.5rem, 4vw, 50px);
   transition: transform 0.3s ease-in-out;
+}
+@media screen and (max-width: 1600px) {
+  .topRatedSection {
+    height: 100vh;
+  }
+
+  .paginationDot {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  .seamlessPara {
+    font-size: clamp(2.2rem, 3vh, 36px);
+  }
 }
 @media screen and (max-width: 1024px) {
   .textSideWrapper {

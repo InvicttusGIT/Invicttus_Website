@@ -157,7 +157,9 @@ export default function Footer() {
               <h4 className={styles.columnTitle}>Reach Us Out</h4>
               <ul className={styles.linkList}>
                 <li>
-                  <a href="nfo@invicttus.com">support@example.com</a>
+                  <a href="mailto:invicttus@invicttus.com">
+                    invicttus@invicttus.com
+                  </a>
                 </li>
               </ul>
             </div>
