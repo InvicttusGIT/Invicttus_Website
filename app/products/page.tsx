@@ -277,13 +277,13 @@ export default function ProductsPage() {
                     <div className={styles.PlatformOptions}>
                       <button
                         className={styles.PlatformOption}
-                        onClick={() => setSelectedPlatform("Roku TV")}
+                        onClick={() => setSelectedPlatform("Roku")}
                       >
                         Roku TV
                       </button>
                       <button
                         className={styles.PlatformOption}
-                        onClick={() => setSelectedPlatform("Fire TV")}
+                        onClick={() => setSelectedPlatform("FireTV")}
                       >
                         Fire TV
                       </button>
