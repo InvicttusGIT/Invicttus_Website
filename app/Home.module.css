@@ -95,7 +95,19 @@
   box-sizing: border-box;
   flex-shrink: 0;
 }
-
+.statCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    223deg,
+    #000 -1.77%,
+    #002958 32.19%,
+    #002958 49.63%,
+    #001f42 68.91%,
+    #00152c 88.18%,
+    #001329 137.44%
+  );
+}
 .statValue {
   color: white;
   font-family: Manrope, sans-serif;
@@ -246,6 +258,17 @@
     cursor: pointer;
     box-sizing: border-box;
     flex-shrink: 0;
+    background: var(
+      --Linear,
+      linear-gradient(
+        127deg,
+        #000 17.06%,
+        #00152c 38.41%,
+        #002958 59.76%,
+        #002958 60.36%,
+        #001329 84.94%
+      )
+    );
   }
 
   .statValue {
@@ -361,16 +384,17 @@
     display: flex;
     justify-content: start;
     padding: 0 1rem;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   .heroTextContainer {
     text-align: center;
-    max-width: 1404px;
+
     margin: 0 0;
     padding-bottom: 0;
     text-align: center;
     width: 100%;
+    padding: 0;
   }
 
   .heroHeading {
@@ -419,7 +443,7 @@
   }
 
   .statSuffix {
-    font-size: clamp(0.1rem, 0.1vw, 2px);
+    font-size: 0.7rem;
   }
 
   .statLabel {
@@ -1303,10 +1327,21 @@
 
   .singleContainer,
   .bottomContainer {
-    width: 90%;
+    width: 80%;
     padding: 2rem;
     aspect-ratio: auto;
     border-radius: 1rem;
+    background: var(
+      --Linear,
+      linear-gradient(
+        127deg,
+        #000 17.06%,
+        #00152c 38.41%,
+        #002958 59.76%,
+        #002958 60.36%,
+        #001329 84.94%
+      )
+    );
   }
 
   .containerTitle {
@@ -1345,7 +1380,7 @@
 
   .singleContainer,
   .bottomContainer {
-    width: 90%;
+    width: 80%;
     padding: 2rem;
     aspect-ratio: auto;
     border-radius: 1rem;
@@ -1386,7 +1421,7 @@
 
   .singleContainer,
   .bottomContainer {
-    width: 100%;
+    width: 80%;
     padding: 2rem 1rem;
     aspect-ratio: auto;
     border-radius: 0.75rem;
@@ -2076,7 +2111,8 @@
 
 @media screen and (max-width: 1024px) {
   .valueTitleWrapper {
-    max-width: 500px;
+    max-width: 100%;
+    padding: 0 2rem;
   }
   .valuesSection {
     padding: 4rem 2rem;
@@ -2088,34 +2124,46 @@
   }
 
   .valueNumber {
-    font-size: 6rem;
+    font-size: 7rem;
   }
 
   .valueDescription,
   .valueDescription3 {
-    font-size: 1.2rem;
+    font-size: 2rem;
+  }
+  .highlightedText1,
+  .highlightedText2,
+  .highlightedText3 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   .valueTitleWrapper {
-    max-width: 90%;
+    max-width: 100%;
   }
   .valuesSection {
     padding: 2rem 1rem;
   }
 
   .valueTitle {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-top: -1rem;
   }
 
   .valueNumber {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 
   .valueDescription,
   .valueDescription3 {
-    font-size: 1rem;
+    font-size: 1.7rem;
+  }
+  .highlightedText1,
+  .highlightedText2,
+  .highlightedText3 {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
   }
 }
 @media screen and (max-width: 425px) {

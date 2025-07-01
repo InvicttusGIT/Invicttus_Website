@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./product.module.css";
 import React, { useState } from "react";
+import { link } from "fs";
 
 const apps = [
   {
@@ -12,14 +13,16 @@ const apps = [
     tag: "Utility",
     platform: ["FireTV", "Roku"],
     device: ["Website"],
+    link: "https://channelstore.roku.com/en-gb/details/519864a69c8bb82bafba4a6f5971f4f4:3b82cf6bc5bb38d94bd001a19dfb2584/fireplace-ambience-virtual-fire-place-for-tv",
   },
   {
-    name: "Jellyfish Aquarium",
-    image: "/jellyfish-aquarium.png",
+    name: "Aquarium Free",
+    image: "/Aquariumfree.jpg",
     featured: false,
     tag: "Featured",
     platform: ["Roku", "FireTV"],
     device: ["Website"],
+    link: "https://channelstore.roku.com/en-gb/details/c06aad6c62b7733825e71df47fcda2e3:cf08af00367f617bb8f5e0ea30e2f014/aquarium-free-relaxing-fish-and-coral-reef-videos-with-music-4k-tv",
   },
   {
     name: "USB Media Player",
@@ -28,6 +31,7 @@ const apps = [
     tag: "Utility",
     platform: ["Roku"],
     device: ["Website"],
+    link: "https://channelstore.roku.com/details/03e098489e45dc46200f70133df25863/usb-player-photos-and-videos",
   },
   {
     name: "Guess The Word",
@@ -36,14 +40,16 @@ const apps = [
     tag: "Game",
     platform: ["FireTV", "Roku"],
     device: ["Website"],
+    link: "https://channelstore.roku.com/en-gb/details/2bd0b6ea73cb6d081aadc017c50f6d61:eed6f78387ae9b4e3241f0e07bd285f5/guess-the-word-word-search-by-pics-a-puzzle-and-brain-trivia-game-for-kids",
   },
   {
-    name: "WordScapes",
+    name: "WordScrapes",
     image: "/wordscrapes.png",
     featured: false,
     tag: "Utility",
     platform: ["FireTV", "Roku"],
     device: ["Website"],
+    link: "https://channelstore.roku.com/en-gb/details/16742c526649c011964e4d4705c8c994/wordscapes-discover-crossword-brain-trivia-challenges-to-elevate-vocabulary-connect-and-match-letters-to-boost-your-iq-level-word-scapes",
   },
   {
     name: "Word Search",
@@ -52,6 +58,7 @@ const apps = [
     tag: "Game",
     platform: ["FireTV", "Roku"],
     device: ["Website"],
+    link: "https://channelstore.roku.com/en-ot/details/7ccb39d2b4485aef36e3fe60d6c52a59/word-search-game-find-words-adventure-trivia-to-enhance-your-vocabulary-skills-match-puzzle-and-elevate-your-brain-and-iq-level-for-kids-free",
   },
   {
     name: "Alarm App",
@@ -60,6 +67,7 @@ const apps = [
     tag: "Utility",
     platform: ["FireTV"],
     device: ["Website"],
+    link: "https://www.amazon.com/Alarm-Fire-TV-Tablets-Wallpapers/dp/B0CCRWTM9J/ref=sr_1_2?dib=eyJ2IjoiMSJ9.Ptv5GPB4yEBypwVUB6d8TzXglam379NBZ7DgwyaOU3c2fyN4TCi_WIGP1VXKZ_bmPZqEGn0xBn9i_SAIHK6jSg.-im9ZV9iAqz-F6q9XYKcRd1gjE00CNdfuol3F7qoDTA&dib_tag=se&qid=1737629880&refinements=p_4%3AApp+Oven&sr=8-2",
   },
   {
     name: "Clockfaces",
@@ -68,6 +76,7 @@ const apps = [
     tag: "Utility",
     platform: ["FireTV"],
     device: ["Website"],
+    link: "https://www.amazon.com/Clock-Faces-Fire-Tablets-featuring/dp/B0CPPWX8R2/ref=sr_1_4?dib=eyJ2IjoiMSJ9.Ptv5GPB4yEBypwVUB6d8TzXglam379NBZ7DgwyaOU3c2fyN4TCi_WIGP1VXKZ_bmPZqEGn0xBn9i_SAIHK6jSg.-im9ZV9iAqz-F6q9XYKcRd1gjE00CNdfuol3F7qoDTA&dib_tag=se&qid=1737629880&refinements=p_4%3AApp+Oven&sr=8-4",
   },
 ];
 const platformIcons: Record<string, string> = {
@@ -311,43 +320,50 @@ export default function ProductsPage() {
               </div>
               <div className={styles.productsgridSection}>
                 {filteredApps.map((app) => (
-                  <div key={app.name} className={styles.AppsgridContainer}>
-                    <div className={styles.AppsGridLeft}>
-                      <h4 className={styles.AppsName}>{app.name}</h4>
-                      <div className={styles.platformIcons}>
-                        {app.platform.map((platform, index) => (
-                          <img
-                            key={index}
-                            src={platformIcons[platform]}
-                            alt={platform}
-                            className={styles.platformIcon}
+                  <Link
+                    key={app.name}
+                    href={app.link ?? ""}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className={styles.AppsgridContainer}>
+                      <div className={styles.AppsGridLeft}>
+                        <h4 className={styles.AppsName}>{app.name}</h4>
+                        <div className={styles.platformIcons}>
+                          {app.platform.map((platform, index) => (
+                            <img
+                              key={index}
+                              src={platformIcons[platform]}
+                              alt={platform}
+                              className={styles.platformIcon}
+                            />
+                          ))}
+                        </div>
+                        <div className={styles.Appsgridimages}>
+                          <Image
+                            src={app.image}
+                            alt={app.name}
+                            fill
+                            className={styles.AppsImages}
                           />
-                        ))}
+                        </div>
                       </div>
-                      <div className={styles.Appsgridimages}>
-                        <Image
-                          src={app.image}
-                          alt={app.name}
-                          fill
-                          className={styles.AppsImages}
-                        />
-                      </div>
-                    </div>
-                    <div className={styles.AppsGridRight}>
-                      <div className={styles.AppsStats}>
-                        <span className={styles.AppsStatBox}>
-                          <p>
-                            <strong> 4.9 </strong> Ratings
-                          </p>
-                        </span>
-                        <span className={styles.AppsStatBox}>
-                          <p>
-                            <strong>1M</strong> Userbase
-                          </p>
-                        </span>
+                      <div className={styles.AppsGridRight}>
+                        <div className={styles.AppsStats}>
+                          <span className={styles.AppsStatBox}>
+                            <p>
+                              <strong>4.9</strong> Ratings
+                            </p>
+                          </span>
+                          <span className={styles.AppsStatBox}>
+                            <p>
+                              <strong>1M</strong> Userbase
+                            </p>
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
               <div className={styles.AppGridLoadmore}>

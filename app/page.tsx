@@ -15,7 +15,7 @@ export default function Home() {
   const appSlides = [
     { id: 0, name: "Word Search Puzzle", image: "/word-search-puzzle.png" },
     { id: 1, name: "Alarm App", image: "/alarm-app.png" },
-    { id: 2, name: "Jellyfish Aquarium", image: "/jellyfish-aquarium.png" },
+    { id: 2, name: "Aquarium Free", image: "/Aquariumfree.jpg" },
     { id: 3, name: "Guess The Word", image: "/guess-the-word.png" },
     { id: 4, name: "Fireplace Ambiance", image: "/fireplace-ambiance.png" },
   ];
@@ -81,18 +81,18 @@ export default function Home() {
                   <div
                     key={index}
                     className={styles.statCard}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background =
-                        "linear-gradient(127deg, #000000 17.06%, #00152C 38.41%, #002958 59.76%, #002958 60.36%, #001329 84.94%)";
-                      e.currentTarget.style.boxShadow =
-                        "0 0 20px rgba(0, 144, 255, 0.5)";
-                      e.currentTarget.style.transform = "translateY(-10px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "none";
-                      e.currentTarget.style.boxShadow = "none";
-                      e.currentTarget.style.transform = "translateY(0)";
-                    }}
+                    // onMouseEnter={(e) => {
+                    //   e.currentTarget.style.background =
+                    //     "linear-gradient(127deg, #000000 17.06%, #00152C 38.41%, #002958 59.76%, #002958 60.36%, #001329 84.94%)";
+                    //   e.currentTarget.style.boxShadow =
+                    //     "0 0 20px rgba(0, 144, 255, 0.5)";
+                    //   e.currentTarget.style.transform = "translateY(-10px)";
+                    // }}
+                    // onMouseLeave={(e) => {
+                    //   e.currentTarget.style.background = "none";
+                    //   e.currentTarget.style.boxShadow = "none";
+                    //   e.currentTarget.style.transform = "translateY(0)";
+                    // }}
                   >
                     <p className={styles.statValue}>
                       {item.value}
