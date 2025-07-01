@@ -17,7 +17,7 @@ const apps = [
   },
   {
     name: "Aquarium Free",
-    image: "/Aquariumfree.jpg",
+    image: "/app_icon_fhd.png",
     featured: false,
     tag: "Featured",
     platform: ["Roku"],

@@ -15,7 +15,7 @@ export default function Home() {
   const appSlides = [
     { id: 0, name: "Word Search Puzzle", image: "/word-search-puzzle.png" },
     { id: 1, name: "Alarm App", image: "/alarm-app.png" },
-    { id: 2, name: "Aquarium Free", image: "/Aquariumfree.jpg" },
+    { id: 2, name: "Aquarium Free", image: "/app_icon_fhd.png" },
     { id: 3, name: "Guess The Word", image: "/guess-the-word.png" },
     { id: 4, name: "Fireplace Ambiance", image: "/fireplace-ambiance.png" },
   ];

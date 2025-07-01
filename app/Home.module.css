@@ -1099,16 +1099,31 @@
   transition: transform 0.3s ease-in-out;
 }
 @media screen and (max-width: 1600px) {
-  .topRatedSection {
-    height: 100vh;
-  }
-
   .paginationDot {
     width: 0.8rem;
     height: 0.8rem;
   }
   .seamlessPara {
     font-size: clamp(2.2rem, 3vh, 36px);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .SeamlessHeading {
+    font-size: clamp(2rem, 5vh, 48px);
+  }
+  .SeamlessPara {
+    font-size: clamp(2rem, 2.7vh, 32px);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .seamlessPara {
+    font-size: clamp(2rem, 2.5vh, 36px);
+  }
+  .SeamlessHeading {
+    font-size: clamp(2rem, 5vh, 60px);
+  }
+  .SeamlessSpan {
+    font-size: clamp(2rem, 7vh, 60px);
   }
 }
 @media screen and (max-width: 1024px) {
